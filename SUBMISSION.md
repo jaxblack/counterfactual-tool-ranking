@@ -118,3 +118,29 @@ The public identity-bearing PDF is not an anonymous TMLR submission. A later
 TMLR submission would require its approved format, anonymous supplementary
 material, complete author profiles and declarations. Do not submit the same work
 simultaneously to incompatible archival peer-reviewed venues.
+
+## Originality Review
+
+A pre-submission review compared the final manuscript against the eleven central
+cited papers using normalized contiguous-token matching. After excluding the
+References section, no source shared a contiguous sequence of eight or more
+normalized words with the manuscript. Matches in the complete manuscript were
+8--14 words and were paper titles in the bibliography. Exact searches for four
+distinctive manuscript phrases produced no result in public GitHub code search
+outside this repository; general web-search coverage was incomplete.
+
+Repository documentation shares short result summaries with the paper. The
+longest measured internal overlap was ten normalized words, consisting of a
+numeric result statement or method configuration. This is self-repetition within
+the same research artifact, not evidence of copying another author's prose.
+
+The review also identified two attribution-distance risks and corrected them:
+the introduction now cites the contextual-bandit/logged-feedback framing [1,2]
+at first use, and the contrast-support proposition directly identifies its
+relationship to deficient-support and baseline-restriction work [3,4].
+
+This review is not a Turnitin/iThenticate report, does not search every book,
+paywalled article, webpage or unpublished manuscript, and cannot certify zero
+plagiarism. The human author remains responsible for originality, accurate
+quotation, citation and rights to all submitted material. arXiv performs its own
+text-overlap and moderation checks after submission.

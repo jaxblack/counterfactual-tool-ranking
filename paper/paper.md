@@ -53,7 +53,9 @@ pretending that unexecuted alternatives have observed labels. The connection is
 not an equivalence. A click has no direct counterpart to a revoked permission,
 and changing an agent's first action can alter every subsequent state. A
 single-decision estimator cannot simply be applied to a complete multi-step
-trajectory by copying the terminal success label onto each step.
+trajectory by copying the terminal success label onto each step. This framing
+adapts the established contextual-bandit and logged-feedback perspective [1,2]
+to complete agent tool calls; we do not claim the underlying reduction as new.
 
 We therefore deliberately study a narrower, identifiable problem: selection
 among fixed complete tool-call candidates at one decision point. We control
@@ -752,6 +754,11 @@ The estimand is the incremental value
 $$
 \Delta=\mathbb E_z\sum_a d(a\mid z)q(z,a).
 $$
+
+The following proposition specializes established deficient-support and
+baseline-restriction reasoning [3,4] to a linear contrast of two tool policies.
+Its contribution here is the explicit contrast-level condition and executable
+bounds, not a claim of priority over general partial-identification theory.
 
 **Proposition (contrast support).** Under randomized logging and observation
 of the complete decision context, the contrast is point-identified for arbitrary
