@@ -2,6 +2,8 @@
 
 ## A Reproducible Empirical Study with Executable Enterprise-Inspired Tools
 
+**jiapengli** (Microsoft)
+
 Working paper, version 1. September 2026. Not peer reviewed.
 
 Code and experimental artifacts: <https://github.com/jaxblack/counterfactual-tool-ranking>.
@@ -559,6 +561,17 @@ universal weights. Real deployments must measure costs and user utility, include
 the cost of asking or escalating, and distinguish recoverable from irreversible
 side effects.
 
+**The direct-model baseline has a restricted cost model.** It predicts success
+and unsafe outcomes but subtracts nominal service cost, latency, and argument
+exposure instead of estimating their conditional realized values. In contrast,
+the DR residual uses observed total utility. Revoked actions incur no service
+fee, and injected failures change latency and may avoid resource access. Part
+of DR's advantage can therefore correct this deliberately restricted nuisance
+model rather than reveal a tool-selection-specific advantage. A direct regressor
+of complete realized utility, plus separately learned cost and denial models,
+is an important missing control. The current results establish improvement over
+the implemented baseline, not over every reasonable direct estimator.
+
 **Statistical conclusions are preliminary.** Five seeds and 200 bootstrap
 resamples support an inspectable first study, not a definitive method ranking.
 Hyperparameter search is limited, classifiers are not probability-calibrated on
@@ -609,6 +622,17 @@ abstention can severely damage coverage without reliably improving business
 safety. These results support an evidence-first development path: trustworthy
 action-level logs and honest OPE before stronger claims about autonomous
 enterprise-agent optimization.
+
+## Generative-AI Assistance
+
+GitHub Copilot assisted with research design, software implementation, experiment
+execution, analysis, and manuscript drafting. Tables and numeric claims were
+generated from executable experiments and checked against the published
+artifacts; they were not generated as hypothetical results. Automated tests and
+artifact checks do not replace independent human scientific review. Responsibility
+for the accuracy, originality, references, and interpretation of the submitted
+work remains with the named human author. No generative model was an experimental
+agent or baseline in the reported workload.
 
 ## References
 
