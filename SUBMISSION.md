@@ -55,9 +55,17 @@ are now addressed in separately numbered experiments. V1 is not rewritten.
 
 ## Prepared arXiv Package
 
-The supplied author name is `jiapengli`, with affiliation `Microsoft`. The name
-has not been silently expanded into a guessed given/family name. No email,
-co-author, ORCID, license or employer endorsement has been invented.
+The author has explicitly confirmed the final publication spelling **Jiapeng Li**,
+affiliation **Microsoft**, and sole authorship. The earlier draft spelling
+`jiapengli` has been replaced in both the manuscript and submission metadata.
+No email, ORCID or employer endorsement has been invented.
+
+The author selected the [arXiv non-exclusive distribution license](https://arxiv.org/licenses/nonexclusive-distrib/1.0/license.html)
+and confirmed review of version 2, responsibility for its content, agreement to
+the AI-assistance disclosure, and the right to publish with the stated identity
+and affiliation. These are author-provided confirmations, not independently
+verified employer approval. License selection is not a grant to arXiv until the
+author completes its submission process.
 
 ```sh
 npm run pdf --prefix paper
@@ -89,11 +97,11 @@ endorsement. An institutional email alone does not guarantee endorsement under
 the current policy. Do not impersonate an author or mass-email endorsers.
 
 Before clicking the final submission button, the author must review the processed
-PDF and metadata, select the distribution license, confirm the full author list,
-ensure the right to publish with the stated affiliation, and accept responsibility
-for the work. Significant GitHub Copilot assistance is disclosed in the paper.
-Author review, final author-list confirmation and a distribution-license choice
-remain explicit prerequisites; none is inferred from preparation of these files.
+PDF and metadata and accept the submission agreement on the website. The final
+author list, license preference, paper review and AI-assistance disclosure are
+confirmed; account verification, any required endorsement, website agreement
+acceptance and final submission are not. Preparation does not automatically
+accept legal terms or press the final submission button.
 
 ## Verified Requirements
 

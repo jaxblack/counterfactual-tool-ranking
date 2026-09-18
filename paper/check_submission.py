@@ -16,7 +16,7 @@ def inspect_pdf(file_path: Path) -> dict:
     if not page_text or not all(text.strip() for text in page_text):
         raise ValueError("every page must contain machine-readable text")
     document_text = "\n".join(page_text)
-    for expected in ("jiapengli", "Microsoft", "Generative-AI Assistance", "References"):
+    for expected in ("Jiapeng Li", "Microsoft", "Generative-AI Assistance", "References"):
         if expected not in document_text:
             raise ValueError(f"missing expected PDF content: {expected}")
     visited = set()

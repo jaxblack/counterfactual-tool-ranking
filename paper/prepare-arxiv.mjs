@@ -29,7 +29,7 @@ for (let index = 0; index < tokens.length; index++) {
 const abstract = abstractParagraphs.join('\n\n');
 assert.ok(abstract.length > 500 && abstract.length < 5000, 'Unexpected abstract length');
 assert.ok(!markdown.includes('{{'), 'Paper has unrendered claims');
-assert.ok(markdown.includes('**jiapengli** (Microsoft)'), 'Author block changed; confirm metadata');
+assert.ok(markdown.includes('**Jiapeng Li** (Microsoft)'), 'Author block changed; confirm metadata');
 assert.ok(markdown.includes('## Generative-AI Assistance'), 'AI-use disclosure is missing');
 const pdf = await fs.readFile(path.join(directory, 'paper.pdf'));
 assert.equal(pdf.subarray(0, 5).toString(), '%PDF-');
@@ -37,13 +37,13 @@ const digest = createHash('sha256').update(pdf).digest('hex');
 const fileName = 'counterfactual-tool-ranking.pdf';
 const metadata = {
   title,
-  authors: [{ name: 'jiapengli', affiliation: 'Microsoft' }],
+  authors: [{ name: 'Jiapeng Li', affiliation: 'Microsoft' }],
   abstract,
   primary_category_proposed: 'cs.LG',
-  comments: 'Working paper. Synthetic single-decision tasks; code and artifacts are publicly available.',
+  comments: 'Working paper, version 2. Includes synthetic execution studies, BFCL-derived function-selection experiments, and local open-weight LLM baselines. Code and artifacts: https://github.com/jaxblack/counterfactual-tool-ranking',
   journal_reference: null,
   doi: null,
-  license: null,
+  license: 'http://arxiv.org/licenses/nonexclusive-distrib/1.0/',
 };
 const status = {
   status: 'prepared_not_submitted',
@@ -54,12 +54,12 @@ const status = {
   pdf_source: 'Markdown and HTML rendered by Chromium; not generated from TeX',
   entrypoint: 'https://arxiv.org/user',
   registration: 'https://arxiv.org/user/register',
+  license_status: 'selected_by_author_not_yet_granted_to_arxiv',
+  submission_agreement_accepted: false,
   pending: [
     'Author creates and verifies their own arXiv account.',
-    'Author confirms intended spelling of their publication name and final author list.',
-    'Author selects a distribution license and confirms the right to grant it.',
-    'Author reviews the paper, AI disclosure and arXiv submission agreement.',
     'Complete subject-area endorsement if requested by arXiv.',
+    'Author reviews and accepts the arXiv submission agreement on the website.',
     'Review the processed PDF and metadata, then explicitly submit through the author account.',
   ],
 };

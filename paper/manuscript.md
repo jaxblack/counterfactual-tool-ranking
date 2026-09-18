@@ -2,7 +2,7 @@
 
 ## Realized-Return Controls, Public Tool-Calling Data, and Disagreement-Support Evaluation
 
-**jiapengli** (Microsoft)
+**Jiapeng Li** (Microsoft)
 
 Working paper, version 2. September 2026. Not peer reviewed.
 
