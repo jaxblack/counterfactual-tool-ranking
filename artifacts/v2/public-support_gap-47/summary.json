@@ -1,0 +1,337 @@
+{
+  "calibration": {
+    "contrast": {
+      "alpha": 0.05,
+      "conditional_hoeffding_interval": [
+        -2.133553372313869,
+        2.2995592806449214
+      ],
+      "confidence_scope": "independent randomized logging, frozen policies/nuisance, fixed observed contexts; not future-distribution certification",
+      "disagreements": 18,
+      "estimated_identification_interval": [
+        0.08300295416552632,
+        0.08300295416552632
+      ],
+      "identification_width": 0.0,
+      "point_identified": true,
+      "sampling_radius": 2.2165563264793953,
+      "shared_unsupported": 9,
+      "tasks": 73,
+      "unsupported_disagreements": 0
+    },
+    "promoted": false
+  },
+  "contrasts": {
+    "blanket_support_abstain": {
+      "absolute_baseline_identified": false,
+      "absolute_target_identified": true,
+      "actual_paired_gain": 0.0770264393939394,
+      "alpha": 0.05,
+      "conditional_hoeffding_interval": [
+        -1.6038156222507642,
+        1.68822574389181
+      ],
+      "confidence_scope": "independent randomized logging, frozen policies/nuisance, fixed observed contexts; not future-distribution certification",
+      "disagreements": 30,
+      "estimated_identification_interval": [
+        -0.06650706039159826,
+        0.15091718203264415
+      ],
+      "identification_width": 0.2174242424242424,
+      "point_identified": false,
+      "sampling_radius": 1.537308561859166,
+      "shared_unsupported": 0,
+      "tasks": 132,
+      "unsupported_disagreements": 14
+    },
+    "direct": {
+      "absolute_baseline_identified": false,
+      "absolute_target_identified": false,
+      "actual_paired_gain": 0.1298097727272727,
+      "alpha": 0.05,
+      "conditional_hoeffding_interval": [
+        -1.156652700704079,
+        1.3605183921704844
+      ],
+      "confidence_scope": "independent randomized logging, frozen policies/nuisance, fixed observed contexts; not future-distribution certification",
+      "disagreements": 19,
+      "estimated_identification_interval": [
+        0.05534193664229355,
+        0.14852375482411173
+      ],
+      "identification_width": 0.09318181818181817,
+      "point_identified": false,
+      "sampling_radius": 1.2119946373463726,
+      "shared_unsupported": 9,
+      "tasks": 132,
+      "unsupported_disagreements": 6
+    },
+    "disagreement_fallback": {
+      "absolute_baseline_identified": false,
+      "absolute_target_identified": false,
+      "actual_paired_gain": 0.04576121212121211,
+      "alpha": 0.05,
+      "conditional_hoeffding_interval": [
+        -1.2829680761448625,
+        1.362075167482878
+      ],
+      "confidence_scope": "independent randomized logging, frozen policies/nuisance, fixed observed contexts; not future-distribution certification",
+      "disagreements": 16,
+      "estimated_identification_interval": [
+        0.03955354566900779,
+        0.03955354566900779
+      ],
+      "identification_width": 0.0,
+      "point_identified": true,
+      "sampling_radius": 1.3225216218138702,
+      "shared_unsupported": 14,
+      "tasks": 132,
+      "unsupported_disagreements": 0
+    },
+    "dr": {
+      "absolute_baseline_identified": false,
+      "absolute_target_identified": false,
+      "actual_paired_gain": 0.07633522727272726,
+      "alpha": 0.05,
+      "conditional_hoeffding_interval": [
+        -1.3697832975931512,
+        1.4504055404463183
+      ],
+      "confidence_scope": "independent randomized logging, frozen policies/nuisance, fixed observed contexts; not future-distribution certification",
+      "disagreements": 22,
+      "estimated_identification_interval": [
+        -0.0062797876643255505,
+        0.08690203051749264
+      ],
+      "identification_width": 0.09318181818181819,
+      "point_identified": false,
+      "sampling_radius": 1.3635035099288257,
+      "shared_unsupported": 9,
+      "tasks": 132,
+      "unsupported_disagreements": 6
+    }
+  },
+  "feedback_sha256": "c15057b037b72e80f5e74924a09ea6efb0cb7bbe3c488ee9650762429cadd86f",
+  "kind": "public_bfcl_reduction",
+  "policies": {
+    "blanket_support_abstain": {
+      "actual": {
+        "correct_on_executed": 0.68,
+        "coverage": 0.1893939393939394,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.0015071212121212125,
+        "selection_accuracy": 0.7803030303030303,
+        "success_all": 0.12878787878787878,
+        "tasks": 132,
+        "utility": 0.06667469696969698,
+        "wrong_call_rate": 0.06060606060606061
+      },
+      "ope": {
+        "direct": 0.05297248724473314,
+        "dr": 0.06748081509475612,
+        "ess": 12.627496856810708,
+        "identified": true,
+        "ips": 0.05663576576460703,
+        "matched": 36
+      }
+    },
+    "calibration_switch": {
+      "actual": {
+        "correct_on_executed": 0.4883720930232558,
+        "coverage": 0.32575757575757575,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.002775984848484849,
+        "selection_accuracy": 0.7348484848484849,
+        "success_all": 0.1590909090909091,
+        "tasks": 132,
+        "utility": -0.01035174242424242,
+        "wrong_call_rate": 0.16666666666666666
+      },
+      "ope": {
+        "identified": false,
+        "reason": "target selects a zero-probability action"
+      }
+    },
+    "direct": {
+      "actual": {
+        "correct_on_executed": 0.7857142857142857,
+        "coverage": 0.21212121212121213,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.0017540909090909091,
+        "selection_accuracy": 0.8333333333333334,
+        "success_all": 0.16666666666666666,
+        "tasks": 132,
+        "utility": 0.1194580303030303,
+        "wrong_call_rate": 0.045454545454545456
+      },
+      "ope": {
+        "identified": false,
+        "reason": "target selects a zero-probability action"
+      }
+    },
+    "disagreement_fallback": {
+      "actual": {
+        "correct_on_executed": 0.5641025641025641,
+        "coverage": 0.29545454545454547,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.002469318181818182,
+        "selection_accuracy": 0.7878787878787878,
+        "success_all": 0.16666666666666666,
+        "tasks": 132,
+        "utility": 0.035409469696969696,
+        "wrong_call_rate": 0.12878787878787878
+      },
+      "ope": {
+        "identified": false,
+        "reason": "target selects a zero-probability action"
+      }
+    },
+    "dr": {
+      "actual": {
+        "correct_on_executed": 0.6285714285714286,
+        "coverage": 0.26515151515151514,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.0021983333333333334,
+        "selection_accuracy": 0.803030303030303,
+        "success_all": 0.16666666666666666,
+        "tasks": 132,
+        "utility": 0.06598348484848483,
+        "wrong_call_rate": 0.09848484848484848
+      },
+      "ope": {
+        "identified": false,
+        "reason": "target selects a zero-probability action"
+      }
+    },
+    "ips": {
+      "actual": {
+        "correct_on_executed": 0.5789473684210527,
+        "coverage": 0.2878787878787879,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.00239655303030303,
+        "selection_accuracy": 0.7803030303030303,
+        "success_all": 0.16666666666666666,
+        "tasks": 132,
+        "utility": 0.043057992424242436,
+        "wrong_call_rate": 0.12121212121212122
+      },
+      "ope": {
+        "identified": false,
+        "reason": "target selects a zero-probability action"
+      }
+    },
+    "tfidf": {
+      "actual": {
+        "correct_on_executed": 0.4883720930232558,
+        "coverage": 0.32575757575757575,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.002775984848484849,
+        "selection_accuracy": 0.7348484848484849,
+        "success_all": 0.1590909090909091,
+        "tasks": 132,
+        "utility": -0.01035174242424242,
+        "wrong_call_rate": 0.16666666666666666
+      },
+      "ope": {
+        "identified": false,
+        "reason": "target selects a zero-probability action"
+      }
+    }
+  },
+  "scope": "function selection only; independent BFCL questions, controlled new bandit sampling; not an official BFCL end-to-end score",
+  "seed": 47,
+  "setting": "support_gap",
+  "source": {
+    "accounting": {
+      "full_role_context_preserved": true,
+      "input_irrelevance": 882,
+      "input_multiple": 1053,
+      "orphan_reference_ids": [
+        "live_multiple_1052-279-0"
+      ],
+      "retained": 1930,
+      "rows_with_non_user_context": 86,
+      "skipped": [
+        {
+          "id": "live_multiple_1052-79-0",
+          "reason": "no reference with exactly matching ID"
+        },
+        {
+          "id": "live_irrelevance_120-9-0",
+          "reason": "missing query/tools or duplicate function names"
+        },
+        {
+          "id": "live_irrelevance_121-9-1",
+          "reason": "missing query/tools or duplicate function names"
+        },
+        {
+          "id": "live_irrelevance_122-9-2",
+          "reason": "missing query/tools or duplicate function names"
+        },
+        {
+          "id": "live_irrelevance_123-9-3",
+          "reason": "missing query/tools or duplicate function names"
+        }
+      ]
+    },
+    "source": {
+      "dataset": "gorilla-llm/Berkeley-Function-Calling-Leaderboard",
+      "files": {
+        "BFCL_v3_live_irrelevance.json": {
+          "bytes": 2202715,
+          "sha256": "0d259e1c3ab6ba06c2a51911e2f49ecaa2eac3723a4a14f183a7687955e61338",
+          "url": "https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard/resolve/61fc0608cfd831fcfbbaa676ebdfef0ed963eeda/BFCL_v3_live_irrelevance.json"
+        },
+        "BFCL_v3_live_multiple.json": {
+          "bytes": 3891342,
+          "sha256": "af2520ac5bb0b05aa9b8abe14a79b87198e5a3137a707d4f5633c792330f0cee",
+          "url": "https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard/resolve/61fc0608cfd831fcfbbaa676ebdfef0ed963eeda/BFCL_v3_live_multiple.json"
+        },
+        "README.md": {
+          "bytes": 15282,
+          "sha256": "22234ad32a0bb921809278d01ed65e932b4e611690dfa17d1e0eb6ba74ab4e27",
+          "url": "https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard/resolve/61fc0608cfd831fcfbbaa676ebdfef0ed963eeda/README.md"
+        },
+        "possible_answer/BFCL_v3_live_multiple.json": {
+          "bytes": 199668,
+          "sha256": "97e90d59c5bd76c55a2920ce93e5566e9046307d3f558578f085f9d3a56c3084",
+          "url": "https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard/resolve/61fc0608cfd831fcfbbaa676ebdfef0ed963eeda/possible_answer/BFCL_v3_live_multiple.json"
+        }
+      },
+      "license": "Apache-2.0",
+      "revision": "61fc0608cfd831fcfbbaa676ebdfef0ed963eeda"
+    }
+  },
+  "source_sha256": {
+    "learning.py": "b45ea349be94e008975f59faf58fab6d5cfc1225ded39949e557590b3002e41b",
+    "policy_contrast.py": "1e7bc298ac06b3b3643ef84810490a653477775fd723ebc65be85ea39cdadd7f",
+    "public_data.py": "d5344b62f4006c013e67e73327905c017f2f8e7d8a2806d14ef200885f5ae5a0",
+    "public_learning.py": "e1b68a9a81ff34138fb07cd25d4b9bafc16d1b1c35bcd3508069d1cdd62d5986",
+    "sandbox.py": "e5dc4ab3278828a3ae68e9e5fa692b39c720b05629133d11cf2b6fa12359c57e",
+    "v2_experiments.py": "15b0a2611db13997486c2ada8d115d001e889976e7cb4107188c4efde4d550bc",
+    "v2_learning.py": "ff7fc2e118532ea5f0ef27452e54a8b7d9a9789f5c6e221df9d455085dc4ebc6"
+  },
+  "split": {
+    "components": 122,
+    "forced_large_training_components": [
+      {
+        "component": "cdd069a1919b03df940f19638148d41d1e3304202195b300aec4cdab616a92c1",
+        "size": 1544
+      }
+    ],
+    "function_name_overlap": 0,
+    "group_counts": {
+      "calibration": 21,
+      "test": 31,
+      "train": 70
+    },
+    "group_definition": "connected normalized function names or identical normalized queries",
+    "largest_component": 1544,
+    "seed": 47,
+    "sizes": {
+      "calibration": 73,
+      "test": 132,
+      "train": 1725
+    }
+  }
+}

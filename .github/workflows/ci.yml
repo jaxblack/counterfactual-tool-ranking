@@ -24,7 +24,9 @@ jobs:
       - run: ruff check .
       - run: python -m unittest discover -p 'test_*.py' -v
       - run: python verify_artifacts.py
+      - run: python verify_v2.py
       - run: python suite.py --quick --out results/ci
+      - run: python v2_experiments.py --quick --only synthetic --out results/v2-ci
       - run: python run.py run --backend mcp --scenario noisy --train-size 120 --calibration-size 40 --test-size 40 --bootstrap 20 --out results/mcp-ci
       - run: python run.py replay --backend mcp --log results/mcp-ci/train.jsonl
       - uses: actions/upload-artifact@v4

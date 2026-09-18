@@ -1,0 +1,361 @@
+{
+  "calibration": {
+    "contrast": {
+      "alpha": 0.05,
+      "conditional_hoeffding_interval": [
+        -2.3658856393764007,
+        3.1479706074876357
+      ],
+      "confidence_scope": "independent randomized logging, frozen policies/nuisance, fixed observed contexts; not future-distribution certification",
+      "disagreements": 33,
+      "estimated_identification_interval": [
+        0.3910424840556173,
+        0.3910424840556173
+      ],
+      "identification_width": 0.0,
+      "point_identified": true,
+      "sampling_radius": 2.756928123432018,
+      "shared_unsupported": 0,
+      "tasks": 75,
+      "unsupported_disagreements": 0
+    },
+    "promoted": false
+  },
+  "contrasts": {
+    "blanket_support_abstain": {
+      "absolute_baseline_identified": true,
+      "absolute_target_identified": true,
+      "actual_paired_gain": 0.29508196721311475,
+      "alpha": 0.05,
+      "conditional_hoeffding_interval": [
+        -1.581689248260685,
+        2.107438278391933
+      ],
+      "confidence_scope": "independent randomized logging, frozen policies/nuisance, fixed observed contexts; not future-distribution certification",
+      "disagreements": 19,
+      "estimated_identification_interval": [
+        0.26287451506562415,
+        0.26287451506562415
+      ],
+      "identification_width": 0.0,
+      "point_identified": true,
+      "sampling_radius": 1.8445637633263092,
+      "shared_unsupported": 0,
+      "tasks": 61,
+      "unsupported_disagreements": 0
+    },
+    "direct": {
+      "absolute_baseline_identified": true,
+      "absolute_target_identified": true,
+      "actual_paired_gain": 0.29508196721311475,
+      "alpha": 0.05,
+      "conditional_hoeffding_interval": [
+        -1.3354072084360253,
+        1.9275691043418721
+      ],
+      "confidence_scope": "independent randomized logging, frozen policies/nuisance, fixed observed contexts; not future-distribution certification",
+      "disagreements": 17,
+      "estimated_identification_interval": [
+        0.29608094795292345,
+        0.29608094795292345
+      ],
+      "identification_width": 0.0,
+      "point_identified": true,
+      "sampling_radius": 1.6314881563889487,
+      "shared_unsupported": 0,
+      "tasks": 61,
+      "unsupported_disagreements": 0
+    },
+    "disagreement_fallback": {
+      "absolute_baseline_identified": true,
+      "absolute_target_identified": true,
+      "actual_paired_gain": 0.29508196721311475,
+      "alpha": 0.05,
+      "conditional_hoeffding_interval": [
+        -1.581689248260685,
+        2.107438278391933
+      ],
+      "confidence_scope": "independent randomized logging, frozen policies/nuisance, fixed observed contexts; not future-distribution certification",
+      "disagreements": 19,
+      "estimated_identification_interval": [
+        0.26287451506562415,
+        0.26287451506562415
+      ],
+      "identification_width": 0.0,
+      "point_identified": true,
+      "sampling_radius": 1.8445637633263092,
+      "shared_unsupported": 0,
+      "tasks": 61,
+      "unsupported_disagreements": 0
+    },
+    "dr": {
+      "absolute_baseline_identified": true,
+      "absolute_target_identified": true,
+      "actual_paired_gain": 0.29508196721311475,
+      "alpha": 0.05,
+      "conditional_hoeffding_interval": [
+        -1.581689248260685,
+        2.107438278391933
+      ],
+      "confidence_scope": "independent randomized logging, frozen policies/nuisance, fixed observed contexts; not future-distribution certification",
+      "disagreements": 19,
+      "estimated_identification_interval": [
+        0.26287451506562415,
+        0.26287451506562415
+      ],
+      "identification_width": 0.0,
+      "point_identified": true,
+      "sampling_radius": 1.8445637633263092,
+      "shared_unsupported": 0,
+      "tasks": 61,
+      "unsupported_disagreements": 0
+    }
+  },
+  "feedback_sha256": "10ebb8f4d9e01375b517dfe10c09c25d0df38795730e78b8f6c0308016c0c400",
+  "kind": "public_bfcl_reduction",
+  "policies": {
+    "blanket_support_abstain": {
+      "actual": {
+        "correct_on_executed": 0.7619047619047619,
+        "coverage": 0.3442622950819672,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.0,
+        "selection_accuracy": 0.8360655737704918,
+        "success_all": 0.26229508196721313,
+        "tasks": 61,
+        "utility": 0.18032786885245902,
+        "wrong_call_rate": 0.08196721311475409
+      },
+      "ope": {
+        "direct": 0.17407911373953883,
+        "dr": 0.21090534725517743,
+        "ess": 9.665411477406385,
+        "identified": true,
+        "ips": 0.24842555646363157,
+        "matched": 22
+      }
+    },
+    "calibration_switch": {
+      "actual": {
+        "correct_on_executed": 0.3939393939393939,
+        "coverage": 0.5409836065573771,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.0,
+        "selection_accuracy": 0.5901639344262295,
+        "success_all": 0.21311475409836064,
+        "tasks": 61,
+        "utility": -0.11475409836065574,
+        "wrong_call_rate": 0.32786885245901637
+      },
+      "ope": {
+        "direct": 0.038977506053864,
+        "dr": -0.05196916781044669,
+        "ess": 13.539578672307552,
+        "identified": true,
+        "ips": -0.04876391689313581,
+        "matched": 32
+      }
+    },
+    "direct": {
+      "actual": {
+        "correct_on_executed": 0.7619047619047619,
+        "coverage": 0.3442622950819672,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.0,
+        "selection_accuracy": 0.8524590163934426,
+        "success_all": 0.26229508196721313,
+        "tasks": 61,
+        "utility": 0.18032786885245902,
+        "wrong_call_rate": 0.08196721311475409
+      },
+      "ope": {
+        "direct": 0.18738635057227965,
+        "dr": 0.24411178014247667,
+        "ess": 9.145348028798528,
+        "identified": true,
+        "ips": 0.2689173597423201,
+        "matched": 20
+      }
+    },
+    "disagreement_fallback": {
+      "actual": {
+        "correct_on_executed": 0.7619047619047619,
+        "coverage": 0.3442622950819672,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.0,
+        "selection_accuracy": 0.8360655737704918,
+        "success_all": 0.26229508196721313,
+        "tasks": 61,
+        "utility": 0.18032786885245902,
+        "wrong_call_rate": 0.08196721311475409
+      },
+      "ope": {
+        "direct": 0.17407911373953883,
+        "dr": 0.21090534725517743,
+        "ess": 9.665411477406385,
+        "identified": true,
+        "ips": 0.24842555646363157,
+        "matched": 22
+      }
+    },
+    "dr": {
+      "actual": {
+        "correct_on_executed": 0.7619047619047619,
+        "coverage": 0.3442622950819672,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.0,
+        "selection_accuracy": 0.8360655737704918,
+        "success_all": 0.26229508196721313,
+        "tasks": 61,
+        "utility": 0.18032786885245902,
+        "wrong_call_rate": 0.08196721311475409
+      },
+      "ope": {
+        "direct": 0.17407911373953883,
+        "dr": 0.21090534725517743,
+        "ess": 9.665411477406385,
+        "identified": true,
+        "ips": 0.24842555646363157,
+        "matched": 22
+      }
+    },
+    "ips": {
+      "actual": {
+        "correct_on_executed": 0.7272727272727273,
+        "coverage": 0.36065573770491804,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.0,
+        "selection_accuracy": 0.8360655737704918,
+        "success_all": 0.26229508196721313,
+        "tasks": 61,
+        "utility": 0.16393442622950818,
+        "wrong_call_rate": 0.09836065573770492
+      },
+      "ope": {
+        "direct": 0.17927628515615224,
+        "dr": 0.1978213598392954,
+        "ess": 9.969141554072797,
+        "identified": true,
+        "ips": 0.22793375318494305,
+        "matched": 23
+      }
+    },
+    "tfidf": {
+      "actual": {
+        "correct_on_executed": 0.3939393939393939,
+        "coverage": 0.5409836065573771,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.0,
+        "selection_accuracy": 0.5901639344262295,
+        "success_all": 0.21311475409836064,
+        "tasks": 61,
+        "utility": -0.11475409836065574,
+        "wrong_call_rate": 0.32786885245901637
+      },
+      "ope": {
+        "direct": 0.038977506053864,
+        "dr": -0.05196916781044669,
+        "ess": 13.539578672307552,
+        "identified": true,
+        "ips": -0.04876391689313581,
+        "matched": 32
+      }
+    }
+  },
+  "scope": "function selection only; independent BFCL questions, controlled new bandit sampling; not an official BFCL end-to-end score",
+  "seed": 17,
+  "setting": "native",
+  "source": {
+    "accounting": {
+      "full_role_context_preserved": true,
+      "input_irrelevance": 882,
+      "input_multiple": 1053,
+      "orphan_reference_ids": [
+        "live_multiple_1052-279-0"
+      ],
+      "retained": 1930,
+      "rows_with_non_user_context": 86,
+      "skipped": [
+        {
+          "id": "live_multiple_1052-79-0",
+          "reason": "no reference with exactly matching ID"
+        },
+        {
+          "id": "live_irrelevance_120-9-0",
+          "reason": "missing query/tools or duplicate function names"
+        },
+        {
+          "id": "live_irrelevance_121-9-1",
+          "reason": "missing query/tools or duplicate function names"
+        },
+        {
+          "id": "live_irrelevance_122-9-2",
+          "reason": "missing query/tools or duplicate function names"
+        },
+        {
+          "id": "live_irrelevance_123-9-3",
+          "reason": "missing query/tools or duplicate function names"
+        }
+      ]
+    },
+    "source": {
+      "dataset": "gorilla-llm/Berkeley-Function-Calling-Leaderboard",
+      "files": {
+        "BFCL_v3_live_irrelevance.json": {
+          "bytes": 2202715,
+          "sha256": "0d259e1c3ab6ba06c2a51911e2f49ecaa2eac3723a4a14f183a7687955e61338",
+          "url": "https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard/resolve/61fc0608cfd831fcfbbaa676ebdfef0ed963eeda/BFCL_v3_live_irrelevance.json"
+        },
+        "BFCL_v3_live_multiple.json": {
+          "bytes": 3891342,
+          "sha256": "af2520ac5bb0b05aa9b8abe14a79b87198e5a3137a707d4f5633c792330f0cee",
+          "url": "https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard/resolve/61fc0608cfd831fcfbbaa676ebdfef0ed963eeda/BFCL_v3_live_multiple.json"
+        },
+        "README.md": {
+          "bytes": 15282,
+          "sha256": "22234ad32a0bb921809278d01ed65e932b4e611690dfa17d1e0eb6ba74ab4e27",
+          "url": "https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard/resolve/61fc0608cfd831fcfbbaa676ebdfef0ed963eeda/README.md"
+        },
+        "possible_answer/BFCL_v3_live_multiple.json": {
+          "bytes": 199668,
+          "sha256": "97e90d59c5bd76c55a2920ce93e5566e9046307d3f558578f085f9d3a56c3084",
+          "url": "https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard/resolve/61fc0608cfd831fcfbbaa676ebdfef0ed963eeda/possible_answer/BFCL_v3_live_multiple.json"
+        }
+      },
+      "license": "Apache-2.0",
+      "revision": "61fc0608cfd831fcfbbaa676ebdfef0ed963eeda"
+    }
+  },
+  "source_sha256": {
+    "learning.py": "b45ea349be94e008975f59faf58fab6d5cfc1225ded39949e557590b3002e41b",
+    "policy_contrast.py": "1e7bc298ac06b3b3643ef84810490a653477775fd723ebc65be85ea39cdadd7f",
+    "public_data.py": "d5344b62f4006c013e67e73327905c017f2f8e7d8a2806d14ef200885f5ae5a0",
+    "public_learning.py": "e1b68a9a81ff34138fb07cd25d4b9bafc16d1b1c35bcd3508069d1cdd62d5986",
+    "sandbox.py": "e5dc4ab3278828a3ae68e9e5fa692b39c720b05629133d11cf2b6fa12359c57e",
+    "v2_experiments.py": "15b0a2611db13997486c2ada8d115d001e889976e7cb4107188c4efde4d550bc",
+    "v2_learning.py": "ff7fc2e118532ea5f0ef27452e54a8b7d9a9789f5c6e221df9d455085dc4ebc6"
+  },
+  "split": {
+    "components": 122,
+    "forced_large_training_components": [
+      {
+        "component": "ed702cc72b51a7d6661ef43d35e667f2005d63b65661905c02f9c897a0600158",
+        "size": 1544
+      }
+    ],
+    "function_name_overlap": 0,
+    "group_counts": {
+      "calibration": 19,
+      "test": 23,
+      "train": 80
+    },
+    "group_definition": "connected normalized function names or identical normalized queries",
+    "largest_component": 1544,
+    "seed": 17,
+    "sizes": {
+      "calibration": 75,
+      "test": 61,
+      "train": 1794
+    }
+  }
+}

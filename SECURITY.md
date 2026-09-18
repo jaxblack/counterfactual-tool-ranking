@@ -20,6 +20,10 @@ This is a local research artifact, not a production security product.
 
 Do not point a production agent at this artifact as an authorization proxy.
 Do not add real user records, API keys or private trajectories to fixtures or
-published artifacts. Raw logs and manifests are synthetic and remain local by
-default. Approval escalation and distributed identity need a separate reviewed
-implementation before any production integration.
+published artifacts. Synthetic logs, downloaded public prompts, model weights
+and raw LLM responses remain local by default; public outputs contain derived
+task IDs and metrics. Tool descriptions in public data are untrusted text and
+are never executed. Network access is limited to explicit public-data/model
+downloads; inference remains local. The public permission/cost transforms are
+research conditions, not actual BFCL authorization data. Approval escalation
+and distributed identity need a separate reviewed implementation before production use.

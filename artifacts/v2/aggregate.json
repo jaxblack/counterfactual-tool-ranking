@@ -1,0 +1,1924 @@
+{
+  "public": {
+    "authorization": {
+      "contrasts": {
+        "blanket_support_abstain": {
+          "absolute_identified_runs": 5,
+          "mean_identification_width": 0.0,
+          "mean_shared_unsupported": 0.0,
+          "point_identified_runs": 5
+        },
+        "direct": {
+          "absolute_identified_runs": 5,
+          "mean_identification_width": 0.0,
+          "mean_shared_unsupported": 0.0,
+          "point_identified_runs": 5
+        },
+        "disagreement_fallback": {
+          "absolute_identified_runs": 5,
+          "mean_identification_width": 0.0,
+          "mean_shared_unsupported": 0.0,
+          "point_identified_runs": 5
+        },
+        "dr": {
+          "absolute_identified_runs": 5,
+          "mean_identification_width": 0.0,
+          "mean_shared_unsupported": 0.0,
+          "point_identified_runs": 5
+        }
+      },
+      "policies": {
+        "blanket_support_abstain": {
+          "coverage": {
+            "mean": 0.23884586103639038,
+            "runs": 5,
+            "std": 0.030633120613336177
+          },
+          "selection_accuracy": {
+            "mean": 0.8426249143211028,
+            "runs": 5,
+            "std": 0.05297685480750858
+          },
+          "success_all": {
+            "mean": 0.146005448588304,
+            "runs": 5,
+            "std": 0.03046232532903662
+          },
+          "utility": {
+            "mean": 0.051135887538328,
+            "runs": 5,
+            "std": 0.053777233703300814
+          },
+          "wrong_call_rate": {
+            "mean": 0.09284041244808641,
+            "runs": 5,
+            "std": 0.03144454456860357
+          }
+        },
+        "calibration_switch": {
+          "coverage": {
+            "mean": 0.37015607529387157,
+            "runs": 5,
+            "std": 0.06938563796410152
+          },
+          "selection_accuracy": {
+            "mean": 0.7535033787091849,
+            "runs": 5,
+            "std": 0.048308300136461965
+          },
+          "success_all": {
+            "mean": 0.16150619528277754,
+            "runs": 5,
+            "std": 0.03649887019876797
+          },
+          "utility": {
+            "mean": -0.05035680387783842,
+            "runs": 5,
+            "std": 0.06766134198392426
+          },
+          "wrong_call_rate": {
+            "mean": 0.20864988001109402,
+            "runs": 5,
+            "std": 0.05786788654781199
+          }
+        },
+        "direct": {
+          "coverage": {
+            "mean": 0.22167414386467327,
+            "runs": 5,
+            "std": 0.04793090287825142
+          },
+          "selection_accuracy": {
+            "mean": 0.8936625351110455,
+            "runs": 5,
+            "std": 0.03720218258082714
+          },
+          "success_all": {
+            "mean": 0.16747056414010683,
+            "runs": 5,
+            "std": 0.03709136139264938
+          },
+          "utility": {
+            "mean": 0.11135486562883057,
+            "runs": 5,
+            "std": 0.03063580038621216
+          },
+          "wrong_call_rate": {
+            "mean": 0.054203579724566374,
+            "runs": 5,
+            "std": 0.015874641196299045
+          }
+        },
+        "disagreement_fallback": {
+          "coverage": {
+            "mean": 0.23884586103639038,
+            "runs": 5,
+            "std": 0.030633120613336177
+          },
+          "selection_accuracy": {
+            "mean": 0.8426249143211028,
+            "runs": 5,
+            "std": 0.05297685480750858
+          },
+          "success_all": {
+            "mean": 0.146005448588304,
+            "runs": 5,
+            "std": 0.03046232532903662
+          },
+          "utility": {
+            "mean": 0.051135887538328,
+            "runs": 5,
+            "std": 0.053777233703300814
+          },
+          "wrong_call_rate": {
+            "mean": 0.09284041244808641,
+            "runs": 5,
+            "std": 0.03144454456860357
+          }
+        },
+        "dr": {
+          "coverage": {
+            "mean": 0.23884586103639038,
+            "runs": 5,
+            "std": 0.030633120613336177
+          },
+          "selection_accuracy": {
+            "mean": 0.8426249143211028,
+            "runs": 5,
+            "std": 0.05297685480750858
+          },
+          "success_all": {
+            "mean": 0.146005448588304,
+            "runs": 5,
+            "std": 0.03046232532903662
+          },
+          "utility": {
+            "mean": 0.051135887538328,
+            "runs": 5,
+            "std": 0.053777233703300814
+          },
+          "wrong_call_rate": {
+            "mean": 0.09284041244808641,
+            "runs": 5,
+            "std": 0.03144454456860357
+          }
+        },
+        "ips": {
+          "coverage": {
+            "mean": 0.2255522591288718,
+            "runs": 5,
+            "std": 0.05613188644736971
+          },
+          "selection_accuracy": {
+            "mean": 0.871834494772626,
+            "runs": 5,
+            "std": 0.03870180591314141
+          },
+          "success_all": {
+            "mean": 0.1595189934158619,
+            "runs": 5,
+            "std": 0.03774691261631524
+          },
+          "utility": {
+            "mean": 0.09153366647403334,
+            "runs": 5,
+            "std": 0.026648105633448695
+          },
+          "wrong_call_rate": {
+            "mean": 0.06603326571300992,
+            "runs": 5,
+            "std": 0.022693237853478206
+          }
+        },
+        "tfidf": {
+          "coverage": {
+            "mean": 0.37015607529387157,
+            "runs": 5,
+            "std": 0.06938563796410152
+          },
+          "selection_accuracy": {
+            "mean": 0.7535033787091849,
+            "runs": 5,
+            "std": 0.048308300136461965
+          },
+          "success_all": {
+            "mean": 0.16150619528277754,
+            "runs": 5,
+            "std": 0.03649887019876797
+          },
+          "utility": {
+            "mean": -0.05035680387783842,
+            "runs": 5,
+            "std": 0.06766134198392426
+          },
+          "wrong_call_rate": {
+            "mean": 0.20864988001109402,
+            "runs": 5,
+            "std": 0.05786788654781199
+          }
+        }
+      },
+      "promoted_runs": 0,
+      "test_groups_per_run": [
+        22,
+        23,
+        28,
+        20,
+        31
+      ],
+      "test_task_instances": 434
+    },
+    "native": {
+      "contrasts": {
+        "blanket_support_abstain": {
+          "absolute_identified_runs": 5,
+          "mean_identification_width": 0.0,
+          "mean_shared_unsupported": 0.0,
+          "point_identified_runs": 5
+        },
+        "direct": {
+          "absolute_identified_runs": 5,
+          "mean_identification_width": 0.0,
+          "mean_shared_unsupported": 0.0,
+          "point_identified_runs": 5
+        },
+        "disagreement_fallback": {
+          "absolute_identified_runs": 5,
+          "mean_identification_width": 0.0,
+          "mean_shared_unsupported": 0.0,
+          "point_identified_runs": 5
+        },
+        "dr": {
+          "absolute_identified_runs": 5,
+          "mean_identification_width": 0.0,
+          "mean_shared_unsupported": 0.0,
+          "point_identified_runs": 5
+        }
+      },
+      "policies": {
+        "blanket_support_abstain": {
+          "coverage": {
+            "mean": 0.28826922731861065,
+            "runs": 5,
+            "std": 0.04231558770370156
+          },
+          "selection_accuracy": {
+            "mean": 0.8409439212712826,
+            "runs": 5,
+            "std": 0.05517262346388102
+          },
+          "success_all": {
+            "mean": 0.19858654555502753,
+            "runs": 5,
+            "std": 0.04005076896344826
+          },
+          "utility": {
+            "mean": 0.10890386379144437,
+            "runs": 5,
+            "std": 0.05176197319124084
+          },
+          "wrong_call_rate": {
+            "mean": 0.08968268176358314,
+            "runs": 5,
+            "std": 0.025117550061992237
+          }
+        },
+        "calibration_switch": {
+          "coverage": {
+            "mean": 0.4299564235974935,
+            "runs": 5,
+            "std": 0.07804866443227726
+          },
+          "selection_accuracy": {
+            "mean": 0.7047297878546928,
+            "runs": 5,
+            "std": 0.06917118513284641
+          },
+          "success_all": {
+            "mean": 0.18926741402760283,
+            "runs": 5,
+            "std": 0.027020045367291065
+          },
+          "utility": {
+            "mean": -0.051421595542287826,
+            "runs": 5,
+            "std": 0.04978504019661888
+          },
+          "wrong_call_rate": {
+            "mean": 0.24068900956989067,
+            "runs": 5,
+            "std": 0.059623730777854884
+          }
+        },
+        "direct": {
+          "coverage": {
+            "mean": 0.2763469081517095,
+            "runs": 5,
+            "std": 0.058785536696402525
+          },
+          "selection_accuracy": {
+            "mean": 0.8642257370435822,
+            "runs": 5,
+            "std": 0.047627301897217346
+          },
+          "success_all": {
+            "mean": 0.20414210111058306,
+            "runs": 5,
+            "std": 0.03986552576589516
+          },
+          "utility": {
+            "mean": 0.1319372940694567,
+            "runs": 5,
+            "std": 0.03151035710515573
+          },
+          "wrong_call_rate": {
+            "mean": 0.07220480704112639,
+            "runs": 5,
+            "std": 0.02520041309578103
+          }
+        },
+        "disagreement_fallback": {
+          "coverage": {
+            "mean": 0.28826922731861065,
+            "runs": 5,
+            "std": 0.04231558770370156
+          },
+          "selection_accuracy": {
+            "mean": 0.8409439212712826,
+            "runs": 5,
+            "std": 0.05517262346388102
+          },
+          "success_all": {
+            "mean": 0.19858654555502753,
+            "runs": 5,
+            "std": 0.04005076896344826
+          },
+          "utility": {
+            "mean": 0.10890386379144437,
+            "runs": 5,
+            "std": 0.05176197319124084
+          },
+          "wrong_call_rate": {
+            "mean": 0.08968268176358314,
+            "runs": 5,
+            "std": 0.025117550061992237
+          }
+        },
+        "dr": {
+          "coverage": {
+            "mean": 0.28826922731861065,
+            "runs": 5,
+            "std": 0.04231558770370156
+          },
+          "selection_accuracy": {
+            "mean": 0.8409439212712826,
+            "runs": 5,
+            "std": 0.05517262346388102
+          },
+          "success_all": {
+            "mean": 0.19858654555502753,
+            "runs": 5,
+            "std": 0.04005076896344826
+          },
+          "utility": {
+            "mean": 0.10890386379144437,
+            "runs": 5,
+            "std": 0.05176197319124084
+          },
+          "wrong_call_rate": {
+            "mean": 0.08968268176358314,
+            "runs": 5,
+            "std": 0.025117550061992237
+          }
+        },
+        "ips": {
+          "coverage": {
+            "mean": 0.2805825344753427,
+            "runs": 5,
+            "std": 0.048837013583134296
+          },
+          "selection_accuracy": {
+            "mean": 0.8443601266689121,
+            "runs": 5,
+            "std": 0.030187972631244068
+          },
+          "success_all": {
+            "mean": 0.19760302615045547,
+            "runs": 5,
+            "std": 0.04110122422301612
+          },
+          "utility": {
+            "mean": 0.11462351782556827,
+            "runs": 5,
+            "std": 0.03499529728972893
+          },
+          "wrong_call_rate": {
+            "mean": 0.0829795083248872,
+            "runs": 5,
+            "std": 0.010749499124481554
+          }
+        },
+        "tfidf": {
+          "coverage": {
+            "mean": 0.4299564235974935,
+            "runs": 5,
+            "std": 0.07804866443227726
+          },
+          "selection_accuracy": {
+            "mean": 0.7047297878546928,
+            "runs": 5,
+            "std": 0.06917118513284641
+          },
+          "success_all": {
+            "mean": 0.18926741402760283,
+            "runs": 5,
+            "std": 0.027020045367291065
+          },
+          "utility": {
+            "mean": -0.051421595542287826,
+            "runs": 5,
+            "std": 0.04978504019661888
+          },
+          "wrong_call_rate": {
+            "mean": 0.24068900956989067,
+            "runs": 5,
+            "std": 0.059623730777854884
+          }
+        }
+      },
+      "promoted_runs": 0,
+      "test_groups_per_run": [
+        22,
+        23,
+        28,
+        20,
+        31
+      ],
+      "test_task_instances": 434
+    },
+    "support_gap": {
+      "contrasts": {
+        "blanket_support_abstain": {
+          "absolute_identified_runs": 0,
+          "mean_identification_width": 0.2111012449009201,
+          "mean_shared_unsupported": 0.0,
+          "point_identified_runs": 0
+        },
+        "direct": {
+          "absolute_identified_runs": 0,
+          "mean_identification_width": 0.10511933987389499,
+          "mean_shared_unsupported": 5.4,
+          "point_identified_runs": 0
+        },
+        "disagreement_fallback": {
+          "absolute_identified_runs": 0,
+          "mean_identification_width": 0.0,
+          "mean_shared_unsupported": 9.2,
+          "point_identified_runs": 5
+        },
+        "dr": {
+          "absolute_identified_runs": 0,
+          "mean_identification_width": 0.1315293415297983,
+          "mean_shared_unsupported": 5.0,
+          "point_identified_runs": 0
+        }
+      },
+      "policies": {
+        "blanket_support_abstain": {
+          "coverage": {
+            "mean": 0.21415329255607385,
+            "runs": 5,
+            "std": 0.07369791727481965
+          },
+          "selection_accuracy": {
+            "mean": 0.7790070373326731,
+            "runs": 5,
+            "std": 0.051900354439717904
+          },
+          "success_all": {
+            "mean": 0.13678711184319467,
+            "runs": 5,
+            "std": 0.060054532326775746
+          },
+          "utility": {
+            "mean": 0.05761591154584981,
+            "runs": 5,
+            "std": 0.051315805404827275
+          },
+          "wrong_call_rate": {
+            "mean": 0.07736618071287918,
+            "runs": 5,
+            "std": 0.021335118199728064
+          }
+        },
+        "calibration_switch": {
+          "coverage": {
+            "mean": 0.4299564235974935,
+            "runs": 5,
+            "std": 0.07804866443227726
+          },
+          "selection_accuracy": {
+            "mean": 0.7047297878546928,
+            "runs": 5,
+            "std": 0.06917118513284641
+          },
+          "success_all": {
+            "mean": 0.18926741402760283,
+            "runs": 5,
+            "std": 0.027020045367291065
+          },
+          "utility": {
+            "mean": -0.05519578863768375,
+            "runs": 5,
+            "std": 0.05029447603374283
+          },
+          "wrong_call_rate": {
+            "mean": 0.24068900956989067,
+            "runs": 5,
+            "std": 0.059623730777854884
+          }
+        },
+        "direct": {
+          "coverage": {
+            "mean": 0.2795990150707707,
+            "runs": 5,
+            "std": 0.06028781680234804
+          },
+          "selection_accuracy": {
+            "mean": 0.8549130240639148,
+            "runs": 5,
+            "std": 0.04243672835689375
+          },
+          "success_all": {
+            "mean": 0.20363705060553258,
+            "runs": 5,
+            "std": 0.03765434810847979
+          },
+          "utility": {
+            "mean": 0.12527736354121327,
+            "runs": 5,
+            "std": 0.022586099701230062
+          },
+          "wrong_call_rate": {
+            "mean": 0.07596196446523808,
+            "runs": 5,
+            "std": 0.025714609668043224
+          }
+        },
+        "disagreement_fallback": {
+          "coverage": {
+            "mean": 0.32319011564151895,
+            "runs": 5,
+            "std": 0.037473041399421564
+          },
+          "selection_accuracy": {
+            "mean": 0.7829401767766484,
+            "runs": 5,
+            "std": 0.02724219425089778
+          },
+          "success_all": {
+            "mean": 0.18251295372647452,
+            "runs": 5,
+            "std": 0.041474703752292126
+          },
+          "utility": {
+            "mean": 0.03900886542884051,
+            "runs": 5,
+            "std": 0.05076194851165356
+          },
+          "wrong_call_rate": {
+            "mean": 0.14067716191504448,
+            "runs": 5,
+            "std": 0.016828247493705206
+          }
+        },
+        "dr": {
+          "coverage": {
+            "mean": 0.28024158244886055,
+            "runs": 5,
+            "std": 0.05647774785233689
+          },
+          "selection_accuracy": {
+            "mean": 0.8112688269283712,
+            "runs": 5,
+            "std": 0.03604025694938121
+          },
+          "success_all": {
+            "mean": 0.17645234766586843,
+            "runs": 5,
+            "std": 0.043753087063029196
+          },
+          "utility": {
+            "mean": 0.07028062663461494,
+            "runs": 5,
+            "std": 0.04479291281214279
+          },
+          "wrong_call_rate": {
+            "mean": 0.1037892347829921,
+            "runs": 5,
+            "std": 0.026398036145958474
+          }
+        },
+        "ips": {
+          "coverage": {
+            "mean": 0.27907926650148646,
+            "runs": 5,
+            "std": 0.049004998773599984
+          },
+          "selection_accuracy": {
+            "mean": 0.8225485787171823,
+            "runs": 5,
+            "std": 0.05448506061899711
+          },
+          "success_all": {
+            "mean": 0.18204269769716655,
+            "runs": 5,
+            "std": 0.03830075096625932
+          },
+          "utility": {
+            "mean": 0.08261182631940375,
+            "runs": 5,
+            "std": 0.03701984367483
+          },
+          "wrong_call_rate": {
+            "mean": 0.0970365688043199,
+            "runs": 5,
+            "std": 0.02074994005587436
+          }
+        },
+        "tfidf": {
+          "coverage": {
+            "mean": 0.4299564235974935,
+            "runs": 5,
+            "std": 0.07804866443227726
+          },
+          "selection_accuracy": {
+            "mean": 0.7047297878546928,
+            "runs": 5,
+            "std": 0.06917118513284641
+          },
+          "success_all": {
+            "mean": 0.18926741402760283,
+            "runs": 5,
+            "std": 0.027020045367291065
+          },
+          "utility": {
+            "mean": -0.05519578863768375,
+            "runs": 5,
+            "std": 0.05029447603374283
+          },
+          "wrong_call_rate": {
+            "mean": 0.24068900956989067,
+            "runs": 5,
+            "std": 0.059623730777854884
+          }
+        }
+      },
+      "promoted_runs": 0,
+      "test_groups_per_run": [
+        22,
+        23,
+        28,
+        20,
+        31
+      ],
+      "test_task_instances": 434
+    }
+  },
+  "run_count": 45,
+  "source_sha256": {
+    "learning.py": "b45ea349be94e008975f59faf58fab6d5cfc1225ded39949e557590b3002e41b",
+    "policy_contrast.py": "1e7bc298ac06b3b3643ef84810490a653477775fd723ebc65be85ea39cdadd7f",
+    "public_data.py": "d5344b62f4006c013e67e73327905c017f2f8e7d8a2806d14ef200885f5ae5a0",
+    "public_learning.py": "e1b68a9a81ff34138fb07cd25d4b9bafc16d1b1c35bcd3508069d1cdd62d5986",
+    "sandbox.py": "e5dc4ab3278828a3ae68e9e5fa692b39c720b05629133d11cf2b6fa12359c57e",
+    "v2_experiments.py": "15b0a2611db13997486c2ada8d115d001e889976e7cb4107188c4efde4d550bc",
+    "v2_learning.py": "ff7fc2e118532ea5f0ef27452e54a8b7d9a9789f5c6e221df9d455085dc4ebc6"
+  },
+  "synthetic": {
+    "clean": {
+      "ope_errors": {
+        "component_direct": {
+          "direct": {
+            "mean": 0.009794884878951913,
+            "runs": 30,
+            "std": 0.005584694834410546
+          },
+          "dr": {
+            "mean": 0.0025928836844009706,
+            "runs": 30,
+            "std": 0.0017329228433904998
+          }
+        },
+        "full_direct": {
+          "direct": {
+            "mean": 0.0016268221259451321,
+            "runs": 30,
+            "std": 0.0037906628762387324
+          },
+          "dr": {
+            "mean": 0.0014372953518931178,
+            "runs": 30,
+            "std": 0.003986256540245608
+          }
+        },
+        "nominal_direct": {
+          "direct": {
+            "mean": 0.001639970274275652,
+            "runs": 30,
+            "std": 0.0015381036838140296
+          },
+          "dr": {
+            "mean": 0.0010175871191547893,
+            "runs": 30,
+            "std": 0.001666451537154558
+          }
+        }
+      },
+      "policies": {
+        "component_direct": {
+          "cost_per_success": {
+            "mean": 0.06604831165506218,
+            "runs": 5,
+            "std": 0.004471815743106444
+          },
+          "coverage": {
+            "mean": 0.6552999999999999,
+            "runs": 5,
+            "std": 0.01680252957146634
+          },
+          "success_all_tasks": {
+            "mean": 0.6277,
+            "runs": 5,
+            "std": 0.008700574693662474
+          },
+          "unsafe_rate": {
+            "mean": 0.0,
+            "runs": 5,
+            "std": 0.0
+          },
+          "utility": {
+            "mean": 0.586014,
+            "runs": 5,
+            "std": 0.009511966903590451
+          }
+        },
+        "full_direct": {
+          "cost_per_success": {
+            "mean": 0.05712488761266623,
+            "runs": 5,
+            "std": 0.0012855667629204778
+          },
+          "coverage": {
+            "mean": 0.6323000000000001,
+            "runs": 5,
+            "std": 0.009846319109189993
+          },
+          "success_all_tasks": {
+            "mean": 0.6277,
+            "runs": 5,
+            "std": 0.008700574693662474
+          },
+          "unsafe_rate": {
+            "mean": 0.0,
+            "runs": 5,
+            "std": 0.0
+          },
+          "utility": {
+            "mean": 0.5918465000000002,
+            "runs": 5,
+            "std": 0.008580253055708746
+          }
+        },
+        "full_dr": {
+          "cost_per_success": {
+            "mean": 0.06409554105019469,
+            "runs": 5,
+            "std": 0.001881157071278144
+          },
+          "coverage": {
+            "mean": 0.6465,
+            "runs": 5,
+            "std": 0.01789553016817328
+          },
+          "success_all_tasks": {
+            "mean": 0.6277,
+            "runs": 5,
+            "std": 0.008700574693662474
+          },
+          "unsafe_rate": {
+            "mean": 0.0,
+            "runs": 5,
+            "std": 0.0
+          },
+          "utility": {
+            "mean": 0.5874560000000001,
+            "runs": 5,
+            "std": 0.007155480329789179
+          }
+        },
+        "ips": {
+          "cost_per_success": {
+            "mean": 0.08623448938869373,
+            "runs": 5,
+            "std": 0.00725589406690934
+          },
+          "coverage": {
+            "mean": 0.6693999999999999,
+            "runs": 5,
+            "std": 0.02077378155271688
+          },
+          "success_all_tasks": {
+            "mean": 0.6277,
+            "runs": 5,
+            "std": 0.008700574693662474
+          },
+          "unsafe_rate": {
+            "mean": 0.021,
+            "runs": 5,
+            "std": 0.012298373876248842
+          },
+          "utility": {
+            "mean": 0.5279695000000001,
+            "runs": 5,
+            "std": 0.03148064630650076
+          }
+        },
+        "nominal_direct": {
+          "cost_per_success": {
+            "mean": 0.05661154498734043,
+            "runs": 5,
+            "std": 0.0008066634887304494
+          },
+          "coverage": {
+            "mean": 0.6291,
+            "runs": 5,
+            "std": 0.009639761407835762
+          },
+          "success_all_tasks": {
+            "mean": 0.6277,
+            "runs": 5,
+            "std": 0.008700574693662474
+          },
+          "unsafe_rate": {
+            "mean": 0.0,
+            "runs": 5,
+            "std": 0.0
+          },
+          "utility": {
+            "mean": 0.5921665,
+            "runs": 5,
+            "std": 0.008361439319877857
+          }
+        },
+        "nominal_dr": {
+          "cost_per_success": {
+            "mean": 0.06778597711104946,
+            "runs": 5,
+            "std": 0.0031184640314683085
+          },
+          "coverage": {
+            "mean": 0.6433,
+            "runs": 5,
+            "std": 0.016713018877509863
+          },
+          "success_all_tasks": {
+            "mean": 0.6277,
+            "runs": 5,
+            "std": 0.008700574693662474
+          },
+          "unsafe_rate": {
+            "mean": 0.0,
+            "runs": 5,
+            "std": 0.0
+          },
+          "utility": {
+            "mean": 0.585151,
+            "runs": 5,
+            "std": 0.008345210752281817
+          }
+        }
+      }
+    },
+    "cost_sensitive": {
+      "ope_errors": {
+        "component_direct": {
+          "direct": {
+            "mean": 0.012725054992267709,
+            "runs": 30,
+            "std": 0.010457360688113485
+          },
+          "dr": {
+            "mean": 0.011797900508662496,
+            "runs": 30,
+            "std": 0.007392316440136761
+          }
+        },
+        "full_direct": {
+          "direct": {
+            "mean": 0.017811184337613827,
+            "runs": 30,
+            "std": 0.009111020343938353
+          },
+          "dr": {
+            "mean": 0.00804275013567423,
+            "runs": 30,
+            "std": 0.007086456250575041
+          }
+        },
+        "nominal_direct": {
+          "direct": {
+            "mean": 0.013831588579379247,
+            "runs": 30,
+            "std": 0.01014810096246738
+          },
+          "dr": {
+            "mean": 0.00922461314698453,
+            "runs": 30,
+            "std": 0.006750066835048353
+          }
+        }
+      },
+      "policies": {
+        "component_direct": {
+          "cost_per_success": {
+            "mean": 0.07318421272675363,
+            "runs": 5,
+            "std": 0.0042543592807484714
+          },
+          "coverage": {
+            "mean": 0.6852000000000001,
+            "runs": 5,
+            "std": 0.017904608345339478
+          },
+          "success_all_tasks": {
+            "mean": 0.5671999999999999,
+            "runs": 5,
+            "std": 0.0059329587896765216
+          },
+          "unsafe_rate": {
+            "mean": 0.0077,
+            "runs": 5,
+            "std": 0.0013509256086106298
+          },
+          "utility": {
+            "mean": 0.4261094999999999,
+            "runs": 5,
+            "std": 0.011502566344081653
+          }
+        },
+        "full_direct": {
+          "cost_per_success": {
+            "mean": 0.07176282741801232,
+            "runs": 5,
+            "std": 0.0036902792247048505
+          },
+          "coverage": {
+            "mean": 0.6717000000000001,
+            "runs": 5,
+            "std": 0.01818859532784213
+          },
+          "success_all_tasks": {
+            "mean": 0.565,
+            "runs": 5,
+            "std": 0.008062257748298536
+          },
+          "unsafe_rate": {
+            "mean": 0.0089,
+            "runs": 5,
+            "std": 0.003049590136395381
+          },
+          "utility": {
+            "mean": 0.424371,
+            "runs": 5,
+            "std": 0.011100688407706963
+          }
+        },
+        "full_dr": {
+          "cost_per_success": {
+            "mean": 0.07435839046621254,
+            "runs": 5,
+            "std": 0.005442173430883999
+          },
+          "coverage": {
+            "mean": 0.693,
+            "runs": 5,
+            "std": 0.026988423444136173
+          },
+          "success_all_tasks": {
+            "mean": 0.5684,
+            "runs": 5,
+            "std": 0.014046351839534704
+          },
+          "unsafe_rate": {
+            "mean": 0.009600000000000001,
+            "runs": 5,
+            "std": 0.0019811612756158946
+          },
+          "utility": {
+            "mean": 0.42124949999999994,
+            "runs": 5,
+            "std": 0.013767247523561118
+          }
+        },
+        "ips": {
+          "cost_per_success": {
+            "mean": 0.0859598438563989,
+            "runs": 5,
+            "std": 0.0019033784168117083
+          },
+          "coverage": {
+            "mean": 0.7182999999999999,
+            "runs": 5,
+            "std": 0.01770804901732545
+          },
+          "success_all_tasks": {
+            "mean": 0.5730999999999999,
+            "runs": 5,
+            "std": 0.014406595711687049
+          },
+          "unsafe_rate": {
+            "mean": 0.0252,
+            "runs": 5,
+            "std": 0.009169242062460779
+          },
+          "utility": {
+            "mean": 0.370267,
+            "runs": 5,
+            "std": 0.02535717030003548
+          }
+        },
+        "nominal_direct": {
+          "cost_per_success": {
+            "mean": 0.07265557414829418,
+            "runs": 5,
+            "std": 0.0027476825377843878
+          },
+          "coverage": {
+            "mean": 0.6769000000000001,
+            "runs": 5,
+            "std": 0.01405524813014694
+          },
+          "success_all_tasks": {
+            "mean": 0.5638,
+            "runs": 5,
+            "std": 0.005540758070877984
+          },
+          "unsafe_rate": {
+            "mean": 0.0078,
+            "runs": 5,
+            "std": 0.0020186629238186354
+          },
+          "utility": {
+            "mean": 0.4242585,
+            "runs": 5,
+            "std": 0.008819629137611185
+          }
+        },
+        "nominal_dr": {
+          "cost_per_success": {
+            "mean": 0.07596217453452234,
+            "runs": 5,
+            "std": 0.003734373677837077
+          },
+          "coverage": {
+            "mean": 0.7027,
+            "runs": 5,
+            "std": 0.019341018587447745
+          },
+          "success_all_tasks": {
+            "mean": 0.5718,
+            "runs": 5,
+            "std": 0.01091214919252852
+          },
+          "unsafe_rate": {
+            "mean": 0.0102,
+            "runs": 5,
+            "std": 0.0025149552679918584
+          },
+          "utility": {
+            "mean": 0.41986099999999993,
+            "runs": 5,
+            "std": 0.011359639711496157
+          }
+        }
+      }
+    },
+    "latency_sensitive": {
+      "ope_errors": {
+        "component_direct": {
+          "direct": {
+            "mean": 0.013901154102302683,
+            "runs": 30,
+            "std": 0.009846349438870493
+          },
+          "dr": {
+            "mean": 0.013831359254095184,
+            "runs": 30,
+            "std": 0.007123783735280198
+          }
+        },
+        "full_direct": {
+          "direct": {
+            "mean": 0.016616430410062052,
+            "runs": 30,
+            "std": 0.00891104139697622
+          },
+          "dr": {
+            "mean": 0.01114008116639425,
+            "runs": 30,
+            "std": 0.006273643250700662
+          }
+        },
+        "nominal_direct": {
+          "direct": {
+            "mean": 0.019712943353225577,
+            "runs": 30,
+            "std": 0.010170157226070155
+          },
+          "dr": {
+            "mean": 0.01143706492762417,
+            "runs": 30,
+            "std": 0.006056002851269864
+          }
+        }
+      },
+      "policies": {
+        "component_direct": {
+          "cost_per_success": {
+            "mean": 0.07893800687429657,
+            "runs": 5,
+            "std": 0.005004145874099155
+          },
+          "coverage": {
+            "mean": 0.6992,
+            "runs": 5,
+            "std": 0.01732628061645084
+          },
+          "success_all_tasks": {
+            "mean": 0.5705,
+            "runs": 5,
+            "std": 0.004808846015417808
+          },
+          "unsafe_rate": {
+            "mean": 0.007300000000000001,
+            "runs": 5,
+            "std": 0.0016807736313971615
+          },
+          "utility": {
+            "mean": 0.4343585,
+            "runs": 5,
+            "std": 0.008827612856826013
+          }
+        },
+        "full_direct": {
+          "cost_per_success": {
+            "mean": 0.07652868520185128,
+            "runs": 5,
+            "std": 0.003458493832848901
+          },
+          "coverage": {
+            "mean": 0.689,
+            "runs": 5,
+            "std": 0.00601040764008565
+          },
+          "success_all_tasks": {
+            "mean": 0.5722,
+            "runs": 5,
+            "std": 0.0050695167422546185
+          },
+          "unsafe_rate": {
+            "mean": 0.008400000000000001,
+            "runs": 5,
+            "std": 0.0021908902300206644
+          },
+          "utility": {
+            "mean": 0.43773999999999996,
+            "runs": 5,
+            "std": 0.009111374759058044
+          }
+        },
+        "full_dr": {
+          "cost_per_success": {
+            "mean": 0.07921209280997896,
+            "runs": 5,
+            "std": 0.004394961671559346
+          },
+          "coverage": {
+            "mean": 0.7084999999999999,
+            "runs": 5,
+            "std": 0.007474958193863024
+          },
+          "success_all_tasks": {
+            "mean": 0.5745,
+            "runs": 5,
+            "std": 0.011979148550710937
+          },
+          "unsafe_rate": {
+            "mean": 0.0099,
+            "runs": 5,
+            "std": 0.0026551836094703507
+          },
+          "utility": {
+            "mean": 0.43260599999999994,
+            "runs": 5,
+            "std": 0.017477143609583357
+          }
+        },
+        "ips": {
+          "cost_per_success": {
+            "mean": 0.09329663733075463,
+            "runs": 5,
+            "std": 0.004692940809034168
+          },
+          "coverage": {
+            "mean": 0.7382000000000001,
+            "runs": 5,
+            "std": 0.011997916485790351
+          },
+          "success_all_tasks": {
+            "mean": 0.5793,
+            "runs": 5,
+            "std": 0.012013534034579514
+          },
+          "unsafe_rate": {
+            "mean": 0.0224,
+            "runs": 5,
+            "std": 0.007223226425912453
+          },
+          "utility": {
+            "mean": 0.38691699999999996,
+            "runs": 5,
+            "std": 0.016704871332937587
+          }
+        },
+        "nominal_direct": {
+          "cost_per_success": {
+            "mean": 0.0789258516205423,
+            "runs": 5,
+            "std": 0.003985854866368474
+          },
+          "coverage": {
+            "mean": 0.6994,
+            "runs": 5,
+            "std": 0.014205632685663772
+          },
+          "success_all_tasks": {
+            "mean": 0.5717999999999999,
+            "runs": 5,
+            "std": 0.005740209055426449
+          },
+          "unsafe_rate": {
+            "mean": 0.0076,
+            "runs": 5,
+            "std": 0.0020432816741702553
+          },
+          "utility": {
+            "mean": 0.4354775,
+            "runs": 5,
+            "std": 0.00990023042661128
+          }
+        },
+        "nominal_dr": {
+          "cost_per_success": {
+            "mean": 0.07916924274327244,
+            "runs": 5,
+            "std": 0.001876507518602418
+          },
+          "coverage": {
+            "mean": 0.7077,
+            "runs": 5,
+            "std": 0.015530614926653755
+          },
+          "success_all_tasks": {
+            "mean": 0.5751,
+            "runs": 5,
+            "std": 0.01053802638068438
+          },
+          "unsafe_rate": {
+            "mean": 0.0097,
+            "runs": 5,
+            "std": 0.0022248595461286987
+          },
+          "utility": {
+            "mean": 0.433156,
+            "runs": 5,
+            "std": 0.011695438159812544
+          }
+        }
+      }
+    },
+    "linear": {
+      "ope_errors": {
+        "component_direct": {
+          "direct": {
+            "mean": 0.013938658910412294,
+            "runs": 30,
+            "std": 0.010110312600800623
+          },
+          "dr": {
+            "mean": 0.02716427075528431,
+            "runs": 30,
+            "std": 0.025318966015063886
+          }
+        },
+        "full_direct": {
+          "direct": {
+            "mean": 0.013938658910410236,
+            "runs": 30,
+            "std": 0.010110312600794091
+          },
+          "dr": {
+            "mean": 0.027164270755287934,
+            "runs": 30,
+            "std": 0.02531896601506732
+          }
+        },
+        "nominal_direct": {
+          "direct": {
+            "mean": 0.08701629922076666,
+            "runs": 30,
+            "std": 0.019742349459239278
+          },
+          "dr": {
+            "mean": 0.02398952054603056,
+            "runs": 30,
+            "std": 0.02328754573025087
+          }
+        }
+      },
+      "policies": {
+        "component_direct": {
+          "cost_per_success": {
+            "mean": 0.09798620249682881,
+            "runs": 5,
+            "std": 0.0017810078968739454
+          },
+          "coverage": {
+            "mean": 0.6685,
+            "runs": 5,
+            "std": 0.01695213850816469
+          },
+          "success_all_tasks": {
+            "mean": 0.5164,
+            "runs": 5,
+            "std": 0.013704014010500731
+          },
+          "unsafe_rate": {
+            "mean": 0.0,
+            "runs": 5,
+            "std": 0.0
+          },
+          "utility": {
+            "mean": 0.465803,
+            "runs": 5,
+            "std": 0.012538164414099882
+          }
+        },
+        "full_direct": {
+          "cost_per_success": {
+            "mean": 0.09798620249682881,
+            "runs": 5,
+            "std": 0.0017810078968739454
+          },
+          "coverage": {
+            "mean": 0.6685,
+            "runs": 5,
+            "std": 0.01695213850816469
+          },
+          "success_all_tasks": {
+            "mean": 0.5164,
+            "runs": 5,
+            "std": 0.013704014010500731
+          },
+          "unsafe_rate": {
+            "mean": 0.0,
+            "runs": 5,
+            "std": 0.0
+          },
+          "utility": {
+            "mean": 0.465803,
+            "runs": 5,
+            "std": 0.012538164414099882
+          }
+        },
+        "full_dr": {
+          "cost_per_success": {
+            "mean": 0.12603730558573806,
+            "runs": 5,
+            "std": 0.02207516625946715
+          },
+          "coverage": {
+            "mean": 0.7477,
+            "runs": 5,
+            "std": 0.011909030187215081
+          },
+          "success_all_tasks": {
+            "mean": 0.5467000000000001,
+            "runs": 5,
+            "std": 0.014241664228593503
+          },
+          "unsafe_rate": {
+            "mean": 0.0,
+            "runs": 5,
+            "std": 0.0
+          },
+          "utility": {
+            "mean": 0.47371300000000005,
+            "runs": 5,
+            "std": 0.009888983043013045
+          }
+        },
+        "ips": {
+          "cost_per_success": {
+            "mean": 0.11489406818128467,
+            "runs": 5,
+            "std": 0.004440193520844276
+          },
+          "coverage": {
+            "mean": 0.7516,
+            "runs": 5,
+            "std": 0.009154233993076607
+          },
+          "success_all_tasks": {
+            "mean": 0.5441,
+            "runs": 5,
+            "std": 0.010772650555921713
+          },
+          "unsafe_rate": {
+            "mean": 0.0,
+            "runs": 5,
+            "std": 0.0
+          },
+          "utility": {
+            "mean": 0.4786205,
+            "runs": 5,
+            "std": 0.011547324148909988
+          }
+        },
+        "nominal_direct": {
+          "cost_per_success": {
+            "mean": 0.09695178712528638,
+            "runs": 5,
+            "std": 0.0013950056507321307
+          },
+          "coverage": {
+            "mean": 0.6683,
+            "runs": 5,
+            "std": 0.016660582222719593
+          },
+          "success_all_tasks": {
+            "mean": 0.5161,
+            "runs": 5,
+            "std": 0.013258959235173774
+          },
+          "unsafe_rate": {
+            "mean": 0.0,
+            "runs": 5,
+            "std": 0.0
+          },
+          "utility": {
+            "mean": 0.46607049999999994,
+            "runs": 5,
+            "std": 0.012343690366944592
+          }
+        },
+        "nominal_dr": {
+          "cost_per_success": {
+            "mean": 0.11610674767164893,
+            "runs": 5,
+            "std": 0.003723610162027357
+          },
+          "coverage": {
+            "mean": 0.7503,
+            "runs": 5,
+            "std": 0.009411429221961956
+          },
+          "success_all_tasks": {
+            "mean": 0.545,
+            "runs": 5,
+            "std": 0.011710038428630373
+          },
+          "unsafe_rate": {
+            "mean": 0.0,
+            "runs": 5,
+            "std": 0.0
+          },
+          "utility": {
+            "mean": 0.477828,
+            "runs": 5,
+            "std": 0.010643243073659454
+          }
+        }
+      }
+    },
+    "noisy": {
+      "ope_errors": {
+        "component_direct": {
+          "direct": {
+            "mean": 0.015543852198796584,
+            "runs": 30,
+            "std": 0.009817616391161714
+          },
+          "dr": {
+            "mean": 0.011961210372140913,
+            "runs": 30,
+            "std": 0.006621210830120235
+          }
+        },
+        "full_direct": {
+          "direct": {
+            "mean": 0.018329443104978648,
+            "runs": 30,
+            "std": 0.011089318149175357
+          },
+          "dr": {
+            "mean": 0.011807767534407524,
+            "runs": 30,
+            "std": 0.0072979409736213825
+          }
+        },
+        "nominal_direct": {
+          "direct": {
+            "mean": 0.01786431751959974,
+            "runs": 30,
+            "std": 0.010621668818077811
+          },
+          "dr": {
+            "mean": 0.01098593374985856,
+            "runs": 30,
+            "std": 0.006391037304644713
+          }
+        }
+      },
+      "policies": {
+        "component_direct": {
+          "cost_per_success": {
+            "mean": 0.09903457332837426,
+            "runs": 5,
+            "std": 0.006753519855598717
+          },
+          "coverage": {
+            "mean": 0.7405000000000002,
+            "runs": 5,
+            "std": 0.021321937060220397
+          },
+          "success_all_tasks": {
+            "mean": 0.5782,
+            "runs": 5,
+            "std": 0.010127931674335094
+          },
+          "unsafe_rate": {
+            "mean": 0.0061,
+            "runs": 5,
+            "std": 0.0029240383034426893
+          },
+          "utility": {
+            "mean": 0.5073525,
+            "runs": 5,
+            "std": 0.00988857168654807
+          }
+        },
+        "full_direct": {
+          "cost_per_success": {
+            "mean": 0.09220888358872016,
+            "runs": 5,
+            "std": 0.006043281536036718
+          },
+          "coverage": {
+            "mean": 0.7361000000000001,
+            "runs": 5,
+            "std": 0.015327263291272838
+          },
+          "success_all_tasks": {
+            "mean": 0.5814,
+            "runs": 5,
+            "std": 0.00730924072664187
+          },
+          "unsafe_rate": {
+            "mean": 0.0064,
+            "runs": 5,
+            "std": 0.0027248853186877427
+          },
+          "utility": {
+            "mean": 0.513526,
+            "runs": 5,
+            "std": 0.009746213784080476
+          }
+        },
+        "full_dr": {
+          "cost_per_success": {
+            "mean": 0.09850914811470765,
+            "runs": 5,
+            "std": 0.005407109487262316
+          },
+          "coverage": {
+            "mean": 0.7375,
+            "runs": 5,
+            "std": 0.007921489758877447
+          },
+          "success_all_tasks": {
+            "mean": 0.5779,
+            "runs": 5,
+            "std": 0.005128352561983239
+          },
+          "unsafe_rate": {
+            "mean": 0.008400000000000001,
+            "runs": 5,
+            "std": 0.0028809720581775868
+          },
+          "utility": {
+            "mean": 0.5028900000000001,
+            "runs": 5,
+            "std": 0.009535415892870127
+          }
+        },
+        "ips": {
+          "cost_per_success": {
+            "mean": 0.11268707356521976,
+            "runs": 5,
+            "std": 0.005453452324976682
+          },
+          "coverage": {
+            "mean": 0.7586,
+            "runs": 5,
+            "std": 0.011765415419780113
+          },
+          "success_all_tasks": {
+            "mean": 0.5740999999999999,
+            "runs": 5,
+            "std": 0.0161260658562465
+          },
+          "unsafe_rate": {
+            "mean": 0.0142,
+            "runs": 5,
+            "std": 0.008393449827097318
+          },
+          "utility": {
+            "mean": 0.47653599999999996,
+            "runs": 5,
+            "std": 0.025535614810495547
+          }
+        },
+        "nominal_direct": {
+          "cost_per_success": {
+            "mean": 0.09491133531126461,
+            "runs": 5,
+            "std": 0.005009317655149448
+          },
+          "coverage": {
+            "mean": 0.7305,
+            "runs": 5,
+            "std": 0.01724093964956668
+          },
+          "success_all_tasks": {
+            "mean": 0.5776,
+            "runs": 5,
+            "std": 0.008995832368380396
+          },
+          "unsafe_rate": {
+            "mean": 0.005,
+            "runs": 5,
+            "std": 0.0032596012026013246
+          },
+          "utility": {
+            "mean": 0.5117404999999999,
+            "runs": 5,
+            "std": 0.007300350890539445
+          }
+        },
+        "nominal_dr": {
+          "cost_per_success": {
+            "mean": 0.10025459073977772,
+            "runs": 5,
+            "std": 0.005782772314236573
+          },
+          "coverage": {
+            "mean": 0.7407999999999999,
+            "runs": 5,
+            "std": 0.010287127879053509
+          },
+          "success_all_tasks": {
+            "mean": 0.5786,
+            "runs": 5,
+            "std": 0.009229030284921634
+          },
+          "unsafe_rate": {
+            "mean": 0.0081,
+            "runs": 5,
+            "std": 0.0028151376520518493
+          },
+          "utility": {
+            "mean": 0.502737,
+            "runs": 5,
+            "std": 0.010394533779828734
+          }
+        }
+      }
+    },
+    "shifted": {
+      "ope_errors": {
+        "component_direct": {
+          "direct": {
+            "mean": 0.09322744207074117,
+            "runs": 30,
+            "std": 0.015188265993438897
+          },
+          "dr": {
+            "mean": 0.024737373321971238,
+            "runs": 30,
+            "std": 0.016199565830320516
+          }
+        },
+        "full_direct": {
+          "direct": {
+            "mean": 0.09481928818951599,
+            "runs": 30,
+            "std": 0.015366198478329552
+          },
+          "dr": {
+            "mean": 0.022702581045820836,
+            "runs": 30,
+            "std": 0.013036399114500781
+          }
+        },
+        "nominal_direct": {
+          "direct": {
+            "mean": 0.095613632211862,
+            "runs": 30,
+            "std": 0.014909522928349454
+          },
+          "dr": {
+            "mean": 0.026202779073493835,
+            "runs": 30,
+            "std": 0.017225539961351823
+          }
+        }
+      },
+      "policies": {
+        "component_direct": {
+          "cost_per_success": {
+            "mean": 0.10873355037457055,
+            "runs": 5,
+            "std": 0.006769759705695562
+          },
+          "coverage": {
+            "mean": 0.736,
+            "runs": 5,
+            "std": 0.021198466925700078
+          },
+          "success_all_tasks": {
+            "mean": 0.4662,
+            "runs": 5,
+            "std": 0.002885307609250691
+          },
+          "unsafe_rate": {
+            "mean": 0.011,
+            "runs": 5,
+            "std": 0.001
+          },
+          "utility": {
+            "mean": 0.391749,
+            "runs": 5,
+            "std": 0.003305958446502315
+          }
+        },
+        "full_direct": {
+          "cost_per_success": {
+            "mean": 0.1027945544525695,
+            "runs": 5,
+            "std": 0.0080322146158685
+          },
+          "coverage": {
+            "mean": 0.726,
+            "runs": 5,
+            "std": 0.022563798439092682
+          },
+          "success_all_tasks": {
+            "mean": 0.4657,
+            "runs": 5,
+            "std": 0.0070586825966323
+          },
+          "unsafe_rate": {
+            "mean": 0.0105,
+            "runs": 5,
+            "std": 0.001767766952966369
+          },
+          "utility": {
+            "mean": 0.39520750000000004,
+            "runs": 5,
+            "std": 0.011245317358794298
+          }
+        },
+        "full_dr": {
+          "cost_per_success": {
+            "mean": 0.1089564959816477,
+            "runs": 5,
+            "std": 0.009264215731625681
+          },
+          "coverage": {
+            "mean": 0.7275,
+            "runs": 5,
+            "std": 0.027136230394069077
+          },
+          "success_all_tasks": {
+            "mean": 0.46240000000000003,
+            "runs": 5,
+            "std": 0.007821444879304577
+          },
+          "unsafe_rate": {
+            "mean": 0.014299999999999998,
+            "runs": 5,
+            "std": 0.002489979919597746
+          },
+          "utility": {
+            "mean": 0.38164549999999997,
+            "runs": 5,
+            "std": 0.005961824227952392
+          }
+        },
+        "ips": {
+          "cost_per_success": {
+            "mean": 0.12287611950777706,
+            "runs": 5,
+            "std": 0.003709796655393671
+          },
+          "coverage": {
+            "mean": 0.7534000000000001,
+            "runs": 5,
+            "std": 0.015384245187853711
+          },
+          "success_all_tasks": {
+            "mean": 0.46210000000000007,
+            "runs": 5,
+            "std": 0.007065762520775788
+          },
+          "unsafe_rate": {
+            "mean": 0.017599999999999998,
+            "runs": 5,
+            "std": 0.004788005847949645
+          },
+          "utility": {
+            "mean": 0.366318,
+            "runs": 5,
+            "std": 0.004677219192533087
+          }
+        },
+        "nominal_direct": {
+          "cost_per_success": {
+            "mean": 0.1041422566218543,
+            "runs": 5,
+            "std": 0.005721160418733819
+          },
+          "coverage": {
+            "mean": 0.7260000000000001,
+            "runs": 5,
+            "std": 0.007681145747868628
+          },
+          "success_all_tasks": {
+            "mean": 0.4641,
+            "runs": 5,
+            "std": 0.01156179051877345
+          },
+          "unsafe_rate": {
+            "mean": 0.011,
+            "runs": 5,
+            "std": 0.0016955824957813172
+          },
+          "utility": {
+            "mean": 0.39259849999999996,
+            "runs": 5,
+            "std": 0.012126666457646162
+          }
+        },
+        "nominal_dr": {
+          "cost_per_success": {
+            "mean": 0.1101925532728606,
+            "runs": 5,
+            "std": 0.007695236801473709
+          },
+          "coverage": {
+            "mean": 0.7332000000000001,
+            "runs": 5,
+            "std": 0.021767521677949448
+          },
+          "success_all_tasks": {
+            "mean": 0.46449999999999997,
+            "runs": 5,
+            "std": 0.00266926956300783
+          },
+          "unsafe_rate": {
+            "mean": 0.0149,
+            "runs": 5,
+            "std": 0.0034351128074635337
+          },
+          "utility": {
+            "mean": 0.381434,
+            "runs": 5,
+            "std": 0.006412622464717556
+          }
+        }
+      }
+    }
+  }
+}

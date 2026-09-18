@@ -1,0 +1,49 @@
+{
+  "only": "all",
+  "public_settings": [
+    "native",
+    "authorization",
+    "support_gap"
+  ],
+  "quick": false,
+  "seeds": [
+    7,
+    17,
+    23,
+    31,
+    47
+  ],
+  "source_sha256": {
+    "learning.py": "b45ea349be94e008975f59faf58fab6d5cfc1225ded39949e557590b3002e41b",
+    "policy_contrast.py": "1e7bc298ac06b3b3643ef84810490a653477775fd723ebc65be85ea39cdadd7f",
+    "public_data.py": "d5344b62f4006c013e67e73327905c017f2f8e7d8a2806d14ef200885f5ae5a0",
+    "public_learning.py": "e1b68a9a81ff34138fb07cd25d4b9bafc16d1b1c35bcd3508069d1cdd62d5986",
+    "sandbox.py": "e5dc4ab3278828a3ae68e9e5fa692b39c720b05629133d11cf2b6fa12359c57e",
+    "v2_experiments.py": "15b0a2611db13997486c2ada8d115d001e889976e7cb4107188c4efde4d550bc",
+    "v2_learning.py": "ff7fc2e118532ea5f0ef27452e54a8b7d9a9789f5c6e221df9d455085dc4ebc6"
+  },
+  "synthetic_settings": {
+    "clean": {
+      "scenario": "clean"
+    },
+    "cost_sensitive": {
+      "cost_weight": 3.0,
+      "scenario": "noisy"
+    },
+    "latency_sensitive": {
+      "latency_weight": 0.5,
+      "scenario": "noisy"
+    },
+    "linear": {
+      "model": "linear",
+      "scenario": "noisy"
+    },
+    "noisy": {
+      "scenario": "noisy"
+    },
+    "shifted": {
+      "scenario": "noisy",
+      "test_scenario": "shifted"
+    }
+  }
+}

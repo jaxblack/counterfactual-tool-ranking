@@ -10,8 +10,13 @@ const directory = path.dirname(fileURLToPath(import.meta.url));
 const root = path.dirname(directory);
 const aggregate = JSON.parse(await fs.readFile(path.join(root, 'artifacts/v1/aggregate.json'), 'utf8'));
 const mcpSummary = JSON.parse(await fs.readFile(path.join(root, 'artifacts/mcp-v1/summary.json'), 'utf8'));
+const extension = JSON.parse(await fs.readFile(path.join(root, 'artifacts/v2/aggregate.json'), 'utf8'));
+const diagnostics = JSON.parse(await fs.readFile(path.join(root, 'artifacts/v2/diagnostics.json'), 'utf8'));
+const publicSummaries = await Promise.all([7, 17, 23, 31, 47].map(async seed =>
+  JSON.parse(await fs.readFile(path.join(root, `artifacts/v2/public-native-${seed}/summary.json`), 'utf8'))));
 const original = await fs.readFile(path.join(directory, 'manuscript.md'), 'utf8');
 assert.equal(aggregate.run_count, 45);
+assert.equal(extension.run_count, 45);
 assert.equal(aggregate.manifest.seeds.length, 5);
 const settingNames = Object.keys(aggregate.settings);
 const learnedPolicies = ['rules', 'direct', 'ips', 'dr', 'conservative_direct', 'conservative_dr'];
@@ -44,6 +49,49 @@ const noisyTable = table(
   }),
 );
 const number = (setting, policy, metric = 'utility') => format(aggregate.settings[setting].policies[policy][metric].mean);
+const controlSettings = ['clean', 'noisy', 'shifted', 'linear', 'cost_sensitive', 'latency_sensitive'];
+const controlsTable = table(
+  ['Setting', 'Nominal DM', 'Full DM', 'Component DM', 'Nominal DR', 'Full DR'],
+  controlSettings.map(setting => {
+    const errors = extension.synthetic[setting].ope_errors;
+    return [setting.replaceAll('_', ' '), ...[
+      ['nominal_direct', 'direct'], ['full_direct', 'direct'], ['component_direct', 'direct'],
+      ['nominal_direct', 'dr'], ['full_direct', 'dr'],
+    ].map(([nuisance, estimator]) => format(errors[nuisance][estimator].mean))];
+  }),
+);
+const publicTable = table(
+  ['Policy', 'Selection accuracy %', 'Balanced accuracy %', 'Coverage %'],
+  Object.entries(diagnostics.native_means).map(([policy, values]) => [
+    policy.replaceAll('_', ' '), ...['accuracy', 'balanced_accuracy', 'coverage'].map(metric => format(values[metric] * 100, 2)),
+  ]),
+);
+const multipleCandidateTable = table(
+  ['Policy', 'Selection accuracy %', 'Balanced accuracy %', 'Coverage %'],
+  Object.entries(diagnostics.multi_candidate_means).map(([policy, values]) => [
+    policy.replaceAll('_', ' '), ...['accuracy', 'balanced_accuracy', 'coverage'].map(metric => format(values[metric] * 100, 2)),
+  ]),
+);
+const modelTable = table(
+  ['Model', 'Tasks', 'Should-call correct', 'Should-abstain correct', 'JSON valid %', 'Schema valid/known call %'],
+  Object.entries(diagnostics.models).map(([name, model]) => [
+    name, model.tasks, `${model.per_category.multiple.correct}/${model.per_category.multiple.tasks}`,
+    `${model.per_category.irrelevance.correct}/${model.per_category.irrelevance.tasks}`,
+    format(model.format_validity * 100, 2), format(model.schema_validity_among_known_calls * 100, 2),
+  ]),
+);
+const matchedTable = table(
+  ['Matched model subset', 'Policy', 'Selection accuracy %', 'Balanced accuracy %'],
+  Object.entries(diagnostics.matched_means).flatMap(([model, policies]) =>
+    Object.entries(policies).map(([policy, values]) => [model, policy.replaceAll('_', ' '), format(values.accuracy * 100, 2), format(values.balanced_accuracy * 100, 2)])),
+);
+const contrastTable = table(
+  ['Comparison against TF-IDF', 'Both absolute values identified', 'Gain point-identified', 'Mean identification width'],
+  ['dr', 'blanket_support_abstain', 'disagreement_fallback'].map(policy => {
+    const value = extension.public.support_gap.contrasts[policy];
+    return [policy.replaceAll('_', ' '), `${value.absolute_identified_runs}/5`, `${value.point_identified_runs}/5`, format(value.mean_identification_width)];
+  }),
+);
 const substitutions = {
   utility_table: utilityTable,
   ope_table: opeTable,
@@ -70,6 +118,27 @@ const substitutions = {
   mcp_p50: format(mcpSummary.execution.roundtrip_p50_ms, 3),
   mcp_p95: format(mcpSummary.execution.roundtrip_p95_ms, 3),
   mcp_protocol: mcpSummary.execution.protocol,
+  v2_controls_table: controlsTable,
+  v2_public_table: publicTable,
+  v2_multi_candidate_table: multipleCandidateTable,
+  v2_models_table: modelTable,
+  v2_matched_table: matchedTable,
+  v2_contrast_table: contrastTable,
+  v2_linear_full_dm: format(extension.synthetic.linear.ope_errors.full_direct.direct.mean),
+  v2_linear_full_dr: format(extension.synthetic.linear.ope_errors.full_direct.dr.mean),
+  v2_shift_full_dm: format(extension.synthetic.shifted.ope_errors.full_direct.direct.mean),
+  v2_shift_full_dr: format(extension.synthetic.shifted.ope_errors.full_direct.dr.mean),
+  v2_public_direct_balanced: format(diagnostics.native_means.direct.balanced_accuracy * 100, 2),
+  v2_public_dr_balanced: format(diagnostics.native_means.dr.balanced_accuracy * 100, 2),
+  v2_public_tfidf_balanced: format(diagnostics.native_means.tfidf.balanced_accuracy * 100, 2),
+  v2_multi_direct_balanced: format(diagnostics.multi_candidate_means.direct.balanced_accuracy * 100, 2),
+  v2_multi_tfidf_balanced: format(diagnostics.multi_candidate_means.tfidf.balanced_accuracy * 100, 2),
+  v2_min_test_tasks: String(Math.min(...publicSummaries.map(summary => summary.split.sizes.test))),
+  v2_max_test_tasks: String(Math.max(...publicSummaries.map(summary => summary.split.sizes.test))),
+  v2_min_test_groups: String(Math.min(...publicSummaries.map(summary => summary.split.group_counts.test))),
+  v2_max_test_groups: String(Math.max(...publicSummaries.map(summary => summary.split.group_counts.test))),
+  v2_llm_act_count: String(diagnostics.models['qwen-0.5b'].per_category.multiple.tasks),
+  v2_llm_abstain_count: String(diagnostics.models['qwen-0.5b'].per_category.irrelevance.tasks),
 };
 const markdown = original.replace(/\{\{([a-z0-9_]+)\}\}/g, (_, name) => {
   assert.ok(name in substitutions, `Unknown generated result: ${name}`);

@@ -5,12 +5,24 @@ This is a submission preparation record, not evidence of submission or acceptanc
 
 ## Assessment
 
+**Version-2 update:** the original concerns below are retained as review history.
+Complete realized-return and component controls are now implemented, and one
+initial DR advantage reverses under the stronger direct baseline. Public BFCL-
+derived function selection with group-disjoint splits and two local Qwen2.5
+baselines provides independent evidence, but not official BFCL execution scores
+or enterprise deployment validation. Disagreement-support analysis adds a precise
+proposition, executable identification bounds and fallback ablations; it does not
+establish that this mathematical observation is new to the broader literature.
+See [EXPERIMENTS_V2.md](EXPERIMENTS_V2.md) and [v2 results](artifacts/v2/tables.md).
+
+### Original Version-1 Review
+
 The artifact is stronger as a reproducible engineering study than as a new
 algorithm paper. Exact logging, complete-action authorization, transport parity,
 negative results and source-linked tables are useful. They do not by themselves
 establish a new learning method or generalizable findings for enterprise agents.
 
-The most important remaining scientific concerns are:
+The most important scientific concerns in version 1 were:
 
 1. **External validity.** All outcomes come from eleven hand-designed tools and
    a finite synthetic generator. There is no independent benchmark, LLM planner,
@@ -35,10 +47,11 @@ new-method paper in its present form. TMLR is in scope for empirical insights bu
 not automatically suitable: its criteria explicitly distinguish generalizable
 findings from an educational reimplementation. No acceptance probability is claimed.
 
-Before a serious peer-reviewed submission, prioritize a full-return direct
-baseline, a task/template-held-out or external executable workload, and fixed-policy
-OPE stress tests reporting estimator bias, variance and interval coverage. Keep
-those as new experiments; do not silently rewrite the frozen version-1 matrix.
+Remaining priorities before a serious peer-reviewed submission are a fully
+external executable workload, broader/stronger model comparisons, semantic family
+generalization and fixed-policy OPE stress tests reporting bias, variance and
+interval coverage. The complete-return baseline and function-name-group holdout
+are now addressed in separately numbered experiments. V1 is not rewritten.
 
 ## Prepared arXiv Package
 

@@ -1,0 +1,1586 @@
+[
+  {
+    "choices": {
+      "blanket_support_abstain": 12,
+      "calibration_switch": 12,
+      "direct": 12,
+      "disagreement_fallback": 12,
+      "dr": 12,
+      "ips": 12,
+      "tfidf": 12
+    },
+    "task_id": "live_irrelevance_103-3-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_104-4-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_105-4-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 2,
+      "calibration_switch": 2,
+      "direct": 2,
+      "disagreement_fallback": 2,
+      "dr": 2,
+      "ips": 2,
+      "tfidf": 2
+    },
+    "task_id": "live_irrelevance_106-5-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 0,
+      "calibration_switch": 2,
+      "direct": 0,
+      "disagreement_fallback": 0,
+      "dr": 0,
+      "ips": 0,
+      "tfidf": 2
+    },
+    "task_id": "live_irrelevance_107-5-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 2,
+      "calibration_switch": 2,
+      "direct": 2,
+      "disagreement_fallback": 2,
+      "dr": 2,
+      "ips": 2,
+      "tfidf": 2
+    },
+    "task_id": "live_irrelevance_108-5-2"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 2,
+      "calibration_switch": 2,
+      "direct": 2,
+      "disagreement_fallback": 2,
+      "dr": 2,
+      "ips": 2,
+      "tfidf": 2
+    },
+    "task_id": "live_irrelevance_158-19-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_159-19-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 2,
+      "calibration_switch": 2,
+      "direct": 2,
+      "disagreement_fallback": 2,
+      "dr": 2,
+      "ips": 2,
+      "tfidf": 2
+    },
+    "task_id": "live_irrelevance_160-19-2"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 5,
+      "calibration_switch": 5,
+      "direct": 5,
+      "disagreement_fallback": 5,
+      "dr": 5,
+      "ips": 5,
+      "tfidf": 5
+    },
+    "task_id": "live_irrelevance_164-21-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 5,
+      "calibration_switch": 5,
+      "direct": 5,
+      "disagreement_fallback": 5,
+      "dr": 5,
+      "ips": 5,
+      "tfidf": 5
+    },
+    "task_id": "live_irrelevance_165-21-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 4,
+      "calibration_switch": 4,
+      "direct": 4,
+      "disagreement_fallback": 4,
+      "dr": 4,
+      "ips": 4,
+      "tfidf": 4
+    },
+    "task_id": "live_irrelevance_166-21-2"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_210-33-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_211-34-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_212-34-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_213-34-2"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_214-34-3"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_215-34-4"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_216-34-5"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_217-34-6"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_218-34-7"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_219-34-8"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_220-34-9"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_221-34-10"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_222-34-11"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 0,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 0
+    },
+    "task_id": "live_irrelevance_223-34-12"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_224-34-13"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 0,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 0
+    },
+    "task_id": "live_irrelevance_229-36-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_230-36-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_275-60-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_276-60-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_277-60-2"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_278-60-3"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_400-83-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 0,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 0
+    },
+    "task_id": "live_irrelevance_401-83-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 0,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 0
+    },
+    "task_id": "live_irrelevance_440-111-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_441-112-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 0,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 0
+    },
+    "task_id": "live_irrelevance_442-113-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_443-113-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_444-114-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 0,
+      "calibration_switch": 3,
+      "direct": 3,
+      "disagreement_fallback": 0,
+      "dr": 0,
+      "ips": 0,
+      "tfidf": 3
+    },
+    "task_id": "live_irrelevance_482-137-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_537-168-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_538-168-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_539-168-2"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_540-168-3"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_541-168-4"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_542-168-5"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_543-168-6"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_544-168-7"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_545-168-8"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_546-168-9"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 0,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 0
+    },
+    "task_id": "live_irrelevance_559-172-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_560-172-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_561-172-2"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_562-172-3"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_563-172-4"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_564-172-5"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 4,
+      "calibration_switch": 1,
+      "direct": 4,
+      "disagreement_fallback": 4,
+      "dr": 4,
+      "ips": 4,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_566-174-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_578-181-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_579-181-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 0,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 0
+    },
+    "task_id": "live_irrelevance_710-234-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_719-238-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_720-238-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 0,
+      "calibration_switch": 0,
+      "direct": 2,
+      "disagreement_fallback": 0,
+      "dr": 0,
+      "ips": 2,
+      "tfidf": 0
+    },
+    "task_id": "live_irrelevance_739-253-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 5,
+      "calibration_switch": 5,
+      "direct": 5,
+      "disagreement_fallback": 5,
+      "dr": 5,
+      "ips": 5,
+      "tfidf": 5
+    },
+    "task_id": "live_irrelevance_748-259-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_771-280-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_775-284-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 3,
+      "calibration_switch": 3,
+      "direct": 3,
+      "disagreement_fallback": 3,
+      "dr": 3,
+      "ips": 3,
+      "tfidf": 3
+    },
+    "task_id": "live_irrelevance_776-285-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 3,
+      "calibration_switch": 3,
+      "direct": 3,
+      "disagreement_fallback": 3,
+      "dr": 3,
+      "ips": 3,
+      "tfidf": 3
+    },
+    "task_id": "live_irrelevance_777-286-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 3,
+      "calibration_switch": 1,
+      "direct": 3,
+      "disagreement_fallback": 3,
+      "dr": 3,
+      "ips": 3,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_783-292-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 6,
+      "calibration_switch": 6,
+      "direct": 6,
+      "disagreement_fallback": 6,
+      "dr": 6,
+      "ips": 6,
+      "tfidf": 6
+    },
+    "task_id": "live_irrelevance_796-305-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 6,
+      "calibration_switch": 6,
+      "direct": 6,
+      "disagreement_fallback": 6,
+      "dr": 6,
+      "ips": 6,
+      "tfidf": 6
+    },
+    "task_id": "live_irrelevance_797-305-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 6,
+      "calibration_switch": 6,
+      "direct": 6,
+      "disagreement_fallback": 6,
+      "dr": 6,
+      "ips": 6,
+      "tfidf": 6
+    },
+    "task_id": "live_irrelevance_798-305-2"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 6,
+      "calibration_switch": 6,
+      "direct": 6,
+      "disagreement_fallback": 6,
+      "dr": 6,
+      "ips": 6,
+      "tfidf": 6
+    },
+    "task_id": "live_irrelevance_799-305-3"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 6,
+      "calibration_switch": 3,
+      "direct": 6,
+      "disagreement_fallback": 6,
+      "dr": 6,
+      "ips": 6,
+      "tfidf": 3
+    },
+    "task_id": "live_irrelevance_800-305-4"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 6,
+      "calibration_switch": 3,
+      "direct": 6,
+      "disagreement_fallback": 6,
+      "dr": 6,
+      "ips": 6,
+      "tfidf": 3
+    },
+    "task_id": "live_irrelevance_801-305-5"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 6,
+      "calibration_switch": 6,
+      "direct": 6,
+      "disagreement_fallback": 6,
+      "dr": 6,
+      "ips": 6,
+      "tfidf": 6
+    },
+    "task_id": "live_irrelevance_802-305-6"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 6,
+      "calibration_switch": 6,
+      "direct": 6,
+      "disagreement_fallback": 6,
+      "dr": 6,
+      "ips": 6,
+      "tfidf": 6
+    },
+    "task_id": "live_irrelevance_803-305-7"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 6,
+      "calibration_switch": 4,
+      "direct": 6,
+      "disagreement_fallback": 6,
+      "dr": 6,
+      "ips": 6,
+      "tfidf": 4
+    },
+    "task_id": "live_irrelevance_804-305-8"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 6,
+      "calibration_switch": 6,
+      "direct": 6,
+      "disagreement_fallback": 6,
+      "dr": 6,
+      "ips": 6,
+      "tfidf": 6
+    },
+    "task_id": "live_irrelevance_805-305-9"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 6,
+      "calibration_switch": 6,
+      "direct": 6,
+      "disagreement_fallback": 6,
+      "dr": 6,
+      "ips": 6,
+      "tfidf": 6
+    },
+    "task_id": "live_irrelevance_806-305-10"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_809-308-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 2,
+      "calibration_switch": 7,
+      "direct": 7,
+      "disagreement_fallback": 2,
+      "dr": 2,
+      "ips": 7,
+      "tfidf": 7
+    },
+    "task_id": "live_irrelevance_829-322-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_840-330-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_843-333-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_851-341-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_irrelevance_867-353-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 2,
+      "calibration_switch": 2,
+      "direct": 2,
+      "disagreement_fallback": 2,
+      "dr": 2,
+      "ips": 2,
+      "tfidf": 2
+    },
+    "task_id": "live_irrelevance_870-355-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 5,
+      "calibration_switch": 5,
+      "direct": 5,
+      "disagreement_fallback": 5,
+      "dr": 5,
+      "ips": 2,
+      "tfidf": 5
+    },
+    "task_id": "live_irrelevance_873-358-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_multiple_0-0-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 2,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 2
+    },
+    "task_id": "live_multiple_1-0-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 3,
+      "calibration_switch": 2,
+      "direct": 3,
+      "disagreement_fallback": 3,
+      "dr": 3,
+      "ips": 3,
+      "tfidf": 2
+    },
+    "task_id": "live_multiple_1001-232-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 0,
+      "calibration_switch": 0,
+      "direct": 0,
+      "disagreement_fallback": 0,
+      "dr": 0,
+      "ips": 0,
+      "tfidf": 0
+    },
+    "task_id": "live_multiple_1002-232-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 0,
+      "calibration_switch": 0,
+      "direct": 0,
+      "disagreement_fallback": 0,
+      "dr": 0,
+      "ips": 0,
+      "tfidf": 0
+    },
+    "task_id": "live_multiple_1003-232-2"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 0,
+      "calibration_switch": 0,
+      "direct": 0,
+      "disagreement_fallback": 0,
+      "dr": 0,
+      "ips": 0,
+      "tfidf": 0
+    },
+    "task_id": "live_multiple_1004-233-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_multiple_1008-237-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 0,
+      "calibration_switch": 0,
+      "direct": 0,
+      "disagreement_fallback": 0,
+      "dr": 0,
+      "ips": 0,
+      "tfidf": 0
+    },
+    "task_id": "live_multiple_1009-238-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 0,
+      "calibration_switch": 0,
+      "direct": 0,
+      "disagreement_fallback": 0,
+      "dr": 0,
+      "ips": 0,
+      "tfidf": 0
+    },
+    "task_id": "live_multiple_1015-244-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 0,
+      "calibration_switch": 3,
+      "direct": 3,
+      "disagreement_fallback": 0,
+      "dr": 0,
+      "ips": 0,
+      "tfidf": 3
+    },
+    "task_id": "live_multiple_1020-249-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 0,
+      "calibration_switch": 0,
+      "direct": 0,
+      "disagreement_fallback": 0,
+      "dr": 0,
+      "ips": 0,
+      "tfidf": 0
+    },
+    "task_id": "live_multiple_1026-255-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 0,
+      "calibration_switch": 0,
+      "direct": 0,
+      "disagreement_fallback": 0,
+      "dr": 0,
+      "ips": 0,
+      "tfidf": 0
+    },
+    "task_id": "live_multiple_1027-255-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_multiple_1030-258-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 0,
+      "calibration_switch": 0,
+      "direct": 0,
+      "disagreement_fallback": 0,
+      "dr": 0,
+      "ips": 0,
+      "tfidf": 0
+    },
+    "task_id": "live_multiple_1034-262-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 2,
+      "calibration_switch": 2,
+      "direct": 2,
+      "disagreement_fallback": 2,
+      "dr": 2,
+      "ips": 2,
+      "tfidf": 2
+    },
+    "task_id": "live_multiple_1035-263-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 2,
+      "calibration_switch": 2,
+      "direct": 2,
+      "disagreement_fallback": 2,
+      "dr": 2,
+      "ips": 2,
+      "tfidf": 2
+    },
+    "task_id": "live_multiple_1036-263-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 4,
+      "calibration_switch": 4,
+      "direct": 4,
+      "disagreement_fallback": 4,
+      "dr": 4,
+      "ips": 4,
+      "tfidf": 4
+    },
+    "task_id": "live_multiple_1037-264-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 6,
+      "calibration_switch": 6,
+      "direct": 6,
+      "disagreement_fallback": 6,
+      "dr": 6,
+      "ips": 6,
+      "tfidf": 6
+    },
+    "task_id": "live_multiple_124-47-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 3,
+      "calibration_switch": 3,
+      "direct": 6,
+      "disagreement_fallback": 3,
+      "dr": 3,
+      "ips": 6,
+      "tfidf": 3
+    },
+    "task_id": "live_multiple_125-47-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 4,
+      "tfidf": 1
+    },
+    "task_id": "live_multiple_183-78-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 3,
+      "calibration_switch": 3,
+      "direct": 3,
+      "disagreement_fallback": 3,
+      "dr": 3,
+      "ips": 3,
+      "tfidf": 3
+    },
+    "task_id": "live_multiple_184-79-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 0,
+      "calibration_switch": 0,
+      "direct": 0,
+      "disagreement_fallback": 0,
+      "dr": 0,
+      "ips": 0,
+      "tfidf": 0
+    },
+    "task_id": "live_multiple_185-80-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 2,
+      "calibration_switch": 2,
+      "direct": 2,
+      "disagreement_fallback": 2,
+      "dr": 2,
+      "ips": 2,
+      "tfidf": 2
+    },
+    "task_id": "live_multiple_192-86-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 0,
+      "calibration_switch": 3,
+      "direct": 0,
+      "disagreement_fallback": 0,
+      "dr": 0,
+      "ips": 0,
+      "tfidf": 3
+    },
+    "task_id": "live_multiple_193-87-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 0,
+      "calibration_switch": 3,
+      "direct": 3,
+      "disagreement_fallback": 0,
+      "dr": 0,
+      "ips": 0,
+      "tfidf": 3
+    },
+    "task_id": "live_multiple_194-87-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 0,
+      "calibration_switch": 0,
+      "direct": 0,
+      "disagreement_fallback": 0,
+      "dr": 0,
+      "ips": 0,
+      "tfidf": 0
+    },
+    "task_id": "live_multiple_195-87-2"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 2,
+      "calibration_switch": 2,
+      "direct": 2,
+      "disagreement_fallback": 2,
+      "dr": 2,
+      "ips": 2,
+      "tfidf": 2
+    },
+    "task_id": "live_multiple_216-92-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 2,
+      "calibration_switch": 2,
+      "direct": 2,
+      "disagreement_fallback": 2,
+      "dr": 2,
+      "ips": 2,
+      "tfidf": 2
+    },
+    "task_id": "live_multiple_27-7-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 3,
+      "calibration_switch": 3,
+      "direct": 3,
+      "disagreement_fallback": 3,
+      "dr": 3,
+      "ips": 3,
+      "tfidf": 3
+    },
+    "task_id": "live_multiple_28-8-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 5,
+      "calibration_switch": 5,
+      "direct": 5,
+      "disagreement_fallback": 5,
+      "dr": 5,
+      "ips": 5,
+      "tfidf": 5
+    },
+    "task_id": "live_multiple_29-9-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 6,
+      "calibration_switch": 6,
+      "direct": 6,
+      "disagreement_fallback": 6,
+      "dr": 6,
+      "ips": 6,
+      "tfidf": 6
+    },
+    "task_id": "live_multiple_30-10-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 5,
+      "calibration_switch": 6,
+      "direct": 5,
+      "disagreement_fallback": 5,
+      "dr": 5,
+      "ips": 5,
+      "tfidf": 6
+    },
+    "task_id": "live_multiple_31-10-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 6,
+      "calibration_switch": 6,
+      "direct": 6,
+      "disagreement_fallback": 6,
+      "dr": 6,
+      "ips": 6,
+      "tfidf": 6
+    },
+    "task_id": "live_multiple_32-10-2"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 6,
+      "calibration_switch": 6,
+      "direct": 6,
+      "disagreement_fallback": 6,
+      "dr": 6,
+      "ips": 6,
+      "tfidf": 6
+    },
+    "task_id": "live_multiple_33-10-3"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_multiple_40-15-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 2,
+      "calibration_switch": 0,
+      "direct": 0,
+      "disagreement_fallback": 2,
+      "dr": 2,
+      "ips": 0,
+      "tfidf": 0
+    },
+    "task_id": "live_multiple_62-24-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 0,
+      "calibration_switch": 0,
+      "direct": 2,
+      "disagreement_fallback": 0,
+      "dr": 0,
+      "ips": 2,
+      "tfidf": 0
+    },
+    "task_id": "live_multiple_963-206-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 0,
+      "calibration_switch": 0,
+      "direct": 2,
+      "disagreement_fallback": 0,
+      "dr": 0,
+      "ips": 2,
+      "tfidf": 0
+    },
+    "task_id": "live_multiple_964-207-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 0,
+      "calibration_switch": 0,
+      "direct": 0,
+      "disagreement_fallback": 0,
+      "dr": 0,
+      "ips": 0,
+      "tfidf": 0
+    },
+    "task_id": "live_multiple_965-207-1"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_multiple_966-208-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 2,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_multiple_967-209-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 1,
+      "calibration_switch": 1,
+      "direct": 1,
+      "disagreement_fallback": 1,
+      "dr": 1,
+      "ips": 1,
+      "tfidf": 1
+    },
+    "task_id": "live_multiple_992-223-0"
+  },
+  {
+    "choices": {
+      "blanket_support_abstain": 0,
+      "calibration_switch": 0,
+      "direct": 0,
+      "disagreement_fallback": 0,
+      "dr": 0,
+      "ips": 0,
+      "tfidf": 0
+    },
+    "task_id": "live_multiple_993-224-0"
+  }
+]

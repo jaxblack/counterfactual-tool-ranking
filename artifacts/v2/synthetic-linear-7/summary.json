@@ -1,0 +1,487 @@
+{
+  "configuration": {
+    "cost_weight": 1.0,
+    "latency_weight": 0.0,
+    "model": "linear",
+    "risk_weight": 2.0,
+    "scenario": "noisy"
+  },
+  "kind": "synthetic_controls",
+  "policies": {
+    "component_direct": {
+      "actual": {
+        "correct_abstention_rate": 0.8279266572637518,
+        "cost_per_success": 0.09512428298279159,
+        "coverage": 0.6635,
+        "decision_accuracy": 0.8165,
+        "denied_at_execution": 0,
+        "executed": 1327,
+        "mean_cost": 0.04975,
+        "mean_excess_access": 0.0,
+        "mean_latency_ms": 16.182,
+        "runtime_p95_ms": 0.03291698667453602,
+        "success_all_tasks": 0.523,
+        "success_on_executed": 0.7882441597588545,
+        "success_on_feasible": 0.8102246320681642,
+        "successes": 1046,
+        "tasks": 2000,
+        "unauthorized_executions": 0,
+        "unnecessary_abstention_rate": 0.06661502711076685,
+        "unsafe_rate": 0.0,
+        "utility": 0.47325,
+        "utility_ci95": [
+          0.4551854375,
+          0.49450081250000005
+        ]
+      },
+      "ope": {
+        "component_direct": {
+          "direct": 0.4738930914884585,
+          "dr": 0.4947837960273014,
+          "dr_ci95": [
+            0.4454852497148317,
+            0.560100943663207
+          ],
+          "ess": 180.43650100989953,
+          "identifiable": true,
+          "ips": 0.5061333333333333,
+          "matched": 470,
+          "max_weight": 20.0,
+          "snips": 0.5048711554447215,
+          "unsupported_fraction": 0.0,
+          "warning": ""
+        },
+        "full_direct": {
+          "direct": 0.47389309148846337,
+          "dr": 0.49478379602730366,
+          "dr_ci95": [
+            0.44548524971484077,
+            0.5601009436631981
+          ],
+          "ess": 180.43650100989953,
+          "identifiable": true,
+          "ips": 0.5061333333333333,
+          "matched": 470,
+          "max_weight": 20.0,
+          "snips": 0.5048711554447215,
+          "unsupported_fraction": 0.0,
+          "warning": ""
+        },
+        "nominal_direct": {
+          "direct": 0.3808718398442799,
+          "dr": 0.5041873993310556,
+          "dr_ci95": [
+            0.45764908222536393,
+            0.570834949338224
+          ],
+          "ess": 180.43650100989953,
+          "identifiable": true,
+          "ips": 0.5061333333333333,
+          "matched": 470,
+          "max_weight": 20.0,
+          "snips": 0.5048711554447215,
+          "unsupported_fraction": 0.0,
+          "warning": ""
+        }
+      }
+    },
+    "full_direct": {
+      "actual": {
+        "correct_abstention_rate": 0.8279266572637518,
+        "cost_per_success": 0.09512428298279159,
+        "coverage": 0.6635,
+        "decision_accuracy": 0.8165,
+        "denied_at_execution": 0,
+        "executed": 1327,
+        "mean_cost": 0.04975,
+        "mean_excess_access": 0.0,
+        "mean_latency_ms": 16.182,
+        "runtime_p95_ms": 0.03291698667453602,
+        "success_all_tasks": 0.523,
+        "success_on_executed": 0.7882441597588545,
+        "success_on_feasible": 0.8102246320681642,
+        "successes": 1046,
+        "tasks": 2000,
+        "unauthorized_executions": 0,
+        "unnecessary_abstention_rate": 0.06661502711076685,
+        "unsafe_rate": 0.0,
+        "utility": 0.47325,
+        "utility_ci95": [
+          0.4551854375,
+          0.49450081250000005
+        ]
+      },
+      "ope": {
+        "component_direct": {
+          "direct": 0.4738930914884585,
+          "dr": 0.4947837960273014,
+          "dr_ci95": [
+            0.4454852497148317,
+            0.560100943663207
+          ],
+          "ess": 180.43650100989953,
+          "identifiable": true,
+          "ips": 0.5061333333333333,
+          "matched": 470,
+          "max_weight": 20.0,
+          "snips": 0.5048711554447215,
+          "unsupported_fraction": 0.0,
+          "warning": ""
+        },
+        "full_direct": {
+          "direct": 0.47389309148846337,
+          "dr": 0.49478379602730366,
+          "dr_ci95": [
+            0.44548524971484077,
+            0.5601009436631981
+          ],
+          "ess": 180.43650100989953,
+          "identifiable": true,
+          "ips": 0.5061333333333333,
+          "matched": 470,
+          "max_weight": 20.0,
+          "snips": 0.5048711554447215,
+          "unsupported_fraction": 0.0,
+          "warning": ""
+        },
+        "nominal_direct": {
+          "direct": 0.3808718398442799,
+          "dr": 0.5041873993310556,
+          "dr_ci95": [
+            0.45764908222536393,
+            0.570834949338224
+          ],
+          "ess": 180.43650100989953,
+          "identifiable": true,
+          "ips": 0.5061333333333333,
+          "matched": 470,
+          "max_weight": 20.0,
+          "snips": 0.5048711554447215,
+          "unsupported_fraction": 0.0,
+          "warning": ""
+        }
+      }
+    },
+    "full_dr": {
+      "actual": {
+        "correct_abstention_rate": 0.6995768688293371,
+        "cost_per_success": 0.16488063660477453,
+        "coverage": 0.735,
+        "decision_accuracy": 0.8135,
+        "denied_at_execution": 0,
+        "executed": 1470,
+        "mean_cost": 0.09323999999999999,
+        "mean_excess_access": 0.109,
+        "mean_latency_ms": 29.64,
+        "runtime_p95_ms": 0.03337914240546524,
+        "success_all_tasks": 0.5655,
+        "success_on_executed": 0.7693877551020408,
+        "success_on_feasible": 0.8760650658404338,
+        "successes": 1131,
+        "tasks": 2000,
+        "unauthorized_executions": 0,
+        "unnecessary_abstention_rate": 0.026336173508907823,
+        "unsafe_rate": 0.0,
+        "utility": 0.46681000000000006,
+        "utility_ci95": [
+          0.44614950000000003,
+          0.48860424999999996
+        ]
+      },
+      "ope": {
+        "component_direct": {
+          "direct": 0.4586206678506732,
+          "dr": 0.4296123018750025,
+          "dr_ci95": [
+            0.365390889147658,
+            0.4850432839386272
+          ],
+          "ess": 178.3251737012586,
+          "identifiable": true,
+          "ips": 0.4705333333333333,
+          "matched": 468,
+          "max_weight": 20.0,
+          "snips": 0.4701415487094087,
+          "unsupported_fraction": 0.0,
+          "warning": ""
+        },
+        "full_direct": {
+          "direct": 0.4586206678506901,
+          "dr": 0.42961230187500915,
+          "dr_ci95": [
+            0.36539088914767154,
+            0.4850432839386258
+          ],
+          "ess": 178.3251737012586,
+          "identifiable": true,
+          "ips": 0.4705333333333333,
+          "matched": 468,
+          "max_weight": 20.0,
+          "snips": 0.4701415487094087,
+          "unsupported_fraction": 0.0,
+          "warning": ""
+        },
+        "nominal_direct": {
+          "direct": 0.3531237693833915,
+          "dr": 0.4449349132638953,
+          "dr_ci95": [
+            0.391359471163415,
+            0.49726429066025446
+          ],
+          "ess": 178.3251737012586,
+          "identifiable": true,
+          "ips": 0.4705333333333333,
+          "matched": 468,
+          "max_weight": 20.0,
+          "snips": 0.4701415487094087,
+          "unsupported_fraction": 0.0,
+          "warning": ""
+        }
+      }
+    },
+    "ips": {
+      "actual": {
+        "correct_abstention_rate": 0.6572637517630465,
+        "cost_per_success": 0.11576923076923078,
+        "coverage": 0.7535,
+        "decision_accuracy": 0.792,
+        "denied_at_execution": 0,
+        "executed": 1507,
+        "mean_cost": 0.06471500000000001,
+        "mean_excess_access": 0.109,
+        "mean_latency_ms": 20.8675,
+        "runtime_p95_ms": 0.03358398826094344,
+        "success_all_tasks": 0.559,
+        "success_on_executed": 0.7418712674187127,
+        "success_on_feasible": 0.8659953524399691,
+        "successes": 1118,
+        "tasks": 2000,
+        "unauthorized_executions": 0,
+        "unnecessary_abstention_rate": 0.020914020139426802,
+        "unsafe_rate": 0.0,
+        "utility": 0.48883499999999996,
+        "utility_ci95": [
+          0.47073637500000004,
+          0.5121321875
+        ]
+      },
+      "ope": {
+        "component_direct": {
+          "direct": 0.45398943242326717,
+          "dr": 0.47344443100387673,
+          "dr_ci95": [
+            0.4229633106831575,
+            0.5237270618739599
+          ],
+          "ess": 177.05133707051468,
+          "identifiable": true,
+          "ips": 0.46985000000000005,
+          "matched": 464,
+          "max_weight": 20.0,
+          "snips": 0.4907049608355092,
+          "unsupported_fraction": 0.0,
+          "warning": ""
+        },
+        "full_direct": {
+          "direct": 0.4539894324232915,
+          "dr": 0.47344443100388295,
+          "dr_ci95": [
+            0.42296331068316745,
+            0.5237270618739541
+          ],
+          "ess": 177.05133707051468,
+          "identifiable": true,
+          "ips": 0.46985000000000005,
+          "matched": 464,
+          "max_weight": 20.0,
+          "snips": 0.4907049608355092,
+          "unsupported_fraction": 0.0,
+          "warning": ""
+        },
+        "nominal_direct": {
+          "direct": 0.36040190761740987,
+          "dr": 0.48289859363289256,
+          "dr_ci95": [
+            0.4321340796836378,
+            0.5342064548533942
+          ],
+          "ess": 177.05133707051468,
+          "identifiable": true,
+          "ips": 0.46985000000000005,
+          "matched": 464,
+          "max_weight": 20.0,
+          "snips": 0.4907049608355092,
+          "unsupported_fraction": 0.0,
+          "warning": ""
+        }
+      }
+    },
+    "nominal_direct": {
+      "actual": {
+        "correct_abstention_rate": 0.8279266572637518,
+        "cost_per_success": 0.09470841300191205,
+        "coverage": 0.6635,
+        "decision_accuracy": 0.8165,
+        "denied_at_execution": 0,
+        "executed": 1327,
+        "mean_cost": 0.0495325,
+        "mean_excess_access": 0.0,
+        "mean_latency_ms": 16.1385,
+        "runtime_p95_ms": 0.032957992516458035,
+        "success_all_tasks": 0.523,
+        "success_on_executed": 0.7882441597588545,
+        "success_on_feasible": 0.8102246320681642,
+        "successes": 1046,
+        "tasks": 2000,
+        "unauthorized_executions": 0,
+        "unnecessary_abstention_rate": 0.06661502711076685,
+        "unsafe_rate": 0.0,
+        "utility": 0.4734675,
+        "utility_ci95": [
+          0.4554111874999999,
+          0.49471943749999997
+        ]
+      },
+      "ope": {
+        "component_direct": {
+          "direct": 0.4696510329234011,
+          "dr": 0.4930278795272523,
+          "dr_ci95": [
+            0.4425969283003405,
+            0.556599630972325
+          ],
+          "ess": 184.20166189293442,
+          "identifiable": true,
+          "ips": 0.5110780701754386,
+          "matched": 489,
+          "max_weight": 20.0,
+          "snips": 0.5073397770811563,
+          "unsupported_fraction": 0.0,
+          "warning": ""
+        },
+        "full_direct": {
+          "direct": 0.4696510329234061,
+          "dr": 0.49302787952725474,
+          "dr_ci95": [
+            0.4425969283003409,
+            0.5565996309723219
+          ],
+          "ess": 184.20166189293442,
+          "identifiable": true,
+          "ips": 0.5110780701754386,
+          "matched": 489,
+          "max_weight": 20.0,
+          "snips": 0.5073397770811563,
+          "unsupported_fraction": 0.0,
+          "warning": ""
+        },
+        "nominal_direct": {
+          "direct": 0.3809420629199299,
+          "dr": 0.5043904455848882,
+          "dr_ci95": [
+            0.4578417094464023,
+            0.5710333862920612
+          ],
+          "ess": 184.20166189293442,
+          "identifiable": true,
+          "ips": 0.5110780701754386,
+          "matched": 489,
+          "max_weight": 20.0,
+          "snips": 0.5073397770811563,
+          "unsupported_fraction": 0.0,
+          "warning": ""
+        }
+      }
+    },
+    "nominal_dr": {
+      "actual": {
+        "correct_abstention_rate": 0.6755994358251057,
+        "cost_per_success": 0.1145560538116592,
+        "coverage": 0.745,
+        "decision_accuracy": 0.797,
+        "denied_at_execution": 0,
+        "executed": 1490,
+        "mean_cost": 0.063865,
+        "mean_excess_access": 0.109,
+        "mean_latency_ms": 20.5525,
+        "runtime_p95_ms": 0.033543149766046554,
+        "success_all_tasks": 0.5575,
+        "success_on_executed": 0.7483221476510067,
+        "success_on_feasible": 0.8636715724244771,
+        "successes": 1115,
+        "tasks": 2000,
+        "unauthorized_executions": 0,
+        "unnecessary_abstention_rate": 0.024012393493415957,
+        "unsafe_rate": 0.0,
+        "utility": 0.48818500000000004,
+        "utility_ci95": [
+          0.469391375,
+          0.5114918749999999
+        ]
+      },
+      "ope": {
+        "component_direct": {
+          "direct": 0.45650794152940305,
+          "dr": 0.4753352379659112,
+          "dr_ci95": [
+            0.42479673200099427,
+            0.5260484515307606
+          ],
+          "ess": 177.05133707051468,
+          "identifiable": true,
+          "ips": 0.47035000000000005,
+          "matched": 464,
+          "max_weight": 20.0,
+          "snips": 0.4912271540469974,
+          "unsupported_fraction": 0.0,
+          "warning": ""
+        },
+        "full_direct": {
+          "direct": 0.45650794152942464,
+          "dr": 0.47533523796591554,
+          "dr_ci95": [
+            0.42479673200100243,
+            0.5260484515307524
+          ],
+          "ess": 177.05133707051468,
+          "identifiable": true,
+          "ips": 0.47035000000000005,
+          "matched": 464,
+          "max_weight": 20.0,
+          "snips": 0.4912271540469974,
+          "unsupported_fraction": 0.0,
+          "warning": ""
+        },
+        "nominal_direct": {
+          "direct": 0.36292940151065023,
+          "dr": 0.48480627214369704,
+          "dr_ci95": [
+            0.43489737849896787,
+            0.5360965996131112
+          ],
+          "ess": 177.05133707051468,
+          "identifiable": true,
+          "ips": 0.47035000000000005,
+          "matched": 464,
+          "max_weight": 20.0,
+          "snips": 0.4912271540469974,
+          "unsupported_fraction": 0.0,
+          "warning": ""
+        }
+      }
+    }
+  },
+  "seed": 7,
+  "setting": "linear",
+  "source_sha256": {
+    "learning.py": "b45ea349be94e008975f59faf58fab6d5cfc1225ded39949e557590b3002e41b",
+    "policy_contrast.py": "1e7bc298ac06b3b3643ef84810490a653477775fd723ebc65be85ea39cdadd7f",
+    "public_data.py": "d5344b62f4006c013e67e73327905c017f2f8e7d8a2806d14ef200885f5ae5a0",
+    "public_learning.py": "e1b68a9a81ff34138fb07cd25d4b9bafc16d1b1c35bcd3508069d1cdd62d5986",
+    "sandbox.py": "e5dc4ab3278828a3ae68e9e5fa692b39c720b05629133d11cf2b6fa12359c57e",
+    "v2_experiments.py": "15b0a2611db13997486c2ada8d115d001e889976e7cb4107188c4efde4d550bc",
+    "v2_learning.py": "ff7fc2e118532ea5f0ef27452e54a8b7d9a9789f5c6e221df9d455085dc4ebc6"
+  },
+  "test_size": 2000,
+  "train_size": 6000
+}

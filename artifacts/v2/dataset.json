@@ -1,0 +1,61 @@
+{
+  "accounting": {
+    "full_role_context_preserved": true,
+    "input_irrelevance": 882,
+    "input_multiple": 1053,
+    "orphan_reference_ids": [
+      "live_multiple_1052-279-0"
+    ],
+    "retained": 1930,
+    "rows_with_non_user_context": 86,
+    "skipped": [
+      {
+        "id": "live_multiple_1052-79-0",
+        "reason": "no reference with exactly matching ID"
+      },
+      {
+        "id": "live_irrelevance_120-9-0",
+        "reason": "missing query/tools or duplicate function names"
+      },
+      {
+        "id": "live_irrelevance_121-9-1",
+        "reason": "missing query/tools or duplicate function names"
+      },
+      {
+        "id": "live_irrelevance_122-9-2",
+        "reason": "missing query/tools or duplicate function names"
+      },
+      {
+        "id": "live_irrelevance_123-9-3",
+        "reason": "missing query/tools or duplicate function names"
+      }
+    ]
+  },
+  "source": {
+    "dataset": "gorilla-llm/Berkeley-Function-Calling-Leaderboard",
+    "files": {
+      "BFCL_v3_live_irrelevance.json": {
+        "bytes": 2202715,
+        "sha256": "0d259e1c3ab6ba06c2a51911e2f49ecaa2eac3723a4a14f183a7687955e61338",
+        "url": "https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard/resolve/61fc0608cfd831fcfbbaa676ebdfef0ed963eeda/BFCL_v3_live_irrelevance.json"
+      },
+      "BFCL_v3_live_multiple.json": {
+        "bytes": 3891342,
+        "sha256": "af2520ac5bb0b05aa9b8abe14a79b87198e5a3137a707d4f5633c792330f0cee",
+        "url": "https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard/resolve/61fc0608cfd831fcfbbaa676ebdfef0ed963eeda/BFCL_v3_live_multiple.json"
+      },
+      "README.md": {
+        "bytes": 15282,
+        "sha256": "22234ad32a0bb921809278d01ed65e932b4e611690dfa17d1e0eb6ba74ab4e27",
+        "url": "https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard/resolve/61fc0608cfd831fcfbbaa676ebdfef0ed963eeda/README.md"
+      },
+      "possible_answer/BFCL_v3_live_multiple.json": {
+        "bytes": 199668,
+        "sha256": "97e90d59c5bd76c55a2920ce93e5566e9046307d3f558578f085f9d3a56c3084",
+        "url": "https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard/resolve/61fc0608cfd831fcfbbaa676ebdfef0ed963eeda/possible_answer/BFCL_v3_live_multiple.json"
+      }
+    },
+    "license": "Apache-2.0",
+    "revision": "61fc0608cfd831fcfbbaa676ebdfef0ed963eeda"
+  }
+}

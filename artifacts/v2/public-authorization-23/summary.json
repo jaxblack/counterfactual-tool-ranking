@@ -1,0 +1,361 @@
+{
+  "calibration": {
+    "contrast": {
+      "alpha": 0.05,
+      "conditional_hoeffding_interval": [
+        -1.1601394584057707,
+        1.7940535096739723
+      ],
+      "confidence_scope": "independent randomized logging, frozen policies/nuisance, fixed observed contexts; not future-distribution certification",
+      "disagreements": 24,
+      "estimated_identification_interval": [
+        0.3169570256341009,
+        0.3169570256341009
+      ],
+      "identification_width": 0.0,
+      "point_identified": true,
+      "sampling_radius": 1.4770964840398715,
+      "shared_unsupported": 0,
+      "tasks": 73,
+      "unsupported_disagreements": 0
+    },
+    "promoted": false
+  },
+  "contrasts": {
+    "blanket_support_abstain": {
+      "absolute_baseline_identified": true,
+      "absolute_target_identified": true,
+      "actual_paired_gain": 0.0317448484848485,
+      "alpha": 0.05,
+      "conditional_hoeffding_interval": [
+        -3.45773581124118,
+        3.1150467701597697
+      ],
+      "confidence_scope": "independent randomized logging, frozen policies/nuisance, fixed observed contexts; not future-distribution certification",
+      "disagreements": 23,
+      "estimated_identification_interval": [
+        -0.17134452054070531,
+        -0.17134452054070531
+      ],
+      "identification_width": 0.0,
+      "point_identified": true,
+      "sampling_radius": 3.286391290700475,
+      "shared_unsupported": 0,
+      "tasks": 99,
+      "unsupported_disagreements": 0
+    },
+    "direct": {
+      "absolute_baseline_identified": true,
+      "absolute_target_identified": true,
+      "actual_paired_gain": 0.14295444444444444,
+      "alpha": 0.05,
+      "conditional_hoeffding_interval": [
+        -3.294816001105657,
+        3.207464084085945
+      ],
+      "confidence_scope": "independent randomized logging, frozen policies/nuisance, fixed observed contexts; not future-distribution certification",
+      "disagreements": 22,
+      "estimated_identification_interval": [
+        -0.04367595850985566,
+        -0.04367595850985566
+      ],
+      "identification_width": 0.0,
+      "point_identified": true,
+      "sampling_radius": 3.251140042595801,
+      "shared_unsupported": 0,
+      "tasks": 99,
+      "unsupported_disagreements": 0
+    },
+    "disagreement_fallback": {
+      "absolute_baseline_identified": true,
+      "absolute_target_identified": true,
+      "actual_paired_gain": 0.0317448484848485,
+      "alpha": 0.05,
+      "conditional_hoeffding_interval": [
+        -3.45773581124118,
+        3.1150467701597697
+      ],
+      "confidence_scope": "independent randomized logging, frozen policies/nuisance, fixed observed contexts; not future-distribution certification",
+      "disagreements": 23,
+      "estimated_identification_interval": [
+        -0.17134452054070531,
+        -0.17134452054070531
+      ],
+      "identification_width": 0.0,
+      "point_identified": true,
+      "sampling_radius": 3.286391290700475,
+      "shared_unsupported": 0,
+      "tasks": 99,
+      "unsupported_disagreements": 0
+    },
+    "dr": {
+      "absolute_baseline_identified": true,
+      "absolute_target_identified": true,
+      "actual_paired_gain": 0.0317448484848485,
+      "alpha": 0.05,
+      "conditional_hoeffding_interval": [
+        -3.45773581124118,
+        3.1150467701597697
+      ],
+      "confidence_scope": "independent randomized logging, frozen policies/nuisance, fixed observed contexts; not future-distribution certification",
+      "disagreements": 23,
+      "estimated_identification_interval": [
+        -0.17134452054070531,
+        -0.17134452054070531
+      ],
+      "identification_width": 0.0,
+      "point_identified": true,
+      "sampling_radius": 3.286391290700475,
+      "shared_unsupported": 0,
+      "tasks": 99,
+      "unsupported_disagreements": 0
+    }
+  },
+  "feedback_sha256": "37a31b37b984b2dba741ed218811aa2a006f3b44f482548d516c1b095e1cd2e3",
+  "kind": "public_bfcl_reduction",
+  "policies": {
+    "blanket_support_abstain": {
+      "actual": {
+        "correct_on_executed": 0.5185185185185185,
+        "coverage": 0.2727272727272727,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.002348030303030303,
+        "selection_accuracy": 0.7777777777777778,
+        "success_all": 0.1414141414141414,
+        "tasks": 99,
+        "utility": 0.007752979797979791,
+        "wrong_call_rate": 0.13131313131313133
+      },
+      "ope": {
+        "direct": 0.06868269112708536,
+        "dr": -0.14912807275876114,
+        "ess": 12.906786418041118,
+        "identified": true,
+        "ips": -0.20579804093273024,
+        "matched": 33
+      }
+    },
+    "calibration_switch": {
+      "actual": {
+        "correct_on_executed": 0.47619047619047616,
+        "coverage": 0.42424242424242425,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.003789848484848485,
+        "selection_accuracy": 0.7676767676767676,
+        "success_all": 0.20202020202020202,
+        "tasks": 99,
+        "utility": -0.023991868686868683,
+        "wrong_call_rate": 0.2222222222222222
+      },
+      "ope": {
+        "direct": 0.0015612029048108756,
+        "dr": 0.022216447781944176,
+        "ess": 16.35707680992977,
+        "identified": true,
+        "ips": 0.025819001639619338,
+        "matched": 45
+      }
+    },
+    "direct": {
+      "actual": {
+        "correct_on_executed": 0.7307692307692307,
+        "coverage": 0.26262626262626265,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.0022495454545454546,
+        "selection_accuracy": 0.8686868686868687,
+        "success_all": 0.1919191919191919,
+        "tasks": 99,
+        "utility": 0.11896257575757577,
+        "wrong_call_rate": 0.0707070707070707
+      },
+      "ope": {
+        "direct": 0.10348407687225789,
+        "dr": -0.021459510727911506,
+        "ess": 12.464157314792265,
+        "identified": true,
+        "ips": -0.007528659060561353,
+        "matched": 33
+      }
+    },
+    "disagreement_fallback": {
+      "actual": {
+        "correct_on_executed": 0.5185185185185185,
+        "coverage": 0.2727272727272727,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.002348030303030303,
+        "selection_accuracy": 0.7777777777777778,
+        "success_all": 0.1414141414141414,
+        "tasks": 99,
+        "utility": 0.007752979797979791,
+        "wrong_call_rate": 0.13131313131313133
+      },
+      "ope": {
+        "direct": 0.06868269112708536,
+        "dr": -0.14912807275876114,
+        "ess": 12.906786418041118,
+        "identified": true,
+        "ips": -0.20579804093273024,
+        "matched": 33
+      }
+    },
+    "dr": {
+      "actual": {
+        "correct_on_executed": 0.5185185185185185,
+        "coverage": 0.2727272727272727,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.002348030303030303,
+        "selection_accuracy": 0.7777777777777778,
+        "success_all": 0.1414141414141414,
+        "tasks": 99,
+        "utility": 0.007752979797979791,
+        "wrong_call_rate": 0.13131313131313133
+      },
+      "ope": {
+        "direct": 0.06868269112708536,
+        "dr": -0.14912807275876114,
+        "ess": 12.906786418041118,
+        "identified": true,
+        "ips": -0.20579804093273024,
+        "matched": 33
+      }
+    },
+    "ips": {
+      "actual": {
+        "correct_on_executed": 0.6818181818181818,
+        "coverage": 0.2222222222222222,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.0019056565656565656,
+        "selection_accuracy": 0.8080808080808081,
+        "success_all": 0.15151515151515152,
+        "tasks": 99,
+        "utility": 0.07890242424242425,
+        "wrong_call_rate": 0.0707070707070707
+      },
+      "ope": {
+        "direct": 0.08248447722551241,
+        "dr": -0.07177991842388384,
+        "ess": 12.865007709385477,
+        "identified": true,
+        "ips": -0.056274624646209095,
+        "matched": 32
+      }
+    },
+    "tfidf": {
+      "actual": {
+        "correct_on_executed": 0.47619047619047616,
+        "coverage": 0.42424242424242425,
+        "denied_attempts": 0,
+        "mean_simulated_cost": 0.003789848484848485,
+        "selection_accuracy": 0.7676767676767676,
+        "success_all": 0.20202020202020202,
+        "tasks": 99,
+        "utility": -0.023991868686868683,
+        "wrong_call_rate": 0.2222222222222222
+      },
+      "ope": {
+        "direct": 0.0015612029048108756,
+        "dr": 0.022216447781944176,
+        "ess": 16.35707680992977,
+        "identified": true,
+        "ips": 0.025819001639619338,
+        "matched": 45
+      }
+    }
+  },
+  "scope": "function selection only; independent BFCL questions, controlled new bandit sampling; not an official BFCL end-to-end score",
+  "seed": 23,
+  "setting": "authorization",
+  "source": {
+    "accounting": {
+      "full_role_context_preserved": true,
+      "input_irrelevance": 882,
+      "input_multiple": 1053,
+      "orphan_reference_ids": [
+        "live_multiple_1052-279-0"
+      ],
+      "retained": 1930,
+      "rows_with_non_user_context": 86,
+      "skipped": [
+        {
+          "id": "live_multiple_1052-79-0",
+          "reason": "no reference with exactly matching ID"
+        },
+        {
+          "id": "live_irrelevance_120-9-0",
+          "reason": "missing query/tools or duplicate function names"
+        },
+        {
+          "id": "live_irrelevance_121-9-1",
+          "reason": "missing query/tools or duplicate function names"
+        },
+        {
+          "id": "live_irrelevance_122-9-2",
+          "reason": "missing query/tools or duplicate function names"
+        },
+        {
+          "id": "live_irrelevance_123-9-3",
+          "reason": "missing query/tools or duplicate function names"
+        }
+      ]
+    },
+    "source": {
+      "dataset": "gorilla-llm/Berkeley-Function-Calling-Leaderboard",
+      "files": {
+        "BFCL_v3_live_irrelevance.json": {
+          "bytes": 2202715,
+          "sha256": "0d259e1c3ab6ba06c2a51911e2f49ecaa2eac3723a4a14f183a7687955e61338",
+          "url": "https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard/resolve/61fc0608cfd831fcfbbaa676ebdfef0ed963eeda/BFCL_v3_live_irrelevance.json"
+        },
+        "BFCL_v3_live_multiple.json": {
+          "bytes": 3891342,
+          "sha256": "af2520ac5bb0b05aa9b8abe14a79b87198e5a3137a707d4f5633c792330f0cee",
+          "url": "https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard/resolve/61fc0608cfd831fcfbbaa676ebdfef0ed963eeda/BFCL_v3_live_multiple.json"
+        },
+        "README.md": {
+          "bytes": 15282,
+          "sha256": "22234ad32a0bb921809278d01ed65e932b4e611690dfa17d1e0eb6ba74ab4e27",
+          "url": "https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard/resolve/61fc0608cfd831fcfbbaa676ebdfef0ed963eeda/README.md"
+        },
+        "possible_answer/BFCL_v3_live_multiple.json": {
+          "bytes": 199668,
+          "sha256": "97e90d59c5bd76c55a2920ce93e5566e9046307d3f558578f085f9d3a56c3084",
+          "url": "https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard/resolve/61fc0608cfd831fcfbbaa676ebdfef0ed963eeda/possible_answer/BFCL_v3_live_multiple.json"
+        }
+      },
+      "license": "Apache-2.0",
+      "revision": "61fc0608cfd831fcfbbaa676ebdfef0ed963eeda"
+    }
+  },
+  "source_sha256": {
+    "learning.py": "b45ea349be94e008975f59faf58fab6d5cfc1225ded39949e557590b3002e41b",
+    "policy_contrast.py": "1e7bc298ac06b3b3643ef84810490a653477775fd723ebc65be85ea39cdadd7f",
+    "public_data.py": "d5344b62f4006c013e67e73327905c017f2f8e7d8a2806d14ef200885f5ae5a0",
+    "public_learning.py": "e1b68a9a81ff34138fb07cd25d4b9bafc16d1b1c35bcd3508069d1cdd62d5986",
+    "sandbox.py": "e5dc4ab3278828a3ae68e9e5fa692b39c720b05629133d11cf2b6fa12359c57e",
+    "v2_experiments.py": "15b0a2611db13997486c2ada8d115d001e889976e7cb4107188c4efde4d550bc",
+    "v2_learning.py": "ff7fc2e118532ea5f0ef27452e54a8b7d9a9789f5c6e221df9d455085dc4ebc6"
+  },
+  "split": {
+    "components": 122,
+    "forced_large_training_components": [
+      {
+        "component": "061848062b45fb2d5254ba1e9df82427b82cc728c82298c7dd2f7f3c407ab624",
+        "size": 1544
+      }
+    ],
+    "function_name_overlap": 0,
+    "group_counts": {
+      "calibration": 18,
+      "test": 28,
+      "train": 76
+    },
+    "group_definition": "connected normalized function names or identical normalized queries",
+    "largest_component": 1544,
+    "seed": 23,
+    "sizes": {
+      "calibration": 73,
+      "test": 99,
+      "train": 1758
+    }
+  }
+}

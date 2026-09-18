@@ -1,38 +1,37 @@
 # Counterfactual Tool Ranking under Utility, Cost, and Privilege Constraints
 
-## A Reproducible Empirical Study with Executable Enterprise-Inspired Tools
+## Realized-Return Controls, Public Tool-Calling Data, and Disagreement-Support Evaluation
 
 **jiapengli** (Microsoft)
 
-Working paper, version 1. September 2026. Not peer reviewed.
+Working paper, version 2. September 2026. Not peer reviewed.
 
 Code and experimental artifacts: <https://github.com/jaxblack/counterfactual-tool-ranking>.
 
 ## Abstract
 
-Tool-using agents must choose among actions that differ in utility, cost, latency,
-and authority. Their execution logs contain outcomes for selected actions, not
-for every available alternative. This suggests transferring contextual-bandit
-methods from advertising and recommendation, but three distinctions matter:
-authorization is not a statistical prediction; legal actions may lack historical
-support; and reliable off-policy evaluation does not imply that an off-policy
-learner produces the best policy. We present a reproducible implementation that
-separates full-action authorization, exact-propensity logging, policy learning,
-and selective execution. Eleven executable tools operate on resettable SQLite
-state in document, ticket, and customer-discount domains. An official Model
-Context Protocol (MCP) client and independent stdio server execute the same
-workload over a real protocol boundary. A fixed matrix of nine conditions and
-five seeds contains 387,000 logged decision instances and
-90,000 held-out task-condition instances. Doubly robust (DR)
-evaluation reduces mean absolute error relative to direct prediction from
-0.0772 to 0.0187 under a shifted test distribution,
-and from 0.1039 to 0.0193 with linear outcome models.
-DR policy learning does not consistently outperform direct prediction: noisy
-tree-model utilities are 0.5027 and 0.5118, respectively.
-Evidence-stratum abstention substantially reduces coverage and is not a safety
-guarantee. Our contribution is an executable, support-aware experimental contract
-and an empirical account of where established counterfactual methods help or
-fail, not a new DR estimator or a production security claim.
+Counterfactual tool evaluation must distinguish authority, historical support,
+and what a comparison actually estimates. We study these distinctions with
+eleven executable enterprise-inspired tools, exact-propensity logs, and real
+local Model Context Protocol transport. An initial 45-run synthetic study is
+retained, then challenged by 30 realized-return control runs and 15 experiments
+on 1,930 independently released Berkeley Function Calling Leaderboard (BFCL)
+tasks. Full-return direct regression reverses an initially favorable doubly
+robust (DR) evaluation result in the linear setting: mean absolute errors are
+0.0139 for direct regression and 0.0272 for DR.
+Under a shifted environment, DR retains an advantage, with errors
+0.0227 versus 0.0948. On function-name-group-disjoint
+BFCL-derived splits, direct and DR selectors obtain balanced accuracies of
+81.85% and 79.83%. Two pinned local
+Qwen2.5 models are evaluated on the same 200 held-out tasks, exposing a strong
+failure to abstain under the fixed prompt. We further characterize policy
+differences under missing support: unsupported actions shared by two policies
+cancel, allowing point identification of an incremental change when neither
+absolute value is identifiable. A disagreement-preserving fallback achieves
+this property in all five support-gap runs, but conservative sampling bounds
+do not certify deployment improvement. The contribution is a falsifiable
+evaluation method and independent public evidence, not a new DR estimator,
+official BFCL leaderboard score, or production-agent safety claim.
 
 **Keywords:** tool selection; contextual bandits; off-policy evaluation; doubly
 robust estimation; least privilege; selective execution; Model Context Protocol.
@@ -61,8 +60,10 @@ among fixed complete tool-call candidates at one decision point. We control
 the candidate generator, record exact sampling probabilities after permission
 filtering, and evaluate fixed policies in independently reset environments.
 No language model is used to infer an authorization decision or to judge task
-success. This isolates the decision-learning question from natural-language
-parsing and long-horizon credit assignment.
+success. The initial study isolates learning from language parsing; the new
+public-data study separately evaluates natural-language function selection
+with local LLMs and label-free lexical features. It still does not claim to
+solve long-horizon credit assignment.
 
 The empirical questions are:
 
@@ -74,12 +75,15 @@ The empirical questions are:
    probability, observations are stale, or the environment changes?
 4. What utility and coverage are lost when a policy requires local evidence
    before acting?
+5. Can a policy difference remain identifiable when its two absolute values
+   are not, and does the distinction help preserve useful baseline behavior?
 
-The results reject a blanket claim that DR ranking is always superior. They
-instead distinguish two uses of counterfactual reasoning: constructing a policy
-and evaluating a fixed policy. In our experiments the strongest and most
-consistent gains are in the second use, especially when the outcome model is
-misspecified or transferred to changed conditions.
+The version-2 results reject blanket superiority claims about either DR ranking
+or DR evaluation. They also correct a weakness in our initial comparison:
+nominal-cost direct prediction is not a substitute for regression of the full
+realized return. Sections 3--7 retain the first study and its frozen artifacts;
+Section 8 adds the new controls, public dataset, actual local LLM runs, and
+disagreement-support analysis. The old data are not silently overwritten.
 
 ## 2. Related Work and Scope
 
@@ -114,6 +118,17 @@ Thus the combination of an ACL, DR estimation, and abstention is not presented
 as algorithmic novelty. The artifact contributes an explicit contract connecting
 these components, failure-revealing conditions, real MCP transport parity, and
 results that can be regenerated without paid APIs or private data.
+
+The extension uses BFCL's independently collected live function-call queries
+[11], not only our own generator, and two small Qwen2.5 models [12]. Our
+disagreement-support proposition follows from a linear policy contrast and
+bounded missing outcomes. It is closely related to deficient-support and
+baseline-restriction ideas [3,4]; we make no unsupported claim of priority over
+general partial-identification theory. Its specific contribution here is the
+contrast-level support contract, executable bounds, and a baseline-preserving
+comparison that can be falsified on public tool-call data. This is stronger
+than simply naming the combination of DR and ACL a new algorithm, but does not
+by itself settle the contribution's ultimate novelty or impact.
 
 ## 3. Problem Formulation
 
@@ -418,7 +433,7 @@ within each setting; abstain and the oracle are excluded from aggregate OPE
 comparisons. Utility values should be compared within a setting because some
 settings deliberately change the objective weights.
 
-## 7. Results
+## 7. Initial Results: Frozen Version 1
 
 ### 7.1 Policy learning does not uniformly favor DR
 
@@ -476,7 +491,8 @@ DR error is 0.0187. For the linear model, errors are
 0.0590 and 0.0148. Across this fixed matrix, DR has
 the lowest mean absolute error among the four compared estimators in every
 condition. This is an empirical observation for these targets and generators,
-not a universal ordering of estimators.
+not a universal ordering of estimators. The complete-return controls in
+Section 8 specifically reverse this ordering in one setting.
 
 The shifted experiment evaluates target policies with held-out logs collected
 under the shifted test distribution. It does not show that old-distribution
@@ -547,7 +563,268 @@ expected from the deterministic mediator and tested implementation; the policies
 share that same gate. It is not evidence that the learner itself understands
 authorization or that a real enterprise deployment has zero security risk.
 
-## 8. Discussion and Limitations
+## 8. Version-2 Controls and Public Evidence
+
+### 8.1 A fair realized-return comparison
+
+The first direct estimator predicts success and unsafe outcomes, then subtracts
+nominal fees and latency. A revoked call is free in the simulator, and a failed
+call can change actual latency or avoid resource exposure. The DR residual sees
+the realized total return. An apparent advantage can therefore reflect a weak
+cost model rather than a tool-specific counterfactual-learning effect.
+
+We add two controls: a scalar regressor of complete realized return, and a
+multi-output regressor of realized success, unsafe outcome, fee, latency and
+extra-resource count, combined with the same utility weights. Full-return DR
+cross-fits the same scalar return model. All version-2 selectors use the same
+legal and empirically supported action boundary, the same feature interface,
+and the same model-family settings. A regression test where execution authority
+is revoked verifies that the full-return controls learn zero utility rather
+than subtracting a nominal fee.
+
+Thirty new runs cover six settings and five fixed seeds, using 6,000 training
+and 2,000 test decisions each. OPE is compared on identical frozen target-policy
+cases within each setting. Table 4 reports mean absolute errors; these cannot
+be numerically conflated with Table 2, which uses the original target set.
+
+| Setting | Nominal DM | Full DM | Component DM | Nominal DR | Full DR |
+| --- | --- | --- | --- | --- | --- |
+| clean | 0.0016 | 0.0016 | 0.0098 | 0.0010 | 0.0014 |
+| noisy | 0.0179 | 0.0183 | 0.0155 | 0.0110 | 0.0118 |
+| shifted | 0.0956 | 0.0948 | 0.0932 | 0.0262 | 0.0227 |
+| linear | 0.0870 | 0.0139 | 0.0139 | 0.0240 | 0.0272 |
+| cost sensitive | 0.0138 | 0.0178 | 0.0127 | 0.0092 | 0.0080 |
+| latency sensitive | 0.0197 | 0.0166 | 0.0139 | 0.0114 | 0.0111 |
+
+The linear setting changes the scientific conclusion. Full-return direct
+regression has MAE 0.0139, better than full-return DR at
+0.0272. The first version's nominal-cost comparison had obscured
+this strong baseline. Under a shifted test environment, the ordering reverses:
+full-return direct and DR errors are 0.0948 and
+0.0227. Thus the benefit of correction depends on the quality of
+the complete nuisance model; it is not an intrinsic superiority of DR. Full
+per-policy utility tables, component controls and seed dispersion are released.
+
+The scalar-return control also changes the outcome parameterization: it is not
+the same function class as two separately clipped success/risk heads. This
+comparison adds a missing practical baseline; it does not isolate cost modeling
+as the sole causal source of the reversal. The realized-component control and
+released model specifications make that distinction inspectable.
+
+### 8.2 Independent BFCL-derived tasks
+
+We use the public BFCL live-multiple and live-irrelevance question files and
+official reference function names at pinned revision
+`61fc0608cfd831fcfbbaa676ebdfef0ed963eeda` [11]. Their dataset card declares
+Apache-2.0. These live queries originated outside our simulator. Of 1,935 rows,
+one question lacks an exactly matching reference ID and four contain duplicate
+function names. They are excluded transparently, leaving 1,930 tasks; one
+orphan reference is recorded rather than joined by row position. All source
+messages are preserved with explicit role labels, including the 86 source rows
+with system or assistant context. The context is task data, not executable host
+instructions. Original question text, reference arguments, and model weights
+are not redistributed.
+
+We split connected components of normalized full function names or duplicate
+normalized queries. There is zero normalized function-name overlap between
+training, calibration and test. This is not a proof of zero semantic or service
+namespace overlap. Common functions connect a 1,544-row component, which is
+always assigned to training by a predeclared greater-than-half rule. Remaining
+components use seeded hash assignment. Consequently each of the five test
+splits has only 57--132 tasks and
+20--31 groups. This severe reduction is
+reported rather than hidden by a random row split or favorable seed selection.
+
+TF-IDF word and character features are fitted on training observations only.
+They measure query/schema similarity and schema complexity, not function IDs
+or answer labels. Reference answers and categories are absent from features;
+cross-fitting uses GroupKFold over training components. This task is exact
+function selection plus abstention, not BFCL's complete AST/argument/execution
+metric. No tool endpoint contained in the public text is executed.
+
+The underlying labels are public full feedback. We deliberately reveal only
+one sampled action's outcome per learning decision with new epsilon-greedy
+probabilities, recorded exactly. These are semi-synthetic bandit logs, not
+historical BFCL or enterprise propensities. Native utility is +1 for a correct
+call, -1 for an incorrect call, and 0 for abstention; abstention accuracy is
+separately evaluated against the no-relevant-function labels. Native data have
+no injected fee or ACL. Two explicitly derivative settings inject an independent
+20% function permission mask or a 25% zero-support mask, plus a schema-length
+fee proxy capped at 0.05. These transforms are not claims about real privileges
+or provider charges in BFCL.
+
+Table 5 reports native results averaged across fixed splits. Balanced accuracy
+averages should-call and should-abstain class recall, preventing class imbalance
+from making an all-abstain policy look successful. Group-bootstrap intervals
+resample connected components, not individual questions, and are included in
+the released diagnostics rather than used to select thresholds.
+
+| Policy | Selection accuracy % | Balanced accuracy % | Coverage % |
+| --- | --- | --- | --- |
+| always abstain | 69.22 | 50.00 | 0.00 |
+| direct | 86.42 | 81.85 | 27.63 |
+| dr | 84.09 | 79.83 | 28.83 |
+| ips | 84.44 | 79.63 | 28.06 |
+| tfidf | 70.47 | 69.23 | 43.00 |
+
+The complete-return direct selector achieves
+81.85% balanced accuracy versus
+69.23% for TF-IDF and 79.83% for DR.
+This supplies independent public task evidence for a learned selector, but
+not evidence that DR is the best selector. Tool schemas and requests are real
+public benchmark material; business side effects remain untested in this arm.
+
+A post-run dataset audit finds a structural shortcut: all 508 single-candidate
+rows in the selected BFCL categories are should-abstain tasks. Candidate count
+is an observable feature, but exploiting it is not language understanding.
+Without retraining, we therefore additionally report only held-out tasks with
+at least two candidates (Table 5b). Direct balanced accuracy falls to
+76.80%, compared with 64.89% for
+TF-IDF. The result still contains signal beyond the one-candidate shortcut,
+but the reduction underscores that the full-set headline is not a general
+semantic-reasoning score. This subgroup diagnostic was added after the runs
+and is not misrepresented as a preregistered primary endpoint.
+
+| Policy | Selection accuracy % | Balanced accuracy % | Coverage % |
+| --- | --- | --- | --- |
+| always abstain | 40.37 | 50.00 | 0.00 |
+| direct | 74.19 | 76.80 | 54.04 |
+| dr | 70.25 | 72.26 | 55.38 |
+| ips | 71.47 | 74.17 | 53.12 |
+| tfidf | 63.76 | 64.89 | 64.19 |
+
+![Figure 4. Realized-return controls change the OPE comparison; public function-group-held-out balanced accuracy controls for the always-abstain baseline.](../artifacts/v2/controls-and-public.png)
+
+### 8.3 Actual local LLM baselines
+
+We run pinned MLX 4-bit Qwen2.5-0.5B-Instruct and Qwen2.5-1.5B-Instruct models
+[12] on the same 200 SHA256-selected task IDs from the union of the five test
+splits. The union reuses tasks across splits; comparison to a learned selector
+is restricted to the seed for which that task is held out. Prompt design is
+fixed before test inference. Generation is greedy, with independent contexts,
+an 8,192 input-token cap and a 192 output-token cap. Invalid output and capped
+inputs are counted as errors, not silently excluded.
+
+The models see only requests and schemas, and must emit one exact function
+name with JSON arguments or a null-name abstention. No reference labels are
+shown. We report exact selection and schema validity separately. Type aliases
+such as BFCL's `dict`, `int` and `any` are normalized for structural validation;
+schema validity is not evidence that values match the reference semantics.
+Weights, prompt hashes, token counts, runtime and task IDs are recorded.
+
+| Model | Tasks | Should-call correct | Should-abstain correct | JSON valid % | Schema valid/known call % |
+| --- | --- | --- | --- | --- | --- |
+| qwen-0.5b | 200 | 46/72 | 0/128 | 95.00 | 92.47 |
+| qwen-1.5b | 200 | 59/72 | 0/128 | 99.00 | 92.51 |
+
+Neither model abstains on the 128 should-abstain questions;
+the remaining 72 tasks require a function call. Their overall
+selection accuracies are therefore much lower than their should-call recalls.
+This is a result for small quantized models under one fixed prompt, not a
+general statement about LLM tool-use capability. Unknown pretraining overlap
+with BFCL remains a contamination risk.
+
+Table 7 uses exactly the same held-out task subsets for each learned method
+and LLM within a seed, then averages the five comparisons. The models generate
+parameters as well, whereas learned selectors choose names; only name selection
+is compared. It is not a frontier-model ranking or an official BFCL score.
+
+| Matched model subset | Policy | Selection accuracy % | Balanced accuracy % |
+| --- | --- | --- | --- |
+| qwen-0.5b | always abstain | 66.83 | 50.00 |
+| qwen-0.5b | direct | 85.95 | 82.36 |
+| qwen-0.5b | dr | 83.76 | 80.44 |
+| qwen-0.5b | llm | 23.19 | 34.33 |
+| qwen-0.5b | tfidf | 70.90 | 70.41 |
+| qwen-1.5b | always abstain | 66.83 | 50.00 |
+| qwen-1.5b | direct | 85.95 | 82.36 |
+| qwen-1.5b | dr | 83.76 | 80.44 |
+| qwen-1.5b | llm | 27.68 | 41.73 |
+| qwen-1.5b | tfidf | 70.90 | 70.41 |
+
+### 8.4 Identifying policy changes rather than absolute values
+
+Let $d(a\mid z)=\pi(a\mid z)-\pi_0(a\mid z)$, and let
+$U(z)=\{a:\mu(a\mid z)=0\}$ be unsupported actions. Suppose outcomes lie
+in $[l,u]$, with no additional restrictions on unsupported conditional means.
+The estimand is the incremental value
+
+$$
+\Delta=\mathbb E_z\sum_a d(a\mid z)q(z,a).
+$$
+
+**Proposition (contrast support).** Under randomized logging and observation
+of the complete decision context, the contrast is point-identified for arbitrary
+bounded outcome models if and only if $d(a\mid z)=0$ on $U(z)$ almost surely.
+Its sharp partial-identification width otherwise is
+
+$$
+W=(u-l)\mathbb E_z\sum_{a\in U(z)}|d(a\mid z)|.
+$$
+
+To see this, split the value sum into supported and unsupported terms. Supported
+conditional means are identified by the randomized logger. On unsupported terms,
+write $d_+=\max(d,0)$ and $d_-=\min(d,0)$. Their lower and upper contributions
+are respectively $d_+l+d_-u$ and $d_+u+d_-l$. Assigning the endpoints independently
+to unobserved conditional means attains both bounds without changing the
+observed distribution. Subtracting yields $W$. When both policies select the
+same unsupported action, its coefficient is zero and it cancels exactly.
+If a nonzero unsupported coefficient occurs with positive probability, the two
+endpoint worlds establish non-identification. This proof does not claim priority
+over established partial-identification arguments; it exposes the relevant
+support condition for this tool-policy comparison.
+
+Our implementation estimates only the supported contribution using a paired
+DR residual and retains the unsupported lower/upper terms explicitly:
+
+$$
+\widehat\Delta_S=\frac1n\sum_i\left[
+\sum_{a\notin U_i}d_i(a)\hat q_i(a)+
+\frac{d_i(a_i)}{\mu_i(a_i)}(r_i-\hat q_i(a_i))\right].
+$$
+
+The model and policies are frozen independently of the evaluation logs.
+For deterministic policies, disagreement fallback preserves the target where
+target and baseline agree or both selected actions have positive logging
+probability; otherwise it retains the baseline action. This makes the contrast
+supported without pretending that either absolute value is known. The baseline
+must itself obey the current ACL, but need not have certified business utility.
+Fallback preserves its risks as well as its behavior.
+
+For bounded independent logging on fixed observed contexts, let $R_i$ be the
+range of possible importance-weighted residual corrections. Hoeffding's
+inequality gives a two-sided sampling radius
+
+$$
+\epsilon_\delta=\sqrt{\frac{\log(2/\delta)}{2n^2}\sum_iR_i^2}.
+$$
+
+The reported interval adds this radius to the estimated partial-identification
+endpoints. Shared-action rows have exactly zero range. The guarantee is
+conditional on the observed contexts, frozen policies and nuisance model, and
+independent randomized sampling. It is not a guarantee for a future distribution,
+human interactions or a data-dependent search over many policies.
+
+In the five BFCL-derived support-gap runs, both separate absolute values remain
+unidentified for the comparisons in Table 8. Disagreement fallback identifies
+the relative change in all five, unlike blanket substitution of abstention.
+The zero width refers to structural identification, not zero sampling error.
+
+| Comparison against TF-IDF | Both absolute values identified | Gain point-identified | Mean identification width |
+| --- | --- | --- | --- |
+| dr | 0/5 | 0/5 | 0.1315 |
+| blanket support abstain | 0/5 | 0/5 | 0.2111 |
+| disagreement fallback | 0/5 | 5/5 | 0.0000 |
+
+Conservative calibration never yields a strictly positive lower bound, so no
+automatic upgrade is certified in any of the 15 public runs. This negative
+result is important: the method fixes the estimand's support requirement, but
+does not manufacture data or solve the sample-complexity problem. A deployable
+improvement still needs sufficient independent evidence and explicit risk budgets.
+
+![Figure 5. Real local models are evaluated separately for should-call and should-abstain tasks. Disagreement support eliminates structural ambiguity about a policy change, not statistical uncertainty about its sign.](../artifacts/v2/llm-and-contrast.png)
+
+## 9. Discussion and Limitations
 
 **Decision learning and policy evaluation are different deliverables.** A
 useful first deployment of this architecture may be better logging and policy
@@ -569,13 +846,14 @@ coverage, risk-constrained policy selection, and state-dependent information
 acquisition. Such changes should be specified before collecting the next test
 set, rather than tuned against the current matrix.
 
-**The environment is intentionally limited.** It contains eleven tools, finite
-argument templates, three synthetic domains, and one decision per task. It does
-not evaluate thousands of MCP tools, semantic retrieval, arbitrary parameter
-generation, token-cost prediction, an LLM planner, interactive human approval,
-or multi-step policy improvement. It provides local real protocol execution,
-not external enterprise services. No claim about BFCL, tau-bench, AgentAbstain,
-or a production agent leaderboard follows from these results.
+**External evidence is improved but still limited.** The executable environment
+has eleven tools and three synthetic domains. The new public BFCL-derived arm
+adds independent text, tool schemas and actual LLM inference, but evaluates
+selection rather than executed business goals. Function-group disjointness is
+not complete semantic novelty, and small test groups limit precision. Neither
+arm tests thousands of executable MCP tools, paid provider costs, interactive
+approval, a persistent LLM planner, or multi-step policy improvement. No
+production-agent or official BFCL, tau-bench or AgentAbstain score is claimed.
 
 **Authority is simplified.** The access-control model supports principal/group
 grants, resource inheritance, deny precedence, and revocation snapshots. It does
@@ -590,16 +868,13 @@ universal weights. Real deployments must measure costs and user utility, include
 the cost of asking or escalating, and distinguish recoverable from irreversible
 side effects.
 
-**The direct-model baseline has a restricted cost model.** It predicts success
-and unsafe outcomes but subtracts nominal service cost, latency, and argument
-exposure instead of estimating their conditional realized values. In contrast,
-the DR residual uses observed total utility. Revoked actions incur no service
-fee, and injected failures change latency and may avoid resource access. Part
-of DR's advantage can therefore correct this deliberately restricted nuisance
-model rather than reveal a tool-selection-specific advantage. A direct regressor
-of complete realized utility, plus separately learned cost and denial models,
-is an important missing control. The current results establish improvement over
-the implemented baseline, not over every reasonable direct estimator.
+**The original comparator limitation materially affects conclusions.** The
+nominal-cost baseline remains in the frozen first study for transparency.
+Complete-return and realized-component controls are now implemented and tested,
+and reverse the original OPE ordering in the linear setting. This does not
+prove that the new baseline is universally optimal; richer models and alternative
+regularization remain unexplored. Reporting the reversal is more informative
+than preserving a headline that depended on an incomplete control.
 
 **Statistical conclusions are preliminary.** Five seeds and 200 bootstrap
 resamples support an inspectable first study, not a definitive method ranking.
@@ -608,7 +883,7 @@ an independent action-level validation target, and interval coverage is not
 uniformly guaranteed after selection. Reused task templates and coupled setting
 seeds are explicit restrictions on generalization and statistical independence.
 
-## 9. Reproducibility and Data Handling
+## 10. Reproducibility and Data Handling
 
 The public repository contains the simulator, authorized candidate generation,
 exact logger, three learners, conservative variants, four OPE estimators, MCP
@@ -621,6 +896,31 @@ python3 -m venv .venv
 .venv/bin/python -m unittest discover -p 'test_*.py' -v
 .venv/bin/python suite.py --out results/reproduction
 ```
+
+The version-2 controls and public data are reproduced separately:
+
+```sh
+.venv/bin/python v2_experiments.py --out results/v2-reproduction
+.venv/bin/python -m pip install -r requirements-llm.txt
+.venv/bin/python public_llm.py --model 0.5b --out results/llm-small-reproduction
+.venv/bin/python public_llm.py --model 1.5b --out results/llm-large-reproduction
+.venv/bin/python verify_v2.py
+```
+
+MLX inference requires Apple silicon; recorded model outputs and all other
+experiments can be inspected on other platforms. The public dataset downloader
+uses pinned revisions and content hashes. License, attribution, exclusions and
+split assignments are documented in the repository. Original BFCL prompts,
+reference arguments, raw generated text and model weights remain in local caches;
+public outputs contain task IDs, scores, hashes and aggregate diagnostics.
+
+A pre-publication input audit found that the first version-2 adapter had kept
+only user messages and omitted other public roles. Those preliminary results
+were not published as the official extension. We preserved them locally and
+reran the complete version-2 matrix and both models after restoring the full
+role-labeled context, with unchanged seeds, model weights, prompt template,
+thresholds and token caps. Source hashes identify the corrected adapter used
+by both the learned selectors and the local models.
 
 For the protocol check:
 
@@ -639,18 +939,21 @@ hashes machine-specific; semantic replay ignores that one measurement. The
 working paper's tables are generated from committed JSON summaries instead of
 being independently transcribed. All figures are generated from the same data.
 
-## 10. Conclusion
+## 11. Conclusion
 
 Counterfactual tool selection is useful only when its execution, logging, and
 evaluation contracts are explicit. Our implementation keeps deterministic
 authorization separate from learned value and separates legal availability
-from historical support. In a reproducible enterprise-inspired workload, DR
-evaluation is consistently more accurate than the compared estimators, while
-DR learning is not consistently better than direct prediction. Evidence-based
-abstention can severely damage coverage without reliably improving business
-safety. These results support an evidence-first development path: trustworthy
-action-level logs and honest OPE before stronger claims about autonomous
-enterprise-agent optimization.
+from historical support. Full realized-return controls overturn a favorable
+DR comparison in one setting, while correction remains helpful under others.
+Independent BFCL-derived tasks and real local LLMs add external evidence without
+turning a selection benchmark into a production claim. At the estimand level,
+unsupported common actions need not prevent identifying a policy change; a
+disagreement-preserving fallback makes this condition operational. Its bounds
+remain too wide to certify the changes in our public-data study. The resulting
+lesson is conditional, testable and narrower than claiming a universally better
+ranker: model the full return, measure both action and abstention performance,
+and distinguish identifiable changes from unsupported absolute predictions.
 
 ## Generative-AI Assistance
 
@@ -660,8 +963,9 @@ generated from executable experiments and checked against the published
 artifacts; they were not generated as hypothetical results. Automated tests and
 artifact checks do not replace independent human scientific review. Responsibility
 for the accuracy, originality, references, and interpretation of the submitted
-work remains with the named human author. No generative model was an experimental
-agent or baseline in the reported workload.
+work remains with the named human author. The initial synthetic study uses no
+generative model as an agent; version 2 separately evaluates the two explicitly
+identified Qwen2.5 models as experimental baselines.
 
 ## References
 
@@ -675,3 +979,5 @@ agent or baseline in the reported workload.
 8. Xun Liu et al. **AgentAbstain: Do LLM Agents Know When Not to Act?** arXiv:2607.10059, 2026. <https://arxiv.org/abs/2607.10059>.
 9. Nan Jiang and Lihong Li. **Doubly Robust Off-policy Value Evaluation for Reinforcement Learning.** ICML, 2016. <https://proceedings.mlr.press/v48/jiang16.html>.
 10. Yuta Saito, Shunsuke Aihara, Megumi Matsutani, and Yusuke Narita. **Open Bandit Dataset and Pipeline: Towards Realistic and Reproducible Off-Policy Evaluation.** NeurIPS Datasets and Benchmarks, 2021. <https://arxiv.org/abs/2008.07146>.
+11. Huanzhi Mao, Charlie Cheng-Jie Ji, Fanjia Yan, Tianjun Zhang, and Shishir G. Patil. **BFCL V2: Live Dataset.** Berkeley Function Calling Leaderboard, 2024. Dataset methodology and citation information: <https://gorilla.cs.berkeley.edu/blogs/12_bfcl_v2_live.html>.
+12. Qwen Team. **Qwen2.5 Technical Report.** arXiv:2412.15115, 2024; version 2 revised January 2025. <https://arxiv.org/abs/2412.15115>.
