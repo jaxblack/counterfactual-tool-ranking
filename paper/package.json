@@ -1,0 +1,17 @@
+{
+  "name": "counterfactual-tool-ranking-paper",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "pdf": "node build.mjs --pdf"
+  },
+  "dependencies": {
+    "katex": "0.18.7",
+    "markdown-it": "14.3.2",
+    "markdown-it-texmath": "1.0.0"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
+  }
+}

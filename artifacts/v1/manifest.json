@@ -1,0 +1,64 @@
+{
+  "quick": false,
+  "schema_version": 1,
+  "seeds": [
+    7,
+    17,
+    23,
+    31,
+    47
+  ],
+  "settings": {
+    "clean": [],
+    "cost_sensitive": [
+      "--scenario",
+      "noisy",
+      "--cost-weight",
+      "3"
+    ],
+    "latency_sensitive": [
+      "--scenario",
+      "noisy",
+      "--latency-weight",
+      "0.5"
+    ],
+    "linear": [
+      "--scenario",
+      "noisy",
+      "--model",
+      "linear"
+    ],
+    "low_exploration": [
+      "--scenario",
+      "noisy",
+      "--epsilon",
+      "0.05"
+    ],
+    "missing_support": [
+      "--scenario",
+      "noisy",
+      "--exclude-logged-tool",
+      "docs.batch_get",
+      "--exclude-logged-tool",
+      "tickets.close_checked",
+      "--exclude-logged-tool",
+      "crm.discount_checked"
+    ],
+    "noisy": [
+      "--scenario",
+      "noisy"
+    ],
+    "shifted": [
+      "--scenario",
+      "noisy",
+      "--test-scenario",
+      "shifted"
+    ],
+    "small_data": [
+      "--scenario",
+      "noisy",
+      "--train-size",
+      "600"
+    ]
+  }
+}

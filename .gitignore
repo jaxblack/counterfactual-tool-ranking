@@ -12,3 +12,6 @@ results/
 *.egg-info/
 build/
 dist/
+paper/node_modules/
+paper/.preview/
+paper/paper.html

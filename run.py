@@ -4,6 +4,7 @@ import argparse
 from dataclasses import asdict, replace
 from datetime import UTC, datetime
 import csv
+import hashlib
 from importlib.metadata import version
 import json
 from pathlib import Path
@@ -13,14 +14,18 @@ import time
 
 import numpy as np
 
+from execution import executor_for
 from learning import (
     Learner, bootstrap_mean, choose, collect, evaluate_ope,
     read_log, write_log,
 )
-from sandbox import ABSTAIN, TOOLS, Sandbox, authorize, make_tasks
+from sandbox import TOOLS, authorize, make_tasks
 
 
-POLICIES = ("abstain", "cheapest", "schema_match", "rules", "direct", "dr", "conservative_dr")
+POLICIES = (
+    "abstain", "cheapest", "schema_match", "rules", "direct", "ips", "dr",
+    "conservative_direct", "conservative_dr",
+)
 THRESHOLDS = (0.0, 0.25, 0.5, 0.75, 0.8, 0.825, 0.85, 0.875, 0.9, 0.925, 0.95, 0.975, 1.0)
 
 
@@ -31,19 +36,20 @@ def save_json(file_path: Path, value: object) -> None:
 def choices_for(tasks, rankings, name, threshold=0.0, min_count=5, uncertainty_weight=1.0):
     return [
         choose(task, ranking, name, threshold, min_count, uncertainty_weight)
-        for task, ranking in zip(tasks, rankings)
+        for task, ranking in zip(tasks, rankings, strict=True)
     ]
 
 
-def calibrate(learner, decisions, min_count, bootstrap, seed):
+def calibrate(learner, decisions, min_count, bootstrap, seed, policy="conservative_dr"):
     tasks = [decision.task for decision in decisions]
     rankings = learner.rank(tasks)
     rows = []
     for uncertainty_weight in (0.0, 0.5, 1.0):
         for threshold in (0.0, 0.5, 0.8, 0.9, 1.0):
-            choices = choices_for(tasks, rankings, "conservative_dr", threshold, min_count, uncertainty_weight)
+            choices = choices_for(tasks, rankings, policy, threshold, min_count, uncertainty_weight)
             estimate = evaluate_ope(
                 decisions, rankings, choices, learner.cost_weight, learner.risk_weight, bootstrap, seed,
+                learner.latency_weight,
             )
             rows.append({
                 "threshold": threshold,
@@ -57,30 +63,29 @@ def calibrate(learner, decisions, min_count, bootstrap, seed):
     return {"threshold": selected["threshold"], "uncertainty_weight": selected["uncertainty_weight"]}, rows
 
 
-def execute_choices(tasks, rankings, choices, cache):
+def execute_choices(tasks, rankings, choices, cache, executor):
     outcomes = []
-    for task, ranking, choice in zip(tasks, rankings, choices):
+    for task, ranking, choice in zip(tasks, rankings, choices, strict=True):
         action = ranking.actions[choice]
         key = (task.task_id, action)
         if key not in cache:
-            with Sandbox(task) as sandbox:
-                cache[key] = sandbox.execute(action)
+            cache[key] = executor.execute(task, action)
         outcomes.append(cache[key])
     return outcomes
 
 
-def metrics(tasks, rankings, choices, outcomes, cost_weight, risk_weight, bootstrap, seed):
+def metrics(tasks, rankings, choices, outcomes, cost_weight, risk_weight, bootstrap, seed, latency_weight=0.0):
     total = len(tasks)
     attempted = sum(not outcome.abstained for outcome in outcomes)
     successes = sum(outcome.success for outcome in outcomes)
     feasible = sum(task.should_act for task in tasks)
-    correct_abstentions = sum(outcome.abstained and not task.should_act for task, outcome in zip(tasks, outcomes))
-    unnecessary_abstentions = sum(outcome.abstained and task.should_act for task, outcome in zip(tasks, outcomes))
+    correct_abstentions = sum(outcome.abstained and not task.should_act for task, outcome in zip(tasks, outcomes, strict=True))
+    unnecessary_abstentions = sum(outcome.abstained and task.should_act for task, outcome in zip(tasks, outcomes, strict=True))
     costs = sum(outcome.cost for outcome in outcomes)
-    rewards = np.array([outcome.utility(cost_weight, risk_weight) for outcome in outcomes])
+    rewards = np.array([outcome.utility(cost_weight, risk_weight, latency_weight) for outcome in outcomes])
     unauthorized_executions = sum(
-        not authorize(task.policy, ranking.actions[choice])[0] and not outcome.denied and not outcome.abstained
-        for task, ranking, choice, outcome in zip(tasks, rankings, choices, outcomes)
+        not authorize(task.execution_policy or task.policy, ranking.actions[choice])[0] and not outcome.denied and not outcome.abstained
+        for task, ranking, choice, outcome in zip(tasks, rankings, choices, outcomes, strict=True)
     )
     return {
         "tasks": total,
@@ -129,8 +134,8 @@ def plot_frontier(output, rows, policies, seed):
         [row["cost_per_success"] for row in valid],
         "o-", color="#167d8d", markersize=4,
     )
-    colors = ("#b95632", "#b09226", "#365caa", "#397f46", "#804b80", "#c33d44")
-    for name, color in zip(POLICIES[1:], colors):
+    colors = ("#b95632", "#b09226", "#365caa", "#397f46", "#804b80", "#c33d44", "#555555", "#007080")
+    for name, color in zip(POLICIES[1:], colors, strict=True):
         result = policies[name]["actual"]
         if result["success_on_executed"] is None:
             continue
@@ -151,8 +156,9 @@ def write_report(output, summary):
     lines = [
         "# Counterfactual Tool Ranking: Local MVP",
         "",
-        "Synthetic document and ticket tasks; eight executable tools; isolated SQLite state.",
-        "Costs and service latency are simulated. No LLM, live MCP server, paid API, or production data was used.",
+        f"Synthetic document, ticket, and CRM tasks; {len(TOOLS)} executable tools; isolated SQLite state.",
+        "Costs and service latency are simulated. No LLM, paid API, or production data was used.",
+        f"Execution backend: {summary['execution']['backend']}.",
         "",
         f"Seed: {summary['config']['seed']}. Train/calibration/test: "
         f"{summary['config']['train_size']}/{summary['config']['calibration_size']}/{summary['config']['test_size']}.",
@@ -191,13 +197,13 @@ def write_report(output, summary):
         "", "## Interpretation and limits", "",
         "- All executable policies share the same deterministic full-action permission filter and execution recheck.",
         "- Unauthorized execution count is measured in this toy boundary, not a proof about external services.",
-        "- The rules baseline knows these eight tool semantics; oracle is evaluation-only full feedback.",
+        "- The rules baseline knows nominal tool semantics but not hidden failures or stale observations; oracle is hindsight full feedback.",
         "- Direct and DR learners only receive the selected action's outcome. No oracle labels enter training or calibration.",
         "- Calibration selects the best bootstrap DR lower endpoint from a fixed grid on separate logged tasks.",
         "- Ensemble disagreement is a heuristic, NOT a calibrated action-level confidence bound or a safety guarantee.",
         "- Intervals are task bootstrap estimates. They are not uniform guarantees or rare-event security certificates.",
         "- One decision per task, fixed structured observations, IID synthetic splits, no language understanding or multi-step claim.",
-        "- Approval status is explicitly observed. A policy should not assume it knows unobserved real-world approval state.",
+        "- Approval and service health are pre-action observations, potentially stale in noisy/shifted scenarios.",
         "- A small deterministic environment can favor hand-written rules and direct models. Equal performance is not evidence of DR superiority.",
         "- Zero-propensity targets are reported as unidentifiable, without silently dropping contexts or renormalizing.",
         "- The support/evidence fallback is a finite feature-stratum check; generalizing it to free-form contexts is future work.",
@@ -212,6 +218,17 @@ def write_report(output, summary):
 
 
 def run_experiment(args):
+    task_splits = {
+        name: make_tasks(size, args.seed + index, name, args.test_scenario or args.scenario if name == "test" else args.scenario)
+        for index, (name, size) in enumerate((
+            ("train", args.train_size), ("calibration", args.calibration_size), ("test", args.test_size),
+        ))
+    }
+    with executor_for(args.backend, [task for tasks in task_splits.values() for task in tasks]) as executor:
+        return run_with_executor(args, task_splits, executor)
+
+
+def run_with_executor(args, task_splits, executor):
     started = time.perf_counter()
     output = args.out or Path(__file__).parent / "results" / datetime.now(UTC).strftime("%Y%m%dT%H%M%S%fZ")
     if output.exists() and any(output.iterdir()):
@@ -220,68 +237,70 @@ def run_experiment(args):
     logger = {"name": "cheap_epsilon_greedy", "epsilon": args.epsilon, "excluded_tools": args.exclude_logged_tool}
     splits = {}
     print("Collecting selected-action logs...", flush=True)
-    for split_index, (name, size) in enumerate((
-        ("train", args.train_size), ("calibration", args.calibration_size), ("test", args.test_size),
-    )):
+    for split_index, name in enumerate(("train", "calibration", "test")):
         task_seed = args.seed + split_index
         logging_seed = args.seed + 100 + split_index
-        tasks = make_tasks(size, task_seed, name)
-        decisions = collect(tasks, args.epsilon, logging_seed, tuple(args.exclude_logged_tool))
+        tasks = task_splits[name]
+        decisions = collect(tasks, args.epsilon, logging_seed, tuple(args.exclude_logged_tool), executor)
         write_log(output / f"{name}.jsonl", decisions, {**logger, "seed": logging_seed, "task_seed": task_seed})
         splits[name] = decisions
     print("Training direct and cross-fitted DR models...", flush=True)
-    learner = Learner(args.seed, args.cost_weight, args.risk_weight).fit(splits["train"])
+    learner = Learner(args.seed, args.cost_weight, args.risk_weight, args.latency_weight, args.model).fit(splits["train"])
     print("Selecting conservative threshold on calibration logs only...", flush=True)
     selected, calibration = calibrate(learner, splits["calibration"], args.min_count, args.bootstrap, args.seed)
+    selected_direct, calibration_direct = calibrate(
+        learner, splits["calibration"], args.min_count, args.bootstrap, args.seed, "conservative_direct",
+    )
     tasks = [decision.task for decision in splits["test"]]
     rankings = learner.rank(tasks)
     choices_by_policy = {
         name: choices_for(
-            tasks, rankings, name, selected["threshold"] if name == "conservative_dr" else 0.0,
-            args.min_count, selected["uncertainty_weight"],
+            tasks, rankings, name,
+            selected["threshold"] if name == "conservative_dr" else selected_direct["threshold"] if name == "conservative_direct" else 0.0,
+            args.min_count, selected_direct["uncertainty_weight"] if name == "conservative_direct" else selected["uncertainty_weight"],
         )
         for name in POLICIES
     }
     cache = {}
     oracle_choices = []
     print("Executing frozen policies in independent resettable test sandboxes...", flush=True)
-    for task, ranking in zip(tasks, rankings):
+    for task, ranking in zip(tasks, rankings, strict=True):
         rewards = []
         for action in ranking.actions:
-            with Sandbox(task) as sandbox:
-                outcome = sandbox.execute(action)
+            outcome = executor.execute(task, action)
             cache[(task.task_id, action)] = outcome
-            rewards.append(outcome.utility(args.cost_weight, args.risk_weight))
+            rewards.append(outcome.utility(args.cost_weight, args.risk_weight, args.latency_weight))
         oracle_choices.append(int(np.argmax(rewards)))
     choices_by_policy["oracle"] = oracle_choices
     results = {}
     policy_rewards = {}
     with (output / "test_decisions.csv").open("w", newline="", encoding="utf-8") as output_csv:
         writer = csv.DictWriter(output_csv, fieldnames=(
-            "policy", "task_id", "domain", "should_act", "tool", "resources", "success",
+            "policy", "task_id", "domain", "should_act", "tool", "resources", "amount", "success",
             "abstained", "unsafe", "denied", "cost", "excess_access", "utility", "error",
         ))
         writer.writeheader()
         for name, choices in choices_by_policy.items():
-            outcomes = execute_choices(tasks, rankings, choices, cache)
+            outcomes = execute_choices(tasks, rankings, choices, cache, executor)
             actual, rewards = metrics(
-                tasks, rankings, choices, outcomes, args.cost_weight, args.risk_weight, args.bootstrap, args.seed,
+                tasks, rankings, choices, outcomes, args.cost_weight, args.risk_weight, args.bootstrap, args.seed, args.latency_weight,
             )
             policy_rewards[name] = rewards
             result = {"actual": actual}
             if name != "oracle":
                 estimate = evaluate_ope(
                     splits["test"], rankings, choices, args.cost_weight, args.risk_weight, args.bootstrap, args.seed,
+                    args.latency_weight,
                 )
                 if estimate["identifiable"]:
                     estimate["absolute_error"] = abs(estimate["dr"] - actual["utility"])
                 result["ope"] = estimate
             results[name] = result
-            for task, ranking, choice, outcome, reward in zip(tasks, rankings, choices, outcomes, rewards):
+            for task, ranking, choice, outcome, reward in zip(tasks, rankings, choices, outcomes, rewards, strict=True):
                 action = ranking.actions[choice]
                 writer.writerow({
                     "policy": name, "task_id": task.task_id, "domain": task.domain,
-                    "should_act": task.should_act, "tool": action.tool, "resources": json.dumps(action.resources),
+                    "should_act": task.should_act, "tool": action.tool, "resources": json.dumps(action.resources), "amount": action.amount,
                     "success": outcome.success, "abstained": outcome.abstained,
                     "unsafe": outcome.unsafe, "denied": outcome.denied, "cost": outcome.cost,
                     "excess_access": outcome.excess_access, "utility": float(reward), "error": outcome.error,
@@ -289,15 +308,15 @@ def run_experiment(args):
     frontier = []
     for threshold in THRESHOLDS:
         choices = choices_for(tasks, rankings, "conservative_dr", threshold, args.min_count, selected["uncertainty_weight"])
-        outcomes = execute_choices(tasks, rankings, choices, cache)
-        actual, _ = metrics(tasks, rankings, choices, outcomes, args.cost_weight, args.risk_weight, args.bootstrap, args.seed)
+        outcomes = execute_choices(tasks, rankings, choices, cache, executor)
+        actual, _ = metrics(tasks, rankings, choices, outcomes, args.cost_weight, args.risk_weight, args.bootstrap, args.seed, args.latency_weight)
         frontier.append({"threshold": threshold, **{key: value for key, value in actual.items() if key != "utility_ci95"}})
     with (output / "frontier.csv").open("w", newline="", encoding="utf-8") as output_csv:
         writer = csv.DictWriter(output_csv, fieldnames=list(frontier[0]))
         writer.writeheader()
         writer.writerows(frontier)
     differences = {}
-    for baseline in ("schema_match", "rules", "direct", "dr"):
+    for baseline in ("schema_match", "rules", "direct", "ips", "dr", "conservative_direct"):
         differences[f"conservative_dr - {baseline}"] = {
             "mean": float((policy_rewards["conservative_dr"] - policy_rewards[baseline]).mean()),
             "ci95": bootstrap_mean(policy_rewards["conservative_dr"] - policy_rewards[baseline], args.bootstrap, args.seed),
@@ -308,13 +327,23 @@ def run_experiment(args):
         "config": {key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()},
         "environment": {"python": platform.python_version(), **{package: version(package) for package in ("numpy", "scikit-learn", "matplotlib")}},
         "tools": [asdict(tool) for tool in TOOLS.values()],
+        "execution": dict(executor.metadata),
         "feature_names": list(learner.vectorizer.get_feature_names_out()),
         "feasible_test_tasks": sum(task.should_act for task in tasks),
         "selected_calibration": selected,
+        "selected_direct_calibration": selected_direct,
         "calibration_grid": calibration,
+        "direct_calibration_grid": calibration_direct,
         "policies": results,
         "paired_differences": differences,
+        "source_sha256": {
+            file_path.name: hashlib.sha256(file_path.read_bytes()).hexdigest()
+            for file_path in sorted(Path(__file__).parent.glob("*.py"))
+        },
     }
+    if hasattr(executor, "roundtrip_ms"):
+        summary["execution"]["roundtrip_p50_ms"] = float(np.percentile(executor.roundtrip_ms, 50))
+        summary["execution"]["roundtrip_p95_ms"] = float(np.percentile(executor.roundtrip_ms, 95))
     plot_frontier(output, frontier, results, args.seed)
     summary["elapsed_seconds"] = time.perf_counter() - started
     save_json(output / "summary.json", summary)
@@ -328,14 +357,14 @@ def run_experiment(args):
     return summary
 
 
-def replay(file_path: Path) -> int:
+def replay(file_path: Path, backend: str = "local") -> int:
     decisions = read_log(file_path)
     mismatches = []
-    for decision in decisions:
-        with Sandbox(decision.task) as sandbox:
-            outcome = sandbox.execute(decision.actions[decision.chosen])
-        if replace(outcome, runtime_ms=0) != replace(decision.outcome, runtime_ms=0):
-            mismatches.append(decision.task.task_id)
+    with executor_for(backend, [decision.task for decision in decisions]) as executor:
+        for decision in decisions:
+            outcome = executor.execute(decision.task, decision.actions[decision.chosen])
+            if replace(outcome, runtime_ms=0) != replace(decision.outcome, runtime_ms=0):
+                mismatches.append(decision.task.task_id)
     print(json.dumps({"checked": len(decisions), "mismatches": len(mismatches), "examples": mismatches[:10]}))
     return int(bool(mismatches))
 
@@ -348,23 +377,29 @@ def parse_args(arguments=None):
     run.add_argument("--calibration-size", type=int, default=1200)
     run.add_argument("--test-size", type=int, default=2000)
     run.add_argument("--seed", type=int, default=7)
+    run.add_argument("--backend", choices=("local", "mcp"), default="local")
+    run.add_argument("--scenario", choices=("clean", "noisy", "shifted"), default="clean")
+    run.add_argument("--test-scenario", choices=("clean", "noisy", "shifted"))
+    run.add_argument("--model", choices=("trees", "linear"), default="trees")
     run.add_argument("--epsilon", type=float, default=0.3)
     run.add_argument("--cost-weight", type=float, default=1.0)
     run.add_argument("--risk-weight", type=float, default=2.0)
+    run.add_argument("--latency-weight", type=float, default=0.0, help="penalty per 100 simulated service milliseconds")
     run.add_argument("--min-count", type=int, default=5)
     run.add_argument("--bootstrap", type=int, default=200)
     run.add_argument("--exclude-logged-tool", action="append", default=[], choices=tuple(TOOLS))
     run.add_argument("--out", type=Path)
     replay_parser = subparsers.add_parser("replay", help="verify logged results against fresh SQLite state")
     replay_parser.add_argument("--log", type=Path, required=True)
+    replay_parser.add_argument("--backend", choices=("local", "mcp"), default="local")
     args = parser.parse_args(arguments)
     if args.command == "run":
         if args.train_size < 12 or min(args.calibration_size, args.test_size, args.bootstrap, args.min_count) < 1:
             parser.error("train-size must be >= 12; other sizes, min-count and bootstrap must be positive")
         if (
-            not all(np.isfinite(value) for value in (args.epsilon, args.cost_weight, args.risk_weight))
+            not all(np.isfinite(value) for value in (args.epsilon, args.cost_weight, args.risk_weight, args.latency_weight))
             or not 0 <= args.epsilon <= 1
-            or min(args.cost_weight, args.risk_weight) < 0
+            or min(args.cost_weight, args.risk_weight, args.latency_weight) < 0
         ):
             parser.error("epsilon must be in [0, 1] and penalty weights must be nonnegative")
         if not 0 <= args.seed < 2**32 - 1000:
@@ -376,7 +411,7 @@ def main() -> int:
     args = parse_args()
     try:
         if args.command == "replay":
-            return replay(args.log)
+            return replay(args.log, args.backend)
         run_experiment(args)
         return 0
     except (OSError, ValueError, KeyError) as error:

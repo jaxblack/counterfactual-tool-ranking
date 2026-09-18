@@ -15,7 +15,7 @@ from learning import (
 )
 from run import parse_args, replay, run_experiment
 from sandbox import (
-    ABSTAIN, Action, Outcome, Policy, Sandbox, authorize, candidates, legal_actions,
+    ABSTAIN, TOOLS, Action, Grant, Outcome, Policy, Sandbox, authorize, candidates, legal_actions,
     make_tasks, task_from_dict, task_to_dict,
 )
 
@@ -39,10 +39,30 @@ class AuthorizationTests(unittest.TestCase):
         for name in ("unknown", "docs.export"):
             self.assertFalse(authorize(self.policy, Action(name, ("tenant/team/document",)))[0])
 
+    def test_numeric_parameters_and_encoded_paths_are_validated(self):
+        policy = replace(self.policy, scopes=("crm.write",))
+        for amount in (None, True, -1, 0, 101, "10"):
+            self.assertFalse(authorize(policy, Action("crm.discount_one", ("tenant/team/customer",), amount))[0])
+        for resource in ("tenant/team/%2e%2e/private", "tenant/team/child\\secret", "tenant/team/x\x00"):
+            self.assertFalse(authorize(self.policy, Action("docs.get", (resource,)))[0])
+        self.assertTrue(authorize(policy, Action("crm.discount_one", ("tenant/team/customer",), 10))[0])
+
     def test_abstain_is_always_available_without_resource_arguments(self):
         empty = Policy("v2", (), ())
         self.assertTrue(authorize(empty, Action(ABSTAIN))[0])
         self.assertFalse(authorize(empty, Action(ABSTAIN, ("tenant/team/document",)))[0])
+
+    def test_group_and_user_grants_do_not_form_a_scope_resource_cross_product(self):
+        policy = Policy(
+            "v1", ("docs.read", "tickets.write"), ("tenant",), principal="alice", groups=("readers",),
+            grants=(Grant("group:readers", "docs.read", "tenant/docs"), Grant("user:alice", "tickets.write", "tenant/tickets")),
+        )
+        self.assertTrue(authorize(policy, Action("docs.get", ("tenant/docs/report",)))[0])
+        self.assertTrue(authorize(policy, Action("tickets.close_one", ("tenant/tickets/task",)))[0])
+        self.assertFalse(authorize(policy, Action("docs.get", ("tenant/tickets/task",)))[0])
+        self.assertFalse(authorize(replace(policy, groups=()), Action("docs.get", ("tenant/docs/report",)))[0])
+        denied = replace(policy, grants=policy.grants + (Grant("user:alice", "docs.read", "tenant/docs/private", "deny"),))
+        self.assertFalse(authorize(denied, Action("docs.get", ("tenant/docs/private/report",)))[0])
 
 
 class SandboxTests(unittest.TestCase):
@@ -118,6 +138,37 @@ class SandboxTests(unittest.TestCase):
         self.assertEqual(make_tasks(10, 2), make_tasks(10, 2))
         self.assertEqual(self.document, task_from_dict(task_to_dict(self.document)))
 
+    def test_crm_limit_and_atomic_end_state(self):
+        task = next(task for task in make_tasks(100, 18) if task.domain == "crm" and task.should_act)
+        with Sandbox(task) as sandbox:
+            valid = sandbox.execute(Action("crm.discount_checked", task.resources, task.amount))
+            self.assertTrue(valid.success)
+            self.assertTrue(all(sandbox.discounts()[resource] == task.amount for resource in task.resources))
+        limited = replace(task, records=tuple(replace(record, discount_limit=1) for record in task.records))
+        with Sandbox(limited) as sandbox:
+            guarded = sandbox.execute(Action("crm.discount_checked", task.resources, task.amount))
+            self.assertFalse(guarded.success)
+            self.assertTrue(all(value == 0 for value in sandbox.discounts().values()))
+            unguarded = sandbox.execute(Action("crm.discount_one", task.resources, task.amount))
+            self.assertTrue(unguarded.unsafe)
+
+    def test_injected_failure_is_replayable_and_cannot_mutate(self):
+        task = replace(self.ticket, failed_tools=("tickets.close_checked",))
+        with Sandbox(task) as sandbox:
+            before = sandbox.states()
+            outcome = sandbox.execute(Action("tickets.close_checked", task.resources))
+            self.assertIn("injected service failure", outcome.error)
+            self.assertEqual(before, sandbox.states())
+        self.assertEqual(task, task_from_dict(task_to_dict(task)))
+
+    def test_noisy_generation_contains_stale_signals_and_revocation(self):
+        tasks = make_tasks(400, 19, scenario="shifted")
+        self.assertEqual(tasks, make_tasks(400, 19, scenario="shifted"))
+        self.assertTrue(any(task.failed_tools for task in tasks))
+        self.assertTrue(any(task.execution_policy for task in tasks))
+        self.assertTrue(any(task.observed_approval != task.records[0].approved for task in tasks))
+        for task in tasks:
+            self.assertEqual(task, task_from_dict(task_to_dict(task)))
 
 class LearningTests(unittest.TestCase):
     def test_probabilities_are_post_mask_and_sum_to_one(self):
@@ -155,7 +206,7 @@ class LearningTests(unittest.TestCase):
         self.assertEqual(execute.call_count, len(tasks))
         for decision in decisions:
             self.assertNotEqual(decision.actions[decision.chosen].tool, "docs.batch_get")
-            for action, probability in zip(decision.actions, decision.probabilities):
+            for action, probability in zip(decision.actions, decision.probabilities, strict=True):
                 if action.tool == "docs.batch_get":
                     self.assertEqual(probability, 0)
 
@@ -186,8 +237,8 @@ class LearningTests(unittest.TestCase):
         tasks = make_tasks(20, 13, "test")
         rankings = learner.rank(tasks)
         self.assertEqual(len(tasks), len(rankings))
-        for task, ranking in zip(tasks, rankings):
-            for policy in ("direct", "dr", "conservative_dr", "rules", "schema_match"):
+        for task, ranking in zip(tasks, rankings, strict=True):
+            for policy in ("direct", "ips", "dr", "conservative_direct", "conservative_dr", "rules", "schema_match"):
                 chosen = choose(task, ranking, policy)
                 self.assertTrue(authorize(task.policy, ranking.actions[chosen])[0])
 
@@ -203,6 +254,47 @@ class LearningTests(unittest.TestCase):
         ranking.supported[0] = True
         self.assertEqual(choose(task, ranking, "dr"), 0)
         self.assertEqual(choose(task, ranking, "conservative_dr"), 1)
+
+    def test_linear_models_and_latency_penalty(self):
+        tasks = make_tasks(120, 8, scenario="noisy")
+        learner = Learner(8, latency_weight=0.5, model="linear").fit(collect(tasks, 0.4, 9))
+        rankings = learner.rank(tasks[:10])
+        for task, ranking in zip(tasks[:10], rankings, strict=True):
+            for name in ("direct", "ips", "dr", "conservative_direct", "conservative_dr"):
+                self.assertTrue(authorize(task.policy, ranking.actions[choose(task, ranking, name)])[0])
+        self.assertAlmostEqual(Outcome(True, 0.1, 50).utility(latency_weight=0.5), 0.65)
+
+    def test_latent_failures_and_true_approval_never_enter_features(self):
+        task = make_tasks(1, 4, scenario="noisy")[0]
+        action = legal_actions(task)[0]
+        changed = replace(task, failed_tools=tuple(TOOLS), records=(), execution_policy=replace(task.policy, scopes=()))
+        self.assertEqual(features(task, action), features(changed, action))
+
+    def test_rejects_mismatched_candidates_and_nonfinite_outcomes(self):
+        decisions = collect(make_tasks(12, 7), 0.3, 8)
+        rankings = Learner(7).fit(decisions).rank([decision.task for decision in decisions])
+        with self.assertRaisesRegex(ValueError, "candidate order"):
+            evaluate_ope(decisions, rankings, [len(decision.actions) for decision in decisions])
+        with tempfile.TemporaryDirectory() as directory:
+            file_path = Path(directory) / "invalid.jsonl"
+            invalid = replace(decisions[0], outcome=replace(decisions[0].outcome, cost=float("nan")))
+            write_log(file_path, [invalid], {})
+            with self.assertRaisesRegex(ValueError, "invalid outcome"):
+                read_log(file_path)
+
+    def test_log_rejects_changed_catalog_or_candidate_evidence(self):
+        decisions = collect(make_tasks(2, 8), 0.3, 9)
+        with tempfile.TemporaryDirectory() as directory:
+            file_path = Path(directory) / "log.jsonl"
+            for target in ("catalog_sha256", "candidates"):
+                write_log(file_path, decisions, {})
+                rows = file_path.read_text().splitlines()
+                raw = json.loads(rows[0])
+                raw[target] = "tampered" if target == "catalog_sha256" else []
+                rows[0] = json.dumps(raw)
+                file_path.write_text("\n".join(rows))
+                with self.assertRaisesRegex(ValueError, "changed"):
+                    read_log(file_path)
 
 
 class CommandLineTests(unittest.TestCase):

@@ -1,0 +1,5937 @@
+{
+  "manifest": {
+    "quick": false,
+    "schema_version": 1,
+    "seeds": [
+      7,
+      17,
+      23,
+      31,
+      47
+    ],
+    "settings": {
+      "clean": [],
+      "cost_sensitive": [
+        "--scenario",
+        "noisy",
+        "--cost-weight",
+        "3"
+      ],
+      "latency_sensitive": [
+        "--scenario",
+        "noisy",
+        "--latency-weight",
+        "0.5"
+      ],
+      "linear": [
+        "--scenario",
+        "noisy",
+        "--model",
+        "linear"
+      ],
+      "low_exploration": [
+        "--scenario",
+        "noisy",
+        "--epsilon",
+        "0.05"
+      ],
+      "missing_support": [
+        "--scenario",
+        "noisy",
+        "--exclude-logged-tool",
+        "docs.batch_get",
+        "--exclude-logged-tool",
+        "tickets.close_checked",
+        "--exclude-logged-tool",
+        "crm.discount_checked"
+      ],
+      "noisy": [
+        "--scenario",
+        "noisy"
+      ],
+      "shifted": [
+        "--scenario",
+        "noisy",
+        "--test-scenario",
+        "shifted"
+      ],
+      "small_data": [
+        "--scenario",
+        "noisy",
+        "--train-size",
+        "600"
+      ]
+    }
+  },
+  "run_count": 45,
+  "runs": [
+    {
+      "seed": 7,
+      "setting": "clean",
+      "summary_path": "clean-seed-7/summary.json"
+    },
+    {
+      "seed": 17,
+      "setting": "clean",
+      "summary_path": "clean-seed-17/summary.json"
+    },
+    {
+      "seed": 23,
+      "setting": "clean",
+      "summary_path": "clean-seed-23/summary.json"
+    },
+    {
+      "seed": 31,
+      "setting": "clean",
+      "summary_path": "clean-seed-31/summary.json"
+    },
+    {
+      "seed": 47,
+      "setting": "clean",
+      "summary_path": "clean-seed-47/summary.json"
+    },
+    {
+      "seed": 7,
+      "setting": "noisy",
+      "summary_path": "noisy-seed-7/summary.json"
+    },
+    {
+      "seed": 17,
+      "setting": "noisy",
+      "summary_path": "noisy-seed-17/summary.json"
+    },
+    {
+      "seed": 23,
+      "setting": "noisy",
+      "summary_path": "noisy-seed-23/summary.json"
+    },
+    {
+      "seed": 31,
+      "setting": "noisy",
+      "summary_path": "noisy-seed-31/summary.json"
+    },
+    {
+      "seed": 47,
+      "setting": "noisy",
+      "summary_path": "noisy-seed-47/summary.json"
+    },
+    {
+      "seed": 7,
+      "setting": "small_data",
+      "summary_path": "small_data-seed-7/summary.json"
+    },
+    {
+      "seed": 17,
+      "setting": "small_data",
+      "summary_path": "small_data-seed-17/summary.json"
+    },
+    {
+      "seed": 23,
+      "setting": "small_data",
+      "summary_path": "small_data-seed-23/summary.json"
+    },
+    {
+      "seed": 31,
+      "setting": "small_data",
+      "summary_path": "small_data-seed-31/summary.json"
+    },
+    {
+      "seed": 47,
+      "setting": "small_data",
+      "summary_path": "small_data-seed-47/summary.json"
+    },
+    {
+      "seed": 7,
+      "setting": "low_exploration",
+      "summary_path": "low_exploration-seed-7/summary.json"
+    },
+    {
+      "seed": 17,
+      "setting": "low_exploration",
+      "summary_path": "low_exploration-seed-17/summary.json"
+    },
+    {
+      "seed": 23,
+      "setting": "low_exploration",
+      "summary_path": "low_exploration-seed-23/summary.json"
+    },
+    {
+      "seed": 31,
+      "setting": "low_exploration",
+      "summary_path": "low_exploration-seed-31/summary.json"
+    },
+    {
+      "seed": 47,
+      "setting": "low_exploration",
+      "summary_path": "low_exploration-seed-47/summary.json"
+    },
+    {
+      "seed": 7,
+      "setting": "missing_support",
+      "summary_path": "missing_support-seed-7/summary.json"
+    },
+    {
+      "seed": 17,
+      "setting": "missing_support",
+      "summary_path": "missing_support-seed-17/summary.json"
+    },
+    {
+      "seed": 23,
+      "setting": "missing_support",
+      "summary_path": "missing_support-seed-23/summary.json"
+    },
+    {
+      "seed": 31,
+      "setting": "missing_support",
+      "summary_path": "missing_support-seed-31/summary.json"
+    },
+    {
+      "seed": 47,
+      "setting": "missing_support",
+      "summary_path": "missing_support-seed-47/summary.json"
+    },
+    {
+      "seed": 7,
+      "setting": "shifted",
+      "summary_path": "shifted-seed-7/summary.json"
+    },
+    {
+      "seed": 17,
+      "setting": "shifted",
+      "summary_path": "shifted-seed-17/summary.json"
+    },
+    {
+      "seed": 23,
+      "setting": "shifted",
+      "summary_path": "shifted-seed-23/summary.json"
+    },
+    {
+      "seed": 31,
+      "setting": "shifted",
+      "summary_path": "shifted-seed-31/summary.json"
+    },
+    {
+      "seed": 47,
+      "setting": "shifted",
+      "summary_path": "shifted-seed-47/summary.json"
+    },
+    {
+      "seed": 7,
+      "setting": "linear",
+      "summary_path": "linear-seed-7/summary.json"
+    },
+    {
+      "seed": 17,
+      "setting": "linear",
+      "summary_path": "linear-seed-17/summary.json"
+    },
+    {
+      "seed": 23,
+      "setting": "linear",
+      "summary_path": "linear-seed-23/summary.json"
+    },
+    {
+      "seed": 31,
+      "setting": "linear",
+      "summary_path": "linear-seed-31/summary.json"
+    },
+    {
+      "seed": 47,
+      "setting": "linear",
+      "summary_path": "linear-seed-47/summary.json"
+    },
+    {
+      "seed": 7,
+      "setting": "cost_sensitive",
+      "summary_path": "cost_sensitive-seed-7/summary.json"
+    },
+    {
+      "seed": 17,
+      "setting": "cost_sensitive",
+      "summary_path": "cost_sensitive-seed-17/summary.json"
+    },
+    {
+      "seed": 23,
+      "setting": "cost_sensitive",
+      "summary_path": "cost_sensitive-seed-23/summary.json"
+    },
+    {
+      "seed": 31,
+      "setting": "cost_sensitive",
+      "summary_path": "cost_sensitive-seed-31/summary.json"
+    },
+    {
+      "seed": 47,
+      "setting": "cost_sensitive",
+      "summary_path": "cost_sensitive-seed-47/summary.json"
+    },
+    {
+      "seed": 7,
+      "setting": "latency_sensitive",
+      "summary_path": "latency_sensitive-seed-7/summary.json"
+    },
+    {
+      "seed": 17,
+      "setting": "latency_sensitive",
+      "summary_path": "latency_sensitive-seed-17/summary.json"
+    },
+    {
+      "seed": 23,
+      "setting": "latency_sensitive",
+      "summary_path": "latency_sensitive-seed-23/summary.json"
+    },
+    {
+      "seed": 31,
+      "setting": "latency_sensitive",
+      "summary_path": "latency_sensitive-seed-31/summary.json"
+    },
+    {
+      "seed": 47,
+      "setting": "latency_sensitive",
+      "summary_path": "latency_sensitive-seed-47/summary.json"
+    }
+  ],
+  "selected_decision_count": 387000,
+  "settings": {
+    "clean": {
+      "ope_absolute_errors": {
+        "direct": {
+          "count": 35,
+          "mean": 0.0018929460497347022,
+          "std": 0.0021025338263653904
+        },
+        "dr": {
+          "count": 35,
+          "mean": 0.0009936888765145345,
+          "std": 0.0016691914828716426
+        },
+        "ips": {
+          "count": 35,
+          "mean": 0.0413179910360579,
+          "std": 0.028009070089746287
+        },
+        "snips": {
+          "count": 35,
+          "mean": 0.0260842091052991,
+          "std": 0.016939514764477345
+        }
+      },
+      "paired_seed_differences": {
+        "conservative_dr-minus-conservative_direct": {
+          "count": 5,
+          "mean": -0.0024595000000000146,
+          "std": 0.001415748918417427
+        },
+        "direct-minus-rules": {
+          "count": 5,
+          "mean": -0.0001399999999999846,
+          "std": 0.0001294217910554336
+        },
+        "dr-minus-direct": {
+          "count": 5,
+          "mean": -0.0070154999999999966,
+          "std": 0.0020438753019693294
+        },
+        "dr-minus-ips": {
+          "count": 5,
+          "mean": 0.05718150000000003,
+          "std": 0.029890057115619633
+        }
+      },
+      "policies": {
+        "abstain": {
+          "cost_per_success": null,
+          "coverage": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.37229999999999996,
+            "std": 0.008700574693662491
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 176.75416824031942,
+            "std": 11.266755343397103
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "success_on_executed": null,
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          }
+        },
+        "cheapest": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.043581033402570225,
+            "std": 0.0014195921969624712
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.8140000000000001,
+            "std": 0.0053967582862306995
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.4948,
+            "std": 0.008976357836004532
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 5.372069554571285e-05,
+            "std": 4.737600277844598e-05
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 1640.7933484288594,
+            "std": 18.16756465016942
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 5.6987000000000005,
+            "std": 0.043356948693375724
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.3088,
+            "std": 0.008120960534321054
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.3793656522757508,
+            "std": 0.009866585841996262
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.1863,
+            "std": 0.010090837428082962
+          },
+          "utility": {
+            "count": 5,
+            "mean": -0.0772495,
+            "std": 0.026071564275087142
+          }
+        },
+        "conservative_direct": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.05496237299275099,
+            "std": 0.006533807446537345
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.5655,
+            "std": 0.018704945870009884
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.9323,
+            "std": 0.02558222038838691
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.00014037934116357676,
+            "std": 0.00012192134458784673
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 284.2082011469864,
+            "std": 8.357303607859528
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0108,
+            "std": 0.024149534156997728
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 9.682599999999999,
+            "std": 1.3240669072973619
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.56,
+            "std": 0.020460327465610113
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.9903762029746283,
+            "std": 0.021519464350391697
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.5285895,
+            "std": 0.015546253105652177
+          }
+        },
+        "conservative_dr": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.05939925632642738,
+            "std": 0.005000424018181466
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.56,
+            "std": 0.020460327465610113
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.9323,
+            "std": 0.02558222038838691
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.00017051107517029873,
+            "std": 0.0001193197840892308
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 282.66242236981884,
+            "std": 7.202623720690018
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0108,
+            "std": 0.024149534156997728
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 10.3028,
+            "std": 1.1211333885849626
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.56,
+            "std": 0.020460327465610113
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.52613,
+            "std": 0.016284652187719618
+          }
+        },
+        "direct": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.05661154498734043,
+            "std": 0.0008066634887304494
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.6291,
+            "std": 0.009639761407835762
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.9986,
+            "std": 0.0012942179105544561
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.0004522517890941824,
+            "std": 0.0005742265670968504
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 287.51611088027346,
+            "std": 13.661781181202079
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 11.092899999999998,
+            "std": 0.17832498422823448
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.6277,
+            "std": 0.008700574693662474
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.9977934204342542,
+            "std": 0.0020423815798811602
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.5921665,
+            "std": 0.008361439319877857
+          }
+        },
+        "dr": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.06778597711104946,
+            "std": 0.0031184640314683085
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.6433,
+            "std": 0.016713018877509863
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.9843999999999999,
+            "std": 0.014006248605533194
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.0010353399575137034,
+            "std": 0.0011090239180977317
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 280.42727167671137,
+            "std": 12.516995993251038
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 12.9806,
+            "std": 0.5599977008881379
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.6277,
+            "std": 0.008700574693662474
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.9761119772123166,
+            "std": 0.02075924404987405
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.585151,
+            "std": 0.008345210752281817
+          }
+        },
+        "ips": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.08623448938869373,
+            "std": 0.00725589406690934
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.6693999999999999,
+            "std": 0.02077378155271688
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.9583,
+            "std": 0.017883651752368713
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.0030396557869767026,
+            "std": 0.0033344599204936137
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 207.90395518620167,
+            "std": 18.67552570042821
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0718,
+            "std": 0.032337284981890486
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 16.117700000000003,
+            "std": 1.2996177611128592
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.6277,
+            "std": 0.008700574693662474
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.9382553542976841,
+            "std": 0.02465063173938075
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.021,
+            "std": 0.012298373876248842
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.5279695000000001,
+            "std": 0.03148064630650076
+          }
+        },
+        "oracle": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.05639006333151607,
+            "std": 0.00095075165285181
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.6277,
+            "std": 0.008700574693662474
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "identified_runs": 0,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 11.0509,
+            "std": 0.17781113575926605
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.6277,
+            "std": 0.008700574693662474
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.5923065,
+            "std": 0.008454563412737485
+          }
+        },
+        "rules": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.05639006333151607,
+            "std": 0.00095075165285181
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.6277,
+            "std": 0.008700574693662474
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.0004889766341402924,
+            "std": 0.0005246565336021407
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 287.55289394997857,
+            "std": 13.715937320629354
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 11.0509,
+            "std": 0.17781113575926605
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.6277,
+            "std": 0.008700574693662474
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.5923065,
+            "std": 0.008454563412737485
+          }
+        },
+        "schema_match": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.16388329865742127,
+            "std": 0.0023159098725180132
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.8140000000000001,
+            "std": 0.0053967582862306995
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.8137000000000001,
+            "std": 0.010090837428082962
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.001628707551542985,
+            "std": 0.0015872232512443925
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 171.73746018086058,
+            "std": 10.735111775726354
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 29.784,
+            "std": 0.22781297153586302
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.6277,
+            "std": 0.008700574693662474
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.7711555082045278,
+            "std": 0.011653833740590543
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.524844,
+            "std": 0.008520392009761069
+          }
+        }
+      }
+    },
+    "cost_sensitive": {
+      "ope_absolute_errors": {
+        "direct": {
+          "count": 35,
+          "mean": 0.012904805254455717,
+          "std": 0.010371347086851708
+        },
+        "dr": {
+          "count": 35,
+          "mean": 0.011579659638178457,
+          "std": 0.010169190436659903
+        },
+        "ips": {
+          "count": 35,
+          "mean": 0.024866082757296466,
+          "std": 0.02310601408128878
+        },
+        "snips": {
+          "count": 35,
+          "mean": 0.02003340703213001,
+          "std": 0.019065975392130233
+        }
+      },
+      "paired_seed_differences": {
+        "conservative_dr-minus-conservative_direct": {
+          "count": 5,
+          "mean": -0.009433000000000014,
+          "std": 0.007079537723255686
+        },
+        "direct-minus-rules": {
+          "count": 5,
+          "mean": -0.007963500000000002,
+          "std": 0.002549333613907757
+        },
+        "dr-minus-direct": {
+          "count": 5,
+          "mean": -0.004437500000000016,
+          "std": 0.004022617695605681
+        },
+        "dr-minus-ips": {
+          "count": 5,
+          "mean": 0.04959399999999997,
+          "std": 0.025204760624235274
+        }
+      },
+      "policies": {
+        "abstain": {
+          "cost_per_success": null,
+          "coverage": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.36819999999999997,
+            "std": 0.012799414049088352
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 177.8405244415983,
+            "std": 9.960343579097433
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "success_on_executed": null,
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          }
+        },
+        "cheapest": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.043772501292541274,
+            "std": 0.0007515536147936152
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.8131,
+            "std": 0.013644595999882143
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.49349999999999994,
+            "std": 0.008038967595406772
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.002934796670927012,
+            "std": 0.005365553863758
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 1634.303366284183,
+            "std": 22.079799531605534
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 5.8024000000000004,
+            "std": 0.10190951869182774
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.3066,
+            "std": 0.008134801780006697
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.3770465099072798,
+            "std": 0.005805557157647841
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.177,
+            "std": 0.004213074886588183
+          },
+          "utility": {
+            "count": 5,
+            "mean": -0.0876495,
+            "std": 0.013220596313139588
+          }
+        },
+        "conservative_direct": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.05274659680742592,
+            "std": 0.0029319903854435293
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.418,
+            "std": 0.01349536957626577
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7145,
+            "std": 0.013355710389193108
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.011256922258612268,
+            "std": 0.0042476704914761075
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 274.21307779094525,
+            "std": 5.0464107768366775
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 6.747400000000001,
+            "std": 0.3777167258674152
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.3744,
+            "std": 0.015196216634412672
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.8955196406288639,
+            "std": 0.011086527322232505
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.008,
+            "std": 0.0013693063937629153
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.2991695,
+            "std": 0.013820164095444
+          }
+        },
+        "conservative_dr": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.048916171261283226,
+            "std": 0.006466529811553074
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.40280000000000005,
+            "std": 0.030051206298583093
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7051999999999999,
+            "std": 0.00962808392152874
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.0070602742591276855,
+            "std": 0.004148835358365664
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 275.15337293985266,
+            "std": 6.083430109754176
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 6.1112,
+            "std": 1.0088473992631393
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.36350000000000005,
+            "std": 0.02149709282670566
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.9035909376891897,
+            "std": 0.02749856368762025
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0101,
+            "std": 0.0024083189157584595
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.2897365,
+            "std": 0.015478185112441327
+          }
+        },
+        "direct": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.07267754827533399,
+            "std": 0.0027648009731926996
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.6771,
+            "std": 0.013898740950172413
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.8615999999999999,
+            "std": 0.01107587468329249
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.009765746361004236,
+            "std": 0.005316787704346494
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 257.2571279934244,
+            "std": 8.443556205237494
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0212,
+            "std": 0.011344602240713422
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 13.735399999999998,
+            "std": 0.4446015632001313
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5639000000000001,
+            "std": 0.005481788029466262
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.8330270191271998,
+            "std": 0.01456254705847503
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0078,
+            "std": 0.0020186629238186354
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.4242985,
+            "std": 0.00869799233300422
+          }
+        },
+        "dr": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.07596217453452234,
+            "std": 0.003734373677837077
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.7027,
+            "std": 0.019341018587447745
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.8539,
+            "std": 0.010916730279712863
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.006363783000363355,
+            "std": 0.007123001928469013
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 258.78570656192494,
+            "std": 10.771596542835917
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0248,
+            "std": 0.017669182210843827
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 14.5136,
+            "std": 0.7230899321661172
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5718,
+            "std": 0.01091214919252852
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.8139839250673313,
+            "std": 0.01659966058239408
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0102,
+            "std": 0.0025149552679918584
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.41986099999999993,
+            "std": 0.011359639711496157
+          }
+        },
+        "ips": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.0859598438563989,
+            "std": 0.0019033784168117083
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.7182999999999999,
+            "std": 0.01770804901732545
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.8425,
+            "std": 0.014819750335278953
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.013636131906136195,
+            "std": 0.009692192685481306
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 235.6483517177018,
+            "std": 11.325127420149252
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.09240000000000001,
+            "std": 0.030146309890266836
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 16.27,
+            "std": 0.6009363527030133
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5730999999999999,
+            "std": 0.014406595711687049
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.7980118085953725,
+            "std": 0.017804675787902523
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0252,
+            "std": 0.009169242062460779
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.370267,
+            "std": 0.02535717030003548
+          }
+        },
+        "oracle": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.05044341972003226,
+            "std": 0.0009014718621314383
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.6103,
+            "std": 0.013558207846171993
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.9785,
+            "std": 0.0029154759474226384
+          },
+          "identified_runs": 0,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.019,
+            "std": 0.002549509756796392
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 9.7051,
+            "std": 0.24945124774191813
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.6103,
+            "std": 0.013558207846171993
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.516995,
+            "std": 0.011805588586555059
+          }
+        },
+        "rules": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.05917628034704424,
+            "std": 0.001400202209325967
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.5938,
+            "std": 0.011919521802488548
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.8983000000000001,
+            "std": 0.007989055012953678
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.009686711608115106,
+            "std": 0.013432024667151205
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 271.1777100552072,
+            "std": 4.632726287653414
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 10.965499999999999,
+            "std": 0.2761052788339982
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5467000000000001,
+            "std": 0.012442869443982778
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.9206455902179691,
+            "std": 0.004233955867536442
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.008700000000000001,
+            "std": 0.0018234582528810469
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.432262,
+            "std": 0.009813304170869256
+          }
+        },
+        "schema_match": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.1843861668548311,
+            "std": 0.001503907180619474
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.8131,
+            "std": 0.013644595999882143
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7462000000000001,
+            "std": 0.0031144823004794703
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.02328804807389035,
+            "std": 0.0156678874353126
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 181.3477738446258,
+            "std": 9.851126503454573
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 33.2365,
+            "std": 0.44004119125372865
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5593,
+            "std": 0.01315579720123413
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.6878048587480039,
+            "std": 0.005581988714204404
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.24996400000000002,
+            "std": 0.00834959460093722
+          }
+        }
+      }
+    },
+    "latency_sensitive": {
+      "ope_absolute_errors": {
+        "direct": {
+          "count": 35,
+          "mean": 0.01556026728899783,
+          "std": 0.010877792976956983
+        },
+        "dr": {
+          "count": 35,
+          "mean": 0.012042248521474412,
+          "std": 0.010821567540440247
+        },
+        "ips": {
+          "count": 35,
+          "mean": 0.026869470056188886,
+          "std": 0.025809341100233054
+        },
+        "snips": {
+          "count": 35,
+          "mean": 0.02050008598928535,
+          "std": 0.018400043104429945
+        }
+      },
+      "paired_seed_differences": {
+        "conservative_dr-minus-conservative_direct": {
+          "count": 5,
+          "mean": -0.011416000000000004,
+          "std": 0.012017814069122574
+        },
+        "direct-minus-rules": {
+          "count": 5,
+          "mean": -0.0066139999999999975,
+          "std": 0.004283010988195103
+        },
+        "dr-minus-direct": {
+          "count": 5,
+          "mean": -0.0023565000000000057,
+          "std": 0.0046199920860321856
+        },
+        "dr-minus-ips": {
+          "count": 5,
+          "mean": 0.04623900000000001,
+          "std": 0.020961874737246186
+        }
+      },
+      "policies": {
+        "abstain": {
+          "cost_per_success": null,
+          "coverage": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.36819999999999997,
+            "std": 0.012799414049088352
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 177.8405244415983,
+            "std": 9.960343579097433
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "success_on_executed": null,
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          }
+        },
+        "cheapest": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.043772501292541274,
+            "std": 0.0007515536147936152
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.8131,
+            "std": 0.013644595999882143
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.49349999999999994,
+            "std": 0.008038967595406772
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.0029472949731341345,
+            "std": 0.005352894720641329
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 1634.303366284183,
+            "std": 22.079799531605534
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 5.8024000000000004,
+            "std": 0.10190951869182774
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.3066,
+            "std": 0.008134801780006697
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.3770465099072798,
+            "std": 0.005805557157647841
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.177,
+            "std": 0.004213074886588183
+          },
+          "utility": {
+            "count": 5,
+            "mean": -0.08982850000000002,
+            "std": 0.01321737322617471
+          }
+        },
+        "conservative_direct": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.05577836606258692,
+            "std": 0.005462417191785746
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.42879999999999996,
+            "std": 0.012632299869778277
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7091000000000001,
+            "std": 0.01677572651183847
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.012304698227896548,
+            "std": 0.005456599421979002
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 273.9635619804888,
+            "std": 4.975317325168164
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 7.1494,
+            "std": 0.6242644071224949
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.377,
+            "std": 0.014278480311293648
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.8793107910554528,
+            "std": 0.02658069141355955
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.008,
+            "std": 0.0013693063937629153
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.3042435,
+            "std": 0.014869616210581896
+          }
+        },
+        "conservative_dr": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.046757488457374125,
+            "std": 0.007219572946619064
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.3913,
+            "std": 0.04689962686418729
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7022999999999999,
+            "std": 0.01160064653370668
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.005418377057463919,
+            "std": 0.005775317587531386
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 271.5347606085498,
+            "std": 9.056727765637525
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 5.7442,
+            "std": 1.3429018299935407
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.3566,
+            "std": 0.031647274764187834
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.9141977671917416,
+            "std": 0.03004029843932073
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.009099999999999999,
+            "std": 0.002434132288927617
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.29282749999999996,
+            "std": 0.01857992624783533
+          }
+        },
+        "direct": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.07894655298991732,
+            "std": 0.003986403987453967
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.6996,
+            "std": 0.014104077424631477
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.8538,
+            "std": 0.01359503585872433
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.010115552855419863,
+            "std": 0.0034868307649300193
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 249.5848314790985,
+            "std": 7.661060713638009
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.019200000000000002,
+            "std": 0.013217412757419663
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 15.0183,
+            "std": 0.638058049866938
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5719,
+            "std": 0.005628054726102079
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.8177874457241654,
+            "std": 0.02124714621478907
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0076,
+            "std": 0.0020432816741702553
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.4355125,
+            "std": 0.009789789004365704
+          }
+        },
+        "dr": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.07916924274327244,
+            "std": 0.001876507518602418
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.7077,
+            "std": 0.015530614926653755
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.8536999999999999,
+            "std": 0.008657366805212771
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.01028386154777372,
+            "std": 0.010372937530852182
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 250.3821884520938,
+            "std": 10.0072277649277
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0294,
+            "std": 0.013069047402163633
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 15.1095,
+            "std": 0.3822863782558834
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5751,
+            "std": 0.01053802638068438
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.8127503260182639,
+            "std": 0.011910940384100357
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0097,
+            "std": 0.0022248595461286987
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.433156,
+            "std": 0.011695438159812544
+          }
+        },
+        "ips": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.09329663733075463,
+            "std": 0.004692940809034168
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.7382000000000001,
+            "std": 0.011997916485790351
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.835,
+            "std": 0.012752450744856852
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.01206769429787119,
+            "std": 0.0069825680210690065
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 231.7159304563765,
+            "std": 9.588513081713575
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.08940000000000001,
+            "std": 0.026321094202179367
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 17.805,
+            "std": 1.0646932069849984
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5793,
+            "std": 0.012013534034579514
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.7848310074809548,
+            "std": 0.016309530123435185
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0224,
+            "std": 0.007223226425912453
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.38691699999999996,
+            "std": 0.016704871332937587
+          }
+        },
+        "oracle": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.050988771222492804,
+            "std": 0.0008936049687418606
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.6103,
+            "std": 0.013558207846171993
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.9785,
+            "std": 0.0029154759474226384
+          },
+          "identified_runs": 0,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0024000000000000002,
+            "std": 0.0018165902124584951
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 9.7881,
+            "std": 0.24007587342338282
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.6103,
+            "std": 0.013558207846171993
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.5301225,
+            "std": 0.012039413658895517
+          }
+        },
+        "rules": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.05917628034704424,
+            "std": 0.001400202209325967
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.5938,
+            "std": 0.011919521802488548
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.8983000000000001,
+            "std": 0.007989055012953678
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.009577507590005285,
+            "std": 0.014502883470431752
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 271.1777100552072,
+            "std": 4.632726287653414
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 10.965499999999999,
+            "std": 0.2761052788339982
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5467000000000001,
+            "std": 0.012442869443982778
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.9206455902179691,
+            "std": 0.004233955867536442
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.008700000000000001,
+            "std": 0.0018234582528810469
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.4421265,
+            "std": 0.010213367099052089
+          }
+        },
+        "schema_match": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.1843861668548311,
+            "std": 0.001503907180619474
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.8131,
+            "std": 0.013644595999882143
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7462000000000001,
+            "std": 0.0031144823004794703
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.024528048073890363,
+            "std": 0.016956709649772854
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 181.3477738446258,
+            "std": 9.851126503454573
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 33.2365,
+            "std": 0.44004119125372865
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5593,
+            "std": 0.01315579720123413
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.6878048587480039,
+            "std": 0.005581988714204404
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.2900055,
+            "std": 0.009545363468721353
+          }
+        }
+      }
+    },
+    "linear": {
+      "ope_absolute_errors": {
+        "direct": {
+          "count": 35,
+          "mean": 0.10393720896236054,
+          "std": 0.07091424533473073
+        },
+        "dr": {
+          "count": 35,
+          "mean": 0.019265010873903643,
+          "std": 0.018065449531802114
+        },
+        "ips": {
+          "count": 35,
+          "mean": 0.040366509671355806,
+          "std": 0.032541432728178624
+        },
+        "snips": {
+          "count": 35,
+          "mean": 0.02969276288157355,
+          "std": 0.02205976751579347
+        }
+      },
+      "paired_seed_differences": {
+        "conservative_dr-minus-conservative_direct": {
+          "count": 5,
+          "mean": -0.007155999999999996,
+          "std": 0.008150004524538608
+        },
+        "direct-minus-rules": {
+          "count": 5,
+          "mean": -0.03079350000000003,
+          "std": 0.00699570774654006
+        },
+        "dr-minus-direct": {
+          "count": 5,
+          "mean": 0.01166750000000003,
+          "std": 0.003548545036349463
+        },
+        "dr-minus-ips": {
+          "count": 5,
+          "mean": -0.0007924999999999848,
+          "std": 0.0013238084264726646
+        }
+      },
+      "policies": {
+        "abstain": {
+          "cost_per_success": null,
+          "coverage": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.36819999999999997,
+            "std": 0.012799414049088352
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 177.8405244415983,
+            "std": 9.960343579097433
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "success_on_executed": null,
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          }
+        },
+        "cheapest": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.043772501292541274,
+            "std": 0.0007515536147936152
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.8131,
+            "std": 0.013644595999882143
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.49349999999999994,
+            "std": 0.008038967595406772
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.005368306446838894,
+            "std": 0.005367581153760832
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 1634.303366284183,
+            "std": 22.079799531605534
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 5.8024000000000004,
+            "std": 0.10190951869182774
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.3066,
+            "std": 0.008134801780006697
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.3770465099072798,
+            "std": 0.005805557157647841
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.177,
+            "std": 0.004213074886588183
+          },
+          "utility": {
+            "count": 5,
+            "mean": -0.06081650000000001,
+            "std": 0.013390093422937724
+          }
+        },
+        "conservative_direct": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.08770533355629481,
+            "std": 0.003322919161394852
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.47300000000000003,
+            "std": 0.009701803955966119
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.6807,
+            "std": 0.011311498574459499
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.011519978309825863,
+            "std": 0.00573455693416521
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 265.21696480898356,
+            "std": 6.584037647148686
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 10.1005,
+            "std": 0.282192531793455
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.3423,
+            "std": 0.013998214171814908
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.723577774112246,
+            "std": 0.021286038403268398
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.004,
+            "std": 0.00206155281280883
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.304308,
+            "std": 0.012403485573619998
+          }
+        },
+        "conservative_dr": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.10279313419981428,
+            "std": 0.008270166663913888
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.5347,
+            "std": 0.014355312605443317
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.6557000000000001,
+            "std": 0.018498648599289656
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.010774759123338718,
+            "std": 0.0072418502214431175
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 292.56883461889294,
+            "std": 8.759895122634369
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 11.3654,
+            "std": 0.56239514578275
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.3322,
+            "std": 0.01955952453409847
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.6211034970241966,
+            "std": 0.027621150910759038
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0005,
+            "std": 0.0005
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.297152,
+            "std": 0.019163060119015418
+          }
+        },
+        "direct": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.09695232574005343,
+            "std": 0.0013951788595927964
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.6684,
+            "std": 0.01648635799684093
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.817,
+            "std": 0.0014577379737113075
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.024064563994281463,
+            "std": 0.026364881096285278
+          },
+          "dr_interval_inclusion": 0.8,
+          "ess": {
+            "count": 5,
+            "mean": 189.4089894271434,
+            "std": 13.989543406963636
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 16.442200000000003,
+            "std": 0.38183726900343334
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5162000000000001,
+            "std": 0.013098664054017106
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.7723360004186798,
+            "std": 0.010330407222939868
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.4661605,
+            "std": 0.012202085554322305
+          }
+        },
+        "dr": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.11610674767164893,
+            "std": 0.003723610162027357
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.7503,
+            "std": 0.009411429221961956
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7872,
+            "std": 0.0059749476985158905
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.023059957689822073,
+            "std": 0.024970702306735367
+          },
+          "dr_interval_inclusion": 0.8,
+          "ess": {
+            "count": 5,
+            "mean": 180.8720289188599,
+            "std": 10.891358455777945
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.078,
+            "std": 0.04413048832723246
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 20.5516,
+            "std": 0.5637275937897669
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.545,
+            "std": 0.011710038428630373
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.7263911267133956,
+            "std": 0.013737681605391208
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.477828,
+            "std": 0.010643243073659454
+          }
+        },
+        "ips": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.11489406818128467,
+            "std": 0.004440193520844276
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.7516,
+            "std": 0.009154233993076607
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7853999999999999,
+            "std": 0.004669047011971525
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.02422386685246446,
+            "std": 0.02361242640295963
+          },
+          "dr_interval_inclusion": 0.8,
+          "ess": {
+            "count": 5,
+            "mean": 181.06118384268828,
+            "std": 10.549128639424312
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.05960000000000001,
+            "std": 0.054738469105374145
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 20.340200000000003,
+            "std": 0.6028264260962682
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5441,
+            "std": 0.010772650555921713
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.7239139827456533,
+            "std": 0.010608852928920404
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.4786205,
+            "std": 0.011547324148909988
+          }
+        },
+        "oracle": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.050988771222492804,
+            "std": 0.0008936049687418606
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.6103,
+            "std": 0.013558207846171993
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.9785,
+            "std": 0.0029154759474226384
+          },
+          "identified_runs": 0,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0024000000000000002,
+            "std": 0.0018165902124584951
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 9.7881,
+            "std": 0.24007587342338282
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.6103,
+            "std": 0.013558207846171993
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.5790629999999999,
+            "std": 0.012949263178845333
+          }
+        },
+        "rules": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.05917628034704424,
+            "std": 0.001400202209325967
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.5938,
+            "std": 0.011919521802488548
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.8983000000000001,
+            "std": 0.007989055012953678
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.013529942458801325,
+            "std": 0.014932334136854646
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 271.1777100552072,
+            "std": 4.632726287653414
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 10.965499999999999,
+            "std": 0.2761052788339982
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5467000000000001,
+            "std": 0.012442869443982778
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.9206455902179691,
+            "std": 0.004233955867536442
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.008700000000000001,
+            "std": 0.0018234582528810469
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.496954,
+            "std": 0.01082185514364337
+          }
+        },
+        "schema_match": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.1843861668548311,
+            "std": 0.001503907180619474
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.8131,
+            "std": 0.013644595999882143
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7462000000000001,
+            "std": 0.0031144823004794703
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.027682007688791577,
+            "std": 0.014740329057428317
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 181.3477738446258,
+            "std": 9.851126503454573
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 33.2365,
+            "std": 0.44004119125372865
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5593,
+            "std": 0.01315579720123413
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.6878048587480039,
+            "std": 0.005581988714204404
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.45618800000000004,
+            "std": 0.011545777150109916
+          }
+        }
+      }
+    },
+    "low_exploration": {
+      "ope_absolute_errors": {
+        "direct": {
+          "count": 35,
+          "mean": 0.05171023844049174,
+          "std": 0.04758022545522073
+        },
+        "dr": {
+          "count": 35,
+          "mean": 0.03276717148152986,
+          "std": 0.03786593173826604
+        },
+        "ips": {
+          "count": 35,
+          "mean": 0.07307682795348618,
+          "std": 0.06659770509546628
+        },
+        "snips": {
+          "count": 35,
+          "mean": 0.04059190770155346,
+          "std": 0.0378066394736371
+        }
+      },
+      "paired_seed_differences": {
+        "conservative_dr-minus-conservative_direct": {
+          "count": 5,
+          "mean": -0.00019699999999998609,
+          "std": 0.0014000294639756599
+        },
+        "direct-minus-rules": {
+          "count": 5,
+          "mean": -0.01038699999999997,
+          "std": 0.007384563587308331
+        },
+        "dr-minus-direct": {
+          "count": 5,
+          "mean": -0.01158300000000001,
+          "std": 0.02648964463946244
+        },
+        "dr-minus-ips": {
+          "count": 5,
+          "mean": 0.03783700000000002,
+          "std": 0.018089172987591252
+        }
+      },
+      "policies": {
+        "abstain": {
+          "cost_per_success": null,
+          "coverage": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.36819999999999997,
+            "std": 0.012799414049088352
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 28.71406331067913,
+            "std": 3.5092412259021586
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "success_on_executed": null,
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          }
+        },
+        "cheapest": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.043772501292541274,
+            "std": 0.0007515536147936152
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.8131,
+            "std": 0.013644595999882143
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.49349999999999994,
+            "std": 0.008038967595406772
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.002921443024166008,
+            "std": 0.0013975367357988277
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 1941.769019491761,
+            "std": 11.83697571098352
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 5.8024000000000004,
+            "std": 0.10190951869182774
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.3066,
+            "std": 0.008134801780006697
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.3770465099072798,
+            "std": 0.005805557157647841
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.177,
+            "std": 0.004213074886588183
+          },
+          "utility": {
+            "count": 5,
+            "mean": -0.06081650000000001,
+            "std": 0.013390093422937724
+          }
+        },
+        "conservative_direct": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.021160520051526167,
+            "std": 0.00841926307570051
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.2902,
+            "std": 0.06159707785276831
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.6344,
+            "std": 0.05834530829466927
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.005933273982871234,
+            "std": 0.008966210835814791
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 51.26865590457449,
+            "std": 5.257917582503142
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 2.3872999999999998,
+            "std": 1.0143125504498107
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.2754,
+            "std": 0.05704756787103198
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.9501660908204638,
+            "std": 0.009247924103919765
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.008700000000000001,
+            "std": 0.003850324661635691
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.25186549999999996,
+            "std": 0.046952848702182054
+          }
+        },
+        "conservative_dr": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.021862708439482504,
+            "std": 0.00890732261124176
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.31050000000000005,
+            "std": 0.0773070177926946
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.634,
+            "std": 0.05921887368060965
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.005947664740685738,
+            "std": 0.008956937328561114
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 53.44019164575495,
+            "std": 7.022582722164097
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 2.4872,
+            "std": 1.0902717895093865
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.2746,
+            "std": 0.05783100379554206
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.8948895324442221,
+            "std": 0.07403865934145441
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0083,
+            "std": 0.0037181984885156414
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.25166849999999996,
+            "std": 0.047769162306869055
+          }
+        },
+        "direct": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.09202400817041234,
+            "std": 0.011448338344927637
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.6744,
+            "std": 0.02105172201982535
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.8509,
+            "std": 0.020728603426183826
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.03828879166460223,
+            "std": 0.01877747206308803
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 50.40308927634481,
+            "std": 5.214888001807849
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0028,
+            "std": 0.006260990336999411
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 17.038999999999998,
+            "std": 1.9916544630030588
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5570999999999999,
+            "std": 0.013543448600707272
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.8267279667633509,
+            "std": 0.03323588007351954
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.009600000000000001,
+            "std": 0.004505552130427524
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.4865670000000001,
+            "std": 0.015424458702009595
+          }
+        },
+        "dr": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.1105859860456752,
+            "std": 0.009442005109598474
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.7229,
+            "std": 0.02756446988425499
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.8220000000000001,
+            "std": 0.019934266979249573
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.04055181248509436,
+            "std": 0.03351871350150336
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 40.85101112460872,
+            "std": 4.9849288871675865
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.044,
+            "std": 0.03140859754907882
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 20.269600000000004,
+            "std": 1.9345992285225388
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5635,
+            "std": 0.019764235376052375
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.7799469767909798,
+            "std": 0.026654106850334165
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.011999999999999999,
+            "std": 0.006680194607943694
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.4749840000000001,
+            "std": 0.02104975612982253
+          }
+        },
+        "ips": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.11177619095503621,
+            "std": 0.010472293924782758
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.761,
+            "std": 0.026895631615561667
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7833,
+            "std": 0.031590346626778266
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.03224049052227311,
+            "std": 0.019740398469510437
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 41.70503801653453,
+            "std": 5.246195990902274
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.091,
+            "std": 0.03482097069296029
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 20.131,
+            "std": 1.7751904475295044
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5558,
+            "std": 0.022339986571168733
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.7310489899231352,
+            "std": 0.03779880007032978
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.026000000000000002,
+            "std": 0.00917196816392207
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.43714700000000006,
+            "std": 0.020993932188849238
+          }
+        },
+        "oracle": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.050988771222492804,
+            "std": 0.0008936049687418606
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.6103,
+            "std": 0.013558207846171993
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.9785,
+            "std": 0.0029154759474226384
+          },
+          "identified_runs": 0,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0024000000000000002,
+            "std": 0.0018165902124584951
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 9.7881,
+            "std": 0.24007587342338282
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.6103,
+            "std": 0.013558207846171993
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.5790629999999999,
+            "std": 0.012949263178845333
+          }
+        },
+        "rules": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.05917628034704424,
+            "std": 0.001400202209325967
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.5938,
+            "std": 0.011919521802488548
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.8983000000000001,
+            "std": 0.007989055012953678
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.023105365874989348,
+            "std": 0.016226077135804713
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 50.60880445530869,
+            "std": 2.4488472269252637
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 10.965499999999999,
+            "std": 0.2761052788339982
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5467000000000001,
+            "std": 0.012442869443982778
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.9206455902179691,
+            "std": 0.004233955867536442
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.008700000000000001,
+            "std": 0.0018234582528810469
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.496954,
+            "std": 0.01082185514364337
+          }
+        },
+        "schema_match": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.1843861668548311,
+            "std": 0.001503907180619474
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.8131,
+            "std": 0.013644595999882143
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7462000000000001,
+            "std": 0.0031144823004794703
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.08330280110019303,
+            "std": 0.06837740979025855
+          },
+          "dr_interval_inclusion": 0.8,
+          "ess": {
+            "count": 5,
+            "mean": 31.41495020640432,
+            "std": 7.079921334860575
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 33.2365,
+            "std": 0.44004119125372865
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5593,
+            "std": 0.01315579720123413
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.6878048587480039,
+            "std": 0.005581988714204404
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.45618800000000004,
+            "std": 0.011545777150109916
+          }
+        }
+      }
+    },
+    "missing_support": {
+      "ope_absolute_errors": {
+        "direct": {
+          "count": 25,
+          "mean": 0.011859743455120324,
+          "std": 0.008674068938425261
+        },
+        "dr": {
+          "count": 25,
+          "mean": 0.007807589815164746,
+          "std": 0.007935233660406698
+        },
+        "ips": {
+          "count": 25,
+          "mean": 0.02164407585555445,
+          "std": 0.022323471158228483
+        },
+        "snips": {
+          "count": 25,
+          "mean": 0.01915335165257851,
+          "std": 0.014556949488097342
+        }
+      },
+      "paired_seed_differences": {
+        "conservative_dr-minus-conservative_direct": {
+          "count": 5,
+          "mean": -0.0003204999999999902,
+          "std": 0.0029273779863557034
+        },
+        "direct-minus-rules": {
+          "count": 5,
+          "mean": -0.13383250000000002,
+          "std": 0.0057762230847674114
+        },
+        "dr-minus-direct": {
+          "count": 5,
+          "mean": -0.006853499999999979,
+          "std": 0.003959501467988124
+        },
+        "dr-minus-ips": {
+          "count": 5,
+          "mean": 0.053700000000000005,
+          "std": 0.014208131144700193
+        }
+      },
+      "policies": {
+        "abstain": {
+          "cost_per_success": null,
+          "coverage": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.36819999999999997,
+            "std": 0.012799414049088352
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 234.6142545828694,
+            "std": 7.300792736537109
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "success_on_executed": null,
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          }
+        },
+        "cheapest": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.043772501292541274,
+            "std": 0.0007515536147936152
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.8131,
+            "std": 0.013644595999882143
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.49349999999999994,
+            "std": 0.008038967595406772
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.002685984807900349,
+            "std": 0.0026834621189751216
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 1691.1579414398052,
+            "std": 19.15898092418284
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 5.8024000000000004,
+            "std": 0.10190951869182774
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.3066,
+            "std": 0.008134801780006697
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.3770465099072798,
+            "std": 0.005805557157647841
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.177,
+            "std": 0.004213074886588183
+          },
+          "utility": {
+            "count": 5,
+            "mean": -0.06081650000000001,
+            "std": 0.013390093422937724
+          }
+        },
+        "conservative_direct": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.017619537472931178,
+            "std": 0.0004570872641467719
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.29630000000000006,
+            "std": 0.014927323939675182
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.6411,
+            "std": 0.007048049375536454
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.0035920698516898274,
+            "std": 0.0019495504227956878
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 348.9461937020572,
+            "std": 4.177307879523486
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 2.0497,
+            "std": 0.13825908650067104
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.28200000000000003,
+            "std": 0.014164215474215282
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.9517732390924681,
+            "std": 0.00964170510464505
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.009,
+            "std": 0.002345207879911715
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.259028,
+            "std": 0.012971090620105926
+          }
+        },
+        "conservative_dr": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.017675524615731616,
+            "std": 0.0005068287635169466
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.2972,
+            "std": 0.012750490186655583
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.6411,
+            "std": 0.006940821277053588
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.0031931409024221645,
+            "std": 0.002340997367470742
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 349.61570053140025,
+            "std": 5.733473549753879
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 2.0568999999999997,
+            "std": 0.12946495664850788
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.2823,
+            "std": 0.01254292629333361
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.9498634826096216,
+            "std": 0.011969058240070425
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0093,
+            "std": 0.0024899799195977467
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.2587075,
+            "std": 0.013630656509317515
+          }
+        },
+        "direct": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.029162932503078796,
+            "std": 0.0014875184699478386
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.42890000000000006,
+            "std": 0.011442246282963859
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.755,
+            "std": 0.011984364814206883
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.010320304673318625,
+            "std": 0.010759356165048365
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 313.9420653417471,
+            "std": 8.735346894643655
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0256,
+            "std": 0.005319774431308155
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 4.150599999999999,
+            "std": 0.24666409345504658
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.39780000000000004,
+            "std": 0.013604227284193686
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.9274070082464994,
+            "std": 0.01496327307822512
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0109,
+            "std": 0.0029874738492579314
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.3631215,
+            "std": 0.01563780651178419
+          }
+        },
+        "dr": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.029640364767574118,
+            "std": 0.0017535518480231898
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.43030000000000007,
+            "std": 0.012622400722525025
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7513,
+            "std": 0.011459712038266906
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.007623123723388092,
+            "std": 0.005231072520472826
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 312.53297669668603,
+            "std": 9.027233959031902
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0344,
+            "std": 0.014152738250953418
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 4.218500000000001,
+            "std": 0.21613855509834426
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.3955,
+            "std": 0.01278182303116421
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.9191364960528432,
+            "std": 0.013882077671850082
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0129,
+            "std": 0.0021908902300206644
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.356268,
+            "std": 0.015584351165512147
+          }
+        },
+        "ips": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.04032122037057105,
+            "std": 0.002937562855369255
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.4484,
+            "std": 0.012656026232589766
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7373000000000001,
+            "std": 0.010831666538441777
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.01430930992500502,
+            "std": 0.010760756240923888
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 301.4929923333376,
+            "std": 5.3910926835913076
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.1592,
+            "std": 0.0223315919719128
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 5.514899999999999,
+            "std": 0.30208037010040883
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.3942,
+            "std": 0.011616798181943243
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.8792314039632313,
+            "std": 0.017134466493489403
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0339,
+            "std": 0.006542170893518451
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.302568,
+            "std": 0.020219291406970732
+          }
+        },
+        "oracle": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.050988771222492804,
+            "std": 0.0008936049687418606
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.6103,
+            "std": 0.013558207846171993
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.9785,
+            "std": 0.0029154759474226384
+          },
+          "identified_runs": 0,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0024000000000000002,
+            "std": 0.0018165902124584951
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 9.7881,
+            "std": 0.24007587342338282
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.6103,
+            "std": 0.013558207846171993
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.5790629999999999,
+            "std": 0.012949263178845333
+          }
+        },
+        "rules": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.05917628034704424,
+            "std": 0.001400202209325967
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.5938,
+            "std": 0.011919521802488548
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.8983000000000001,
+            "std": 0.007989055012953678
+          },
+          "identified_runs": 0,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 10.965499999999999,
+            "std": 0.2761052788339982
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5467000000000001,
+            "std": 0.012442869443982778
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.9206455902179691,
+            "std": 0.004233955867536442
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.008700000000000001,
+            "std": 0.0018234582528810469
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.496954,
+            "std": 0.01082185514364337
+          }
+        },
+        "schema_match": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.1843861668548311,
+            "std": 0.001503907180619474
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.8131,
+            "std": 0.013644595999882143
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7462000000000001,
+            "std": 0.0031144823004794703
+          },
+          "identified_runs": 0,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 33.2365,
+            "std": 0.44004119125372865
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5593,
+            "std": 0.01315579720123413
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.6878048587480039,
+            "std": 0.005581988714204404
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.45618800000000004,
+            "std": 0.011545777150109916
+          }
+        }
+      }
+    },
+    "noisy": {
+      "ope_absolute_errors": {
+        "direct": {
+          "count": 35,
+          "mean": 0.014312154460118626,
+          "std": 0.010209190887964594
+        },
+        "dr": {
+          "count": 35,
+          "mean": 0.013233706304039708,
+          "std": 0.009690689270809672
+        },
+        "ips": {
+          "count": 35,
+          "mean": 0.030893569993532228,
+          "std": 0.02792688538603155
+        },
+        "snips": {
+          "count": 35,
+          "mean": 0.023940171675264466,
+          "std": 0.0183917635780325
+        }
+      },
+      "paired_seed_differences": {
+        "conservative_dr-minus-conservative_direct": {
+          "count": 5,
+          "mean": -0.004954499999999995,
+          "std": 0.008106337875391082
+        },
+        "direct-minus-rules": {
+          "count": 5,
+          "mean": 0.014866500000000005,
+          "std": 0.006991699453637877
+        },
+        "dr-minus-direct": {
+          "count": 5,
+          "mean": -0.00908349999999999,
+          "std": 0.005521995959342976
+        },
+        "dr-minus-ips": {
+          "count": 5,
+          "mean": 0.02620100000000005,
+          "std": 0.024235392481864206
+        }
+      },
+      "policies": {
+        "abstain": {
+          "cost_per_success": null,
+          "coverage": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.36819999999999997,
+            "std": 0.012799414049088352
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 177.8405244415983,
+            "std": 9.960343579097433
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "success_on_executed": null,
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          }
+        },
+        "cheapest": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.043772501292541274,
+            "std": 0.0007515536147936152
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.8131,
+            "std": 0.013644595999882143
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.49349999999999994,
+            "std": 0.008038967595406772
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.002934796670927012,
+            "std": 0.005365553863758017
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 1634.303366284183,
+            "std": 22.079799531605534
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 5.8024000000000004,
+            "std": 0.10190951869182774
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.3066,
+            "std": 0.008134801780006697
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.3770465099072798,
+            "std": 0.005805557157647841
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.177,
+            "std": 0.004213074886588183
+          },
+          "utility": {
+            "count": 5,
+            "mean": -0.06081650000000001,
+            "std": 0.013390093422937724
+          }
+        },
+        "conservative_direct": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.06525005267962468,
+            "std": 0.007714240862866511
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.43899999999999995,
+            "std": 0.016174826119621826
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7031,
+            "std": 0.019727518850580283
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.013854320340903415,
+            "std": 0.0031067805502023975
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 263.02020473224303,
+            "std": 6.3572696514881795
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 8.305,
+            "std": 1.1182665156392726
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.378,
+            "std": 0.014991664350564964
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.8612475563146715,
+            "std": 0.02511313387679038
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0062,
+            "std": 0.00204939015319192
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.34089099999999994,
+            "std": 0.01556386977907486
+          }
+        },
+        "conservative_dr": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.05918081012827644,
+            "std": 0.013212569284608488
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.4311999999999999,
+            "std": 0.044839435768082546
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7060000000000001,
+            "std": 0.010839741694339398
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.00906448313325341,
+            "std": 0.00501449480032941
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 266.60945630098394,
+            "std": 9.212506664505723
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 7.5729,
+            "std": 1.9548799643456372
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.376,
+            "std": 0.025097310612892366
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.8750467757007814,
+            "std": 0.037742717542121676
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0088,
+            "std": 0.0025641762809916167
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.33593649999999997,
+            "std": 0.021202950605399232
+          }
+        },
+        "direct": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.09492978544523578,
+            "std": 0.004972679914104558
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.7307,
+            "std": 0.017013230145977564
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.8379,
+            "std": 0.012546911970680275
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.013615907387878268,
+            "std": 0.010644904485576062
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 234.33049254325724,
+            "std": 1.3299108188183673
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0206,
+            "std": 0.009208691546577072
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 18.0422,
+            "std": 1.0006070407507626
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5777,
+            "std": 0.008934483756770747
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.7908257143339974,
+            "std": 0.015144147524388332
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.005,
+            "std": 0.0032596012026013246
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.5118205,
+            "std": 0.007174979834466421
+          }
+        },
+        "dr": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.10025459073977772,
+            "std": 0.005782772314236573
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.7407999999999999,
+            "std": 0.010287127879053509
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.8306000000000001,
+            "std": 0.009717252698165244
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.011810715893110035,
+            "std": 0.0061794628116713735
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 227.57836639292253,
+            "std": 10.201096940309688
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0328,
+            "std": 0.00864291617453276
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 19.138600000000004,
+            "std": 1.248682826021084
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5786,
+            "std": 0.009229030284921634
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.7811239758049151,
+            "std": 0.013611113852509482
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0081,
+            "std": 0.0028151376520518493
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.502737,
+            "std": 0.010394533779828734
+          }
+        },
+        "ips": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.11268707356521976,
+            "std": 0.005453452324976682
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.7586,
+            "std": 0.011765415419780113
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.8119999999999999,
+            "std": 0.01947434209415046
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.011315757691127382,
+            "std": 0.0037975461190470155
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 216.32138724210844,
+            "std": 15.896356830010754
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.08920000000000002,
+            "std": 0.03854477915360263
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 21.2219,
+            "std": 1.1493410829688457
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5740999999999999,
+            "std": 0.0161260658562465
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.756920852300962,
+            "std": 0.02395106602225375
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0142,
+            "std": 0.008393449827097318
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.47653599999999996,
+            "std": 0.025535614810495547
+          }
+        },
+        "oracle": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.050988771222492804,
+            "std": 0.0008936049687418606
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.6103,
+            "std": 0.013558207846171993
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.9785,
+            "std": 0.0029154759474226384
+          },
+          "identified_runs": 0,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0024000000000000002,
+            "std": 0.0018165902124584951
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 9.7881,
+            "std": 0.24007587342338282
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.6103,
+            "std": 0.013558207846171993
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.5790629999999999,
+            "std": 0.012949263178845333
+          }
+        },
+        "rules": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.05917628034704424,
+            "std": 0.001400202209325967
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.5938,
+            "std": 0.011919521802488548
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.8983000000000001,
+            "std": 0.007989055012953678
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.009686711608115073,
+            "std": 0.01343202466715116
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 271.1777100552072,
+            "std": 4.632726287653414
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 10.965499999999999,
+            "std": 0.2761052788339982
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5467000000000001,
+            "std": 0.012442869443982778
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.9206455902179691,
+            "std": 0.004233955867536442
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.008700000000000001,
+            "std": 0.0018234582528810469
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.496954,
+            "std": 0.01082185514364337
+          }
+        },
+        "schema_match": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.1843861668548311,
+            "std": 0.001503907180619474
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.8131,
+            "std": 0.013644595999882143
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7462000000000001,
+            "std": 0.0031144823004794703
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.02328804807389038,
+            "std": 0.01566788743531265
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 181.3477738446258,
+            "std": 9.851126503454573
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 33.2365,
+            "std": 0.44004119125372865
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5593,
+            "std": 0.01315579720123413
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.6878048587480039,
+            "std": 0.005581988714204404
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.45618800000000004,
+            "std": 0.011545777150109916
+          }
+        }
+      }
+    },
+    "shifted": {
+      "ope_absolute_errors": {
+        "direct": {
+          "count": 35,
+          "mean": 0.07723006069052403,
+          "std": 0.020581313967019545
+        },
+        "dr": {
+          "count": 35,
+          "mean": 0.018683808993136618,
+          "std": 0.016620789908958173
+        },
+        "ips": {
+          "count": 35,
+          "mean": 0.02398906184816881,
+          "std": 0.017956953447792006
+        },
+        "snips": {
+          "count": 35,
+          "mean": 0.02103165150269518,
+          "std": 0.016139063694744545
+        }
+      },
+      "paired_seed_differences": {
+        "conservative_dr-minus-conservative_direct": {
+          "count": 5,
+          "mean": -0.006661500000000003,
+          "std": 0.017057728417054843
+        },
+        "direct-minus-rules": {
+          "count": 5,
+          "mean": 0.04175150000000003,
+          "std": 0.00616897215912023
+        },
+        "dr-minus-direct": {
+          "count": 5,
+          "mean": -0.011184500000000042,
+          "std": 0.01229812732187306
+        },
+        "dr-minus-ips": {
+          "count": 5,
+          "mean": 0.015115999999999996,
+          "std": 0.010578140432041932
+        }
+      },
+      "policies": {
+        "abstain": {
+          "cost_per_success": null,
+          "coverage": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.4473,
+            "std": 0.008976357836004542
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 180.1167819745238,
+            "std": 9.651337401928714
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "success_on_executed": null,
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          }
+        },
+        "cheapest": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.04416989690729283,
+            "std": 0.0016700055272823875
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.8078,
+            "std": 0.013704926121654217
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.4609,
+            "std": 0.019158549005600604
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.008678060719418502,
+            "std": 0.007284485367441179
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 1633.0418982017886,
+            "std": 23.838014537608164
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 5.162699999999999,
+            "std": 0.06735224569381495
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.26870000000000005,
+            "std": 0.0077427385336197255
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.33278092045432806,
+            "std": 0.013665422344066912
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.1514,
+            "std": 0.010460640515761932
+          },
+          "utility": {
+            "count": 5,
+            "mean": -0.0459585,
+            "std": 0.02415372930574076
+          }
+        },
+        "conservative_direct": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.06999005016104769,
+            "std": 0.006799700962208017
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.41579999999999995,
+            "std": 0.009833615815151608
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.6469999999999999,
+            "std": 0.008336666000266545
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.007126144018527525,
+            "std": 0.006487602783594791
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 261.00198791493676,
+            "std": 16.258339665084378
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 7.4,
+            "std": 0.7889775028478312
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.2933,
+            "std": 0.004919349550499542
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.7055815683403331,
+            "std": 0.01427409708657501
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0118,
+            "std": 0.0016431676725154987
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.24916850000000004,
+            "std": 0.007711146477664653
+          }
+        },
+        "conservative_dr": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.06314170925021773,
+            "std": 0.014059034253119981
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.4024,
+            "std": 0.0445412729948303
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.6468,
+            "std": 0.007032069396699674
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.008575753488182358,
+            "std": 0.007182960780600063
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 263.0839969774646,
+            "std": 17.056537843557138
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 6.627199999999999,
+            "std": 1.7493564388082834
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.287,
+            "std": 0.020472542587573233
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.7162612501688385,
+            "std": 0.036657343083290585
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0131,
+            "std": 0.0017464249196572983
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.24250700000000003,
+            "std": 0.017522904867629696
+          }
+        },
+        "direct": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.1042920473399821,
+            "std": 0.005612555462925515
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.727,
+            "std": 0.007705517503711229
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7232000000000001,
+            "std": 0.013645512082732573
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.025411141715124173,
+            "std": 0.015925920683922585
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 223.28667848145423,
+            "std": 12.934334277635113
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0242,
+            "std": 0.017866169147301835
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 17.0944,
+            "std": 0.8914240994049916
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.46420000000000006,
+            "std": 0.011649034294738753
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.6386342300705905,
+            "std": 0.020043804309899122
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.011,
+            "std": 0.0016955824957813172
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.39261850000000004,
+            "std": 0.012161971545559576
+          }
+        },
+        "dr": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.1101925532728606,
+            "std": 0.007695236801473709
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.7332000000000001,
+            "std": 0.021767521677949448
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7190000000000001,
+            "std": 0.01668082731761231
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.028305501052265536,
+            "std": 0.028452817768366192
+          },
+          "dr_interval_inclusion": 0.8,
+          "ess": {
+            "count": 5,
+            "mean": 217.8277893397924,
+            "std": 12.551367054145132
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0418,
+            "std": 0.018646715528478467
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 18.051099999999998,
+            "std": 1.3254283458565383
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.46449999999999997,
+            "std": 0.00266926956300783
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.6340264775412848,
+            "std": 0.021377648582235308
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0149,
+            "std": 0.0034351128074635337
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.381434,
+            "std": 0.006412622464717556
+          }
+        },
+        "ips": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.12287611950777706,
+            "std": 0.003709796655393671
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.7534000000000001,
+            "std": 0.015384245187853711
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7024999999999999,
+            "std": 0.018117670931993443
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.027029008303357784,
+            "std": 0.010854698530381197
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 211.52887544118576,
+            "std": 10.53274273826961
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.07600000000000001,
+            "std": 0.036496575181789316
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 19.930799999999998,
+            "std": 0.58257023181759
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.46210000000000007,
+            "std": 0.007065762520775788
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.6136399758083444,
+            "std": 0.01935934564311726
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.017599999999999998,
+            "std": 0.004788005847949645
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.366318,
+            "std": 0.004677219192533087
+          }
+        },
+        "oracle": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.05098879443574324,
+            "std": 0.0007972117107351234
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.6099,
+            "std": 0.006831910420958403
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.8610000000000001,
+            "std": 0.009874208829065758
+          },
+          "identified_runs": 0,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0032,
+            "std": 0.0021679483388678798
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 8.218,
+            "std": 0.2423303530307337
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5118,
+            "std": 0.009718538984847461
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.8391374393545925,
+            "std": 0.01149561522898583
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.4855410000000001,
+            "std": 0.009031834081458755
+          }
+        },
+        "rules": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.06399673209023962,
+            "std": 0.0022936093263576617
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.55,
+            "std": 0.012942179105544793
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7568,
+            "std": 0.00849705831449921
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.016483383137332053,
+            "std": 0.013607345054234632
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 269.34405408476994,
+            "std": 15.89497274471938
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 9.512800000000002,
+            "std": 0.5335587596507062
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.40669999999999995,
+            "std": 0.009984988733093274
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.7395080061884297,
+            "std": 0.011212302815007217
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0149,
+            "std": 0.0017102631376487076
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.350867,
+            "std": 0.010772292206164866
+          }
+        },
+        "schema_match": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.20388322232242245,
+            "std": 0.004454057351407615
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.8078,
+            "std": 0.013704926121654217
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.6327999999999999,
+            "std": 0.016372996060587102
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.017855731237166893,
+            "std": 0.018091964458960007
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 175.93650160487286,
+            "std": 15.350607677518534
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 31.236,
+            "std": 0.40973161947792175
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.44060000000000005,
+            "std": 0.01000249968757811
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.5455460042471449,
+            "std": 0.01510544532952831
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.35079600000000005,
+            "std": 0.009548399342298168
+          }
+        }
+      }
+    },
+    "small_data": {
+      "ope_absolute_errors": {
+        "direct": {
+          "count": 35,
+          "mean": 0.05896443818382083,
+          "std": 0.061644069204937514
+        },
+        "dr": {
+          "count": 35,
+          "mean": 0.014844612181981498,
+          "std": 0.01511981015009934
+        },
+        "ips": {
+          "count": 35,
+          "mean": 0.022128503668445314,
+          "std": 0.02530780271216353
+        },
+        "snips": {
+          "count": 35,
+          "mean": 0.020117960219685753,
+          "std": 0.016580529746862967
+        }
+      },
+      "paired_seed_differences": {
+        "conservative_dr-minus-conservative_direct": {
+          "count": 5,
+          "mean": 0.004232500000000011,
+          "std": 0.0072251600328297255
+        },
+        "direct-minus-rules": {
+          "count": 5,
+          "mean": -0.03537300000000002,
+          "std": 0.03504872525321003
+        },
+        "dr-minus-direct": {
+          "count": 5,
+          "mean": -0.040332,
+          "std": 0.029651717035021785
+        },
+        "dr-minus-ips": {
+          "count": 5,
+          "mean": 0.03951699999999998,
+          "std": 0.06795842199462845
+        }
+      },
+      "policies": {
+        "abstain": {
+          "cost_per_success": null,
+          "coverage": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.36819999999999997,
+            "std": 0.012799414049088352
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 177.8405244415983,
+            "std": 9.960343579097433
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "success_on_executed": null,
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          }
+        },
+        "cheapest": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.043772501292541274,
+            "std": 0.0007515536147936152
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.8131,
+            "std": 0.013644595999882143
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.49349999999999994,
+            "std": 0.008038967595406772
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.004994573367342646,
+            "std": 0.0037199349829009076
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 1634.303366284183,
+            "std": 22.079799531605534
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 5.8024000000000004,
+            "std": 0.10190951869182774
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.3066,
+            "std": 0.008134801780006697
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.3770465099072798,
+            "std": 0.005805557157647841
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.177,
+            "std": 0.004213074886588183
+          },
+          "utility": {
+            "count": 5,
+            "mean": -0.06081650000000001,
+            "std": 0.013390093422937724
+          }
+        },
+        "conservative_direct": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.03299048616115676,
+            "std": 0.015394514347502426
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.1438,
+            "std": 0.028553896406620236
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.49499999999999994,
+            "std": 0.023624669309854907
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.0027551406147195865,
+            "std": 0.0014615647220696149
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 203.80529459785254,
+            "std": 5.736051008498063
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 1.5279,
+            "std": 0.8512293609832781
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.1342,
+            "std": 0.023496276300724765
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.9367347428674219,
+            "std": 0.02622351407650183
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.006500000000000001,
+            "std": 0.004623310502226732
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.11651800000000001,
+            "std": 0.014005673894889877
+          }
+        },
+        "conservative_dr": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.03946412434675079,
+            "std": 0.016176828472009745
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.1418,
+            "std": 0.021652367076142046
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.4962000000000001,
+            "std": 0.025818113796325242
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.002498436138183696,
+            "std": 0.0018791281314625638
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 201.76216843284953,
+            "std": 4.832880863802351
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 1.7326000000000001,
+            "std": 0.7513850876880642
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.1325,
+            "std": 0.022276669409945462
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.9332218158859925,
+            "std": 0.03419352173978436
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0032,
+            "std": 0.001095445115010332
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.12075050000000002,
+            "std": 0.018990163193743227
+          }
+        },
+        "direct": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.07002649536320252,
+            "std": 0.002192521948684351
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.6636,
+            "std": 0.03748566392635988
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.8139000000000001,
+            "std": 0.012626361312745653
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.014447252258171405,
+            "std": 0.008736935396664744
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 276.6520071333963,
+            "std": 6.886692575831067
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 12.440900000000001,
+            "std": 0.8517643746952557
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5226,
+            "std": 0.02846137733842128
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.7877811407264209,
+            "std": 0.01767470644034995
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.012199999999999999,
+            "std": 0.006210877554742164
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.46158099999999996,
+            "std": 0.03491498427430551
+          }
+        },
+        "dr": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.0978267084813724,
+            "std": 0.0016395082426648507
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.6379,
+            "std": 0.02585391653115637
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7636000000000001,
+            "std": 0.009330058949438601
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.029027711050298256,
+            "std": 0.017777929531348515
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 214.55493012594297,
+            "std": 13.11256755053544
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0196,
+            "std": 0.015257784898208521
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 15.7049,
+            "std": 0.7783012270323099
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.4862,
+            "std": 0.02607585089695059
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.7619660567504971,
+            "std": 0.016525916325178726
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0082,
+            "std": 0.0043960209280666535
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.421249,
+            "std": 0.02629936421522391
+          }
+        },
+        "ips": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.1008627025731363,
+            "std": 0.00704685859306352
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.6388999999999999,
+            "std": 0.015570003211303446
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7632000000000001,
+            "std": 0.025353993768240924
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.016265321033078085,
+            "std": 0.0071932165672844725
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 224.21092574936733,
+            "std": 16.798122612764082
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.085,
+            "std": 0.05245474239761359
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 16.0347,
+            "std": 1.6884058531644572
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.48650000000000004,
+            "std": 0.021467999441028486
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.7611883850635719,
+            "std": 0.01678573143180172
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0257,
+            "std": 0.017304623659588788
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.38173200000000007,
+            "std": 0.05318471589070492
+          }
+        },
+        "oracle": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.050988771222492804,
+            "std": 0.0008936049687418606
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.6103,
+            "std": 0.013558207846171993
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.9785,
+            "std": 0.0029154759474226384
+          },
+          "identified_runs": 0,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0024000000000000002,
+            "std": 0.0018165902124584951
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 9.7881,
+            "std": 0.24007587342338282
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.6103,
+            "std": 0.013558207846171993
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.5790629999999999,
+            "std": 0.012949263178845333
+          }
+        },
+        "rules": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.05917628034704424,
+            "std": 0.001400202209325967
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.5938,
+            "std": 0.011919521802488548
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.8983000000000001,
+            "std": 0.007989055012953678
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.008213297221440707,
+            "std": 0.0042599088305717864
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 271.1777100552072,
+            "std": 4.632726287653414
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 10.965499999999999,
+            "std": 0.2761052788339982
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5467000000000001,
+            "std": 0.012442869443982778
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.9206455902179691,
+            "std": 0.004233955867536442
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.008700000000000001,
+            "std": 0.0018234582528810469
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.496954,
+            "std": 0.01082185514364337
+          }
+        },
+        "schema_match": {
+          "cost_per_success": {
+            "count": 5,
+            "mean": 0.1843861668548311,
+            "std": 0.001503907180619474
+          },
+          "coverage": {
+            "count": 5,
+            "mean": 0.8131,
+            "std": 0.013644595999882143
+          },
+          "decision_accuracy": {
+            "count": 5,
+            "mean": 0.7462000000000001,
+            "std": 0.0031144823004794703
+          },
+          "dr_absolute_error": {
+            "count": 5,
+            "mean": 0.03070512695797877,
+            "std": 0.021872710907374214
+          },
+          "dr_interval_inclusion": 1.0,
+          "ess": {
+            "count": 5,
+            "mean": 181.3477738446258,
+            "std": 9.851126503454573
+          },
+          "identified_runs": 5,
+          "mean_excess_access": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "mean_latency_ms": {
+            "count": 5,
+            "mean": 33.2365,
+            "std": 0.44004119125372865
+          },
+          "success_all_tasks": {
+            "count": 5,
+            "mean": 0.5593,
+            "std": 0.01315579720123413
+          },
+          "success_on_executed": {
+            "count": 5,
+            "mean": 0.6878048587480039,
+            "std": 0.005581988714204404
+          },
+          "unauthorized_executions": 0,
+          "unsafe_rate": {
+            "count": 5,
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "utility": {
+            "count": 5,
+            "mean": 0.45618800000000004,
+            "std": 0.011545777150109916
+          }
+        }
+      }
+    }
+  },
+  "test_task_condition_count": 90000
+}

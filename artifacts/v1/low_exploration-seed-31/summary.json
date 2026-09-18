@@ -1,0 +1,1237 @@
+{
+  "calibration_grid": [
+    {
+      "ope": {
+        "direct": 0.2572953371369783,
+        "dr": 0.26819521773317423,
+        "dr_ci95": [
+          0.23850856919196115,
+          0.2952688123612266
+        ],
+        "ess": 46.74719330053952,
+        "identifiable": true,
+        "ips": 0.2687184468845123,
+        "matched": 692,
+        "max_weight": 80.0,
+        "snips": 0.2975589872068654,
+        "unsupported_fraction": 0.0,
+        "warning": ""
+      },
+      "threshold": 0.0,
+      "uncertainty_weight": 0.0
+    },
+    {
+      "ope": {
+        "direct": 0.25697308858097195,
+        "dr": 0.2700339437667991,
+        "dr_ci95": [
+          0.24288410970390156,
+          0.29480521537772286
+        ],
+        "ess": 32.83845482182954,
+        "identifiable": true,
+        "ips": 0.27052031475468974,
+        "matched": 586,
+        "max_weight": 100.0,
+        "snips": 0.3027746336522572,
+        "unsupported_fraction": 0.0,
+        "warning": ""
+      },
+      "threshold": 0.5,
+      "uncertainty_weight": 0.0
+    },
+    {
+      "ope": {
+        "direct": 0.22060132390418818,
+        "dr": 0.22092557527147677,
+        "dr_ci95": [
+          0.19462129303350995,
+          0.24287953987506677
+        ],
+        "ess": 28.62069676616956,
+        "identifiable": true,
+        "ips": 0.22141544835671995,
+        "matched": 527,
+        "max_weight": 100.0,
+        "snips": 0.2273037889732469,
+        "unsupported_fraction": 0.0,
+        "warning": "low effective sample size; interval may be unstable"
+      },
+      "threshold": 0.8,
+      "uncertainty_weight": 0.0
+    },
+    {
+      "ope": {
+        "direct": 0.1314220575761256,
+        "dr": 0.13092339437059416,
+        "dr_ci95": [
+          0.11105430894431392,
+          0.15084858088441602
+        ],
+        "ess": 23.692092466644695,
+        "identifiable": true,
+        "ips": 0.1296854555338673,
+        "matched": 405,
+        "max_weight": 100.0,
+        "snips": 0.1412866197892285,
+        "unsupported_fraction": 0.0,
+        "warning": "low effective sample size; interval may be unstable"
+      },
+      "threshold": 0.9,
+      "uncertainty_weight": 0.0
+    },
+    {
+      "ope": {
+        "direct": 0.0,
+        "dr": 0.0,
+        "dr_ci95": [
+          0.0,
+          0.0
+        ],
+        "ess": 18.581460674157302,
+        "identifiable": true,
+        "ips": 0.0,
+        "matched": 253,
+        "max_weight": 120.0,
+        "snips": 0.0,
+        "unsupported_fraction": 0.0,
+        "warning": "low effective sample size; interval may be unstable"
+      },
+      "threshold": 1.0,
+      "uncertainty_weight": 0.0
+    },
+    {
+      "ope": {
+        "direct": 0.25750367047031164,
+        "dr": 0.2684035510665076,
+        "dr_ci95": [
+          0.23872356919196117,
+          0.2954271456945599
+        ],
+        "ess": 44.65801147506135,
+        "identifiable": true,
+        "ips": 0.2689271425366862,
+        "matched": 668,
+        "max_weight": 80.0,
+        "snips": 0.3048346320577204,
+        "unsupported_fraction": 0.0,
+        "warning": ""
+      },
+      "threshold": 0.0,
+      "uncertainty_weight": 0.5
+    },
+    {
+      "ope": {
+        "direct": 0.25534695221733567,
+        "dr": 0.2666934657103728,
+        "dr_ci95": [
+          0.23882194645811688,
+          0.2914507405041467
+        ],
+        "ess": 32.589454565398995,
+        "identifiable": true,
+        "ips": 0.2671237630305518,
+        "matched": 582,
+        "max_weight": 100.0,
+        "snips": 0.30013144090198274,
+        "unsupported_fraction": 0.0,
+        "warning": ""
+      },
+      "threshold": 0.5,
+      "uncertainty_weight": 0.5
+    },
+    {
+      "ope": {
+        "direct": 0.21456076689175613,
+        "dr": 0.21608510229856837,
+        "dr_ci95": [
+          0.19060433388150344,
+          0.2380614220547077
+        ],
+        "ess": 28.170998353115568,
+        "identifiable": true,
+        "ips": 0.21634855404413594,
+        "matched": 518,
+        "max_weight": 100.0,
+        "snips": 0.22389056991249706,
+        "unsupported_fraction": 0.0,
+        "warning": "low effective sample size; interval may be unstable"
+      },
+      "threshold": 0.8,
+      "uncertainty_weight": 0.5
+    },
+    {
+      "ope": {
+        "direct": 0.12894705757612562,
+        "dr": 0.12844839437059416,
+        "dr_ci95": [
+          0.1078143768475471,
+          0.14922929522811618
+        ],
+        "ess": 23.55911798031711,
+        "identifiable": true,
+        "ips": 0.12710284683821507,
+        "matched": 402,
+        "max_weight": 100.0,
+        "snips": 0.1388676509462451,
+        "unsupported_fraction": 0.0,
+        "warning": "low effective sample size; interval may be unstable"
+      },
+      "threshold": 0.9,
+      "uncertainty_weight": 0.5
+    },
+    {
+      "ope": {
+        "direct": 0.0,
+        "dr": 0.0,
+        "dr_ci95": [
+          0.0,
+          0.0
+        ],
+        "ess": 18.581460674157302,
+        "identifiable": true,
+        "ips": 0.0,
+        "matched": 253,
+        "max_weight": 120.0,
+        "snips": 0.0,
+        "unsupported_fraction": 0.0,
+        "warning": "low effective sample size; interval may be unstable"
+      },
+      "threshold": 1.0,
+      "uncertainty_weight": 0.5
+    },
+    {
+      "ope": {
+        "direct": 0.2576171669493976,
+        "dr": 0.272341950601591,
+        "dr_ci95": [
+          0.24516518221068592,
+          0.29882894588621844
+        ],
+        "ess": 34.61885955057907,
+        "identifiable": true,
+        "ips": 0.2728617424242424,
+        "matched": 614,
+        "max_weight": 100.0,
+        "snips": 0.29730961313348997,
+        "unsupported_fraction": 0.0,
+        "warning": ""
+      },
+      "threshold": 0.0,
+      "uncertainty_weight": 1.0
+    },
+    {
+      "ope": {
+        "direct": 0.25534695221733567,
+        "dr": 0.2666934657103728,
+        "dr_ci95": [
+          0.23882194645811688,
+          0.2914507405041467
+        ],
+        "ess": 32.589454565398995,
+        "identifiable": true,
+        "ips": 0.2671237630305518,
+        "matched": 582,
+        "max_weight": 100.0,
+        "snips": 0.30013144090198274,
+        "unsupported_fraction": 0.0,
+        "warning": ""
+      },
+      "threshold": 0.5,
+      "uncertainty_weight": 1.0
+    },
+    {
+      "ope": {
+        "direct": 0.21456076689175613,
+        "dr": 0.21608510229856837,
+        "dr_ci95": [
+          0.19060433388150344,
+          0.2380614220547077
+        ],
+        "ess": 28.170998353115568,
+        "identifiable": true,
+        "ips": 0.21634855404413594,
+        "matched": 518,
+        "max_weight": 100.0,
+        "snips": 0.22389056991249706,
+        "unsupported_fraction": 0.0,
+        "warning": "low effective sample size; interval may be unstable"
+      },
+      "threshold": 0.8,
+      "uncertainty_weight": 1.0
+    },
+    {
+      "ope": {
+        "direct": 0.12523872424279228,
+        "dr": 0.12430603325948301,
+        "dr_ci95": [
+          0.10460586240225142,
+          0.1415913740819472
+        ],
+        "ess": 23.338684971667156,
+        "identifiable": true,
+        "ips": 0.12280597183821508,
+        "matched": 397,
+        "max_weight": 100.0,
+        "snips": 0.13481233435122347,
+        "unsupported_fraction": 0.0,
+        "warning": "low effective sample size; interval may be unstable"
+      },
+      "threshold": 0.9,
+      "uncertainty_weight": 1.0
+    },
+    {
+      "ope": {
+        "direct": 0.0,
+        "dr": 0.0,
+        "dr_ci95": [
+          0.0,
+          0.0
+        ],
+        "ess": 18.581460674157302,
+        "identifiable": true,
+        "ips": 0.0,
+        "matched": 253,
+        "max_weight": 120.0,
+        "snips": 0.0,
+        "unsupported_fraction": 0.0,
+        "warning": "low effective sample size; interval may be unstable"
+      },
+      "threshold": 1.0,
+      "uncertainty_weight": 1.0
+    }
+  ],
+  "config": {
+    "backend": "local",
+    "bootstrap": 200,
+    "calibration_size": 1200,
+    "command": "run",
+    "cost_weight": 1.0,
+    "epsilon": 0.05,
+    "exclude_logged_tool": [],
+    "latency_weight": 0.0,
+    "min_count": 5,
+    "model": "trees",
+    "out": "low_exploration-seed-31",
+    "risk_weight": 2.0,
+    "scenario": "noisy",
+    "seed": 31,
+    "test_scenario": null,
+    "test_size": 2000,
+    "train_size": 6000
+  },
+  "created_at": "2026-09-18T07:10:22.404649+00:00",
+  "direct_calibration_grid": [
+    {
+      "ope": {
+        "direct": 0.2580878563703047,
+        "dr": 0.26806594309083254,
+        "dr_ci95": [
+          0.2381861805408061,
+          0.2963718496818409
+        ],
+        "ess": 34.10262761365802,
+        "identifiable": true,
+        "ips": 0.2685947646103896,
+        "matched": 606,
+        "max_weight": 100.0,
+        "snips": 0.2949040253739065,
+        "unsupported_fraction": 0.0,
+        "warning": ""
+      },
+      "threshold": 0.0,
+      "uncertainty_weight": 0.0
+    },
+    {
+      "ope": {
+        "direct": 0.25534695221733567,
+        "dr": 0.2666934657103728,
+        "dr_ci95": [
+          0.23882194645811688,
+          0.2914507405041467
+        ],
+        "ess": 32.589454565398995,
+        "identifiable": true,
+        "ips": 0.2671237630305518,
+        "matched": 582,
+        "max_weight": 100.0,
+        "snips": 0.30013144090198274,
+        "unsupported_fraction": 0.0,
+        "warning": ""
+      },
+      "threshold": 0.5,
+      "uncertainty_weight": 0.0
+    },
+    {
+      "ope": {
+        "direct": 0.21860836304560233,
+        "dr": 0.21844688426660036,
+        "dr_ci95": [
+          0.19135692226280507,
+          0.24025945541590243
+        ],
+        "ess": 28.470838110968696,
+        "identifiable": true,
+        "ips": 0.21886803456361648,
+        "matched": 524,
+        "max_weight": 100.0,
+        "snips": 0.22528676195353725,
+        "unsupported_fraction": 0.0,
+        "warning": "low effective sample size; interval may be unstable"
+      },
+      "threshold": 0.8,
+      "uncertainty_weight": 0.0
+    },
+    {
+      "ope": {
+        "direct": 0.12550513049279227,
+        "dr": 0.1251744416739852,
+        "dr_ci95": [
+          0.10630060797453812,
+          0.14263314820369585
+        ],
+        "ess": 23.339250776940343,
+        "identifiable": true,
+        "ips": 0.12369593984122657,
+        "matched": 397,
+        "max_weight": 100.0,
+        "snips": 0.1357876284127128,
+        "unsupported_fraction": 0.0,
+        "warning": "low effective sample size; interval may be unstable"
+      },
+      "threshold": 0.9,
+      "uncertainty_weight": 0.0
+    },
+    {
+      "ope": {
+        "direct": 0.0,
+        "dr": 0.0,
+        "dr_ci95": [
+          0.0,
+          0.0
+        ],
+        "ess": 18.581460674157302,
+        "identifiable": true,
+        "ips": 0.0,
+        "matched": 253,
+        "max_weight": 120.0,
+        "snips": 0.0,
+        "unsupported_fraction": 0.0,
+        "warning": "low effective sample size; interval may be unstable"
+      },
+      "threshold": 1.0,
+      "uncertainty_weight": 0.0
+    },
+    {
+      "ope": {
+        "direct": 0.258067531117602,
+        "dr": 0.26992937492892516,
+        "dr_ci95": [
+          0.24017976287239975,
+          0.29724011921393484
+        ],
+        "ess": 33.21474317000293,
+        "identifiable": true,
+        "ips": 0.2704574322349107,
+        "matched": 592,
+        "max_weight": 100.0,
+        "snips": 0.3009569482487627,
+        "unsupported_fraction": 0.0,
+        "warning": ""
+      },
+      "threshold": 0.0,
+      "uncertainty_weight": 0.5
+    },
+    {
+      "ope": {
+        "direct": 0.25534695221733567,
+        "dr": 0.2666934657103728,
+        "dr_ci95": [
+          0.23882194645811688,
+          0.2914507405041467
+        ],
+        "ess": 32.589454565398995,
+        "identifiable": true,
+        "ips": 0.2671237630305518,
+        "matched": 582,
+        "max_weight": 100.0,
+        "snips": 0.30013144090198274,
+        "unsupported_fraction": 0.0,
+        "warning": ""
+      },
+      "threshold": 0.5,
+      "uncertainty_weight": 0.5
+    },
+    {
+      "ope": {
+        "direct": 0.21456076689175613,
+        "dr": 0.21608510229856837,
+        "dr_ci95": [
+          0.19060433388150344,
+          0.2380614220547077
+        ],
+        "ess": 28.170998353115568,
+        "identifiable": true,
+        "ips": 0.21634855404413594,
+        "matched": 518,
+        "max_weight": 100.0,
+        "snips": 0.22389056991249706,
+        "unsupported_fraction": 0.0,
+        "warning": "low effective sample size; interval may be unstable"
+      },
+      "threshold": 0.8,
+      "uncertainty_weight": 0.5
+    },
+    {
+      "ope": {
+        "direct": 0.12550513049279227,
+        "dr": 0.1251744416739852,
+        "dr_ci95": [
+          0.10630060797453812,
+          0.14263314820369585
+        ],
+        "ess": 23.339250776940343,
+        "identifiable": true,
+        "ips": 0.12369593984122657,
+        "matched": 397,
+        "max_weight": 100.0,
+        "snips": 0.1357876284127128,
+        "unsupported_fraction": 0.0,
+        "warning": "low effective sample size; interval may be unstable"
+      },
+      "threshold": 0.9,
+      "uncertainty_weight": 0.5
+    },
+    {
+      "ope": {
+        "direct": 0.0,
+        "dr": 0.0,
+        "dr_ci95": [
+          0.0,
+          0.0
+        ],
+        "ess": 18.581460674157302,
+        "identifiable": true,
+        "ips": 0.0,
+        "matched": 253,
+        "max_weight": 120.0,
+        "snips": 0.0,
+        "unsupported_fraction": 0.0,
+        "warning": "low effective sample size; interval may be unstable"
+      },
+      "threshold": 1.0,
+      "uncertainty_weight": 0.5
+    },
+    {
+      "ope": {
+        "direct": 0.258067531117602,
+        "dr": 0.26992937492892516,
+        "dr_ci95": [
+          0.24017976287239975,
+          0.29724011921393484
+        ],
+        "ess": 33.21474317000293,
+        "identifiable": true,
+        "ips": 0.2704574322349107,
+        "matched": 592,
+        "max_weight": 100.0,
+        "snips": 0.3009569482487627,
+        "unsupported_fraction": 0.0,
+        "warning": ""
+      },
+      "threshold": 0.0,
+      "uncertainty_weight": 1.0
+    },
+    {
+      "ope": {
+        "direct": 0.25534695221733567,
+        "dr": 0.2666934657103728,
+        "dr_ci95": [
+          0.23882194645811688,
+          0.2914507405041467
+        ],
+        "ess": 32.589454565398995,
+        "identifiable": true,
+        "ips": 0.2671237630305518,
+        "matched": 582,
+        "max_weight": 100.0,
+        "snips": 0.30013144090198274,
+        "unsupported_fraction": 0.0,
+        "warning": ""
+      },
+      "threshold": 0.5,
+      "uncertainty_weight": 1.0
+    },
+    {
+      "ope": {
+        "direct": 0.21235217314175614,
+        "dr": 0.21447851071307056,
+        "dr_ci95": [
+          0.18882348610779717,
+          0.2363600815504066
+        ],
+        "ess": 28.021658611668894,
+        "identifiable": true,
+        "ips": 0.21465591335149525,
+        "matched": 515,
+        "max_weight": 100.0,
+        "snips": 0.22273763040293051,
+        "unsupported_fraction": 0.0,
+        "warning": "low effective sample size; interval may be unstable"
+      },
+      "threshold": 0.8,
+      "uncertainty_weight": 1.0
+    },
+    {
+      "ope": {
+        "direct": 0.12550513049279227,
+        "dr": 0.1251744416739852,
+        "dr_ci95": [
+          0.10630060797453812,
+          0.14263314820369585
+        ],
+        "ess": 23.339250776940343,
+        "identifiable": true,
+        "ips": 0.12369593984122657,
+        "matched": 397,
+        "max_weight": 100.0,
+        "snips": 0.1357876284127128,
+        "unsupported_fraction": 0.0,
+        "warning": "low effective sample size; interval may be unstable"
+      },
+      "threshold": 0.9,
+      "uncertainty_weight": 1.0
+    },
+    {
+      "ope": {
+        "direct": 0.0,
+        "dr": 0.0,
+        "dr_ci95": [
+          0.0,
+          0.0
+        ],
+        "ess": 18.581460674157302,
+        "identifiable": true,
+        "ips": 0.0,
+        "matched": 253,
+        "max_weight": 120.0,
+        "snips": 0.0,
+        "unsupported_fraction": 0.0,
+        "warning": "low effective sample size; interval may be unstable"
+      },
+      "threshold": 1.0,
+      "uncertainty_weight": 1.0
+    }
+  ],
+  "elapsed_seconds": 5.790176833019359,
+  "environment": {
+    "matplotlib": "3.10.8",
+    "numpy": "2.4.3",
+    "python": "3.14.6",
+    "scikit-learn": "1.8.0"
+  },
+  "execution": {
+    "backend": "local",
+    "calls": 16090
+  },
+  "feasible_test_tasks": 1260,
+  "feature_names": [
+    "action_resource_count",
+    "cache_age",
+    "discount_amount",
+    "domain=crm",
+    "domain=documents",
+    "domain=tickets",
+    "observed_approval",
+    "observed_limit",
+    "observed_service=degraded",
+    "observed_service=normal",
+    "requested_count",
+    "requested_field=body",
+    "requested_field=state",
+    "requested_field=title",
+    "requires_current_data",
+    "scopes=",
+    "scopes=crm.admin,crm.write,docs.export,docs.read,tickets.admin,tickets.write",
+    "scopes=crm.write,docs.read,tickets.write",
+    "tool=abstain",
+    "tool=crm.discount_bulk",
+    "tool=crm.discount_checked",
+    "tool=crm.discount_one",
+    "tool=docs.batch_get",
+    "tool=docs.cache",
+    "tool=docs.export",
+    "tool=docs.get",
+    "tool=docs.search",
+    "tool=tickets.admin_close",
+    "tool=tickets.close_checked",
+    "tool=tickets.close_one"
+  ],
+  "paired_differences": {
+    "conservative_dr - conservative_direct": {
+      "ci95": [
+        -0.0021154374999999997,
+        0.007410000000000001
+      ],
+      "mean": 0.0019050000000000002
+    },
+    "conservative_dr - direct": {
+      "ci95": [
+        -0.2474895625,
+        -0.21185518750000001
+      ],
+      "mean": -0.23042
+    },
+    "conservative_dr - dr": {
+      "ci95": [
+        -0.21986093750000005,
+        -0.177344
+      ],
+      "mean": -0.19793
+    },
+    "conservative_dr - ips": {
+      "ci95": [
+        -0.20378712499999996,
+        -0.161668875
+      ],
+      "mean": -0.1835525
+    },
+    "conservative_dr - rules": {
+      "ci95": [
+        -0.25439106250000004,
+        -0.21842681249999998
+      ],
+      "mean": -0.2366625
+    },
+    "conservative_dr - schema_match": {
+      "ci95": [
+        -0.212513625,
+        -0.1723660625
+      ],
+      "mean": -0.191255
+    }
+  },
+  "policies": {
+    "abstain": {
+      "actual": {
+        "correct_abstention_rate": 1.0,
+        "cost_per_success": null,
+        "coverage": 0.0,
+        "decision_accuracy": 0.37,
+        "denied_at_execution": 0,
+        "executed": 0,
+        "mean_cost": 0.0,
+        "mean_excess_access": 0.0,
+        "mean_latency_ms": 0.0,
+        "runtime_p95_ms": 0.0,
+        "success_all_tasks": 0.0,
+        "success_on_executed": null,
+        "success_on_feasible": 0.0,
+        "successes": 0,
+        "tasks": 2000,
+        "unauthorized_executions": 0,
+        "unnecessary_abstention_rate": 1.0,
+        "unsafe_rate": 0.0,
+        "utility": 0.0,
+        "utility_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "ope": {
+        "absolute_error": 0.0,
+        "direct": 0.0,
+        "dr": 0.0,
+        "dr_ci95": [
+          0.0,
+          0.0
+        ],
+        "ess": 26.86544949394721,
+        "identifiable": true,
+        "ips": 0.0,
+        "matched": 400,
+        "max_weight": 100.0,
+        "snips": 0.0,
+        "unsupported_fraction": 0.0,
+        "warning": "low effective sample size; interval may be unstable"
+      }
+    },
+    "cheapest": {
+      "actual": {
+        "correct_abstention_rate": 0.5202702702702703,
+        "cost_per_success": 0.042859450726979,
+        "coverage": 0.8075,
+        "decision_accuracy": 0.502,
+        "denied_at_execution": 0,
+        "executed": 1615,
+        "mean_cost": 0.013265,
+        "mean_excess_access": 0.0,
+        "mean_latency_ms": 5.7725,
+        "runtime_p95_ms": 0.03262498648837209,
+        "success_all_tasks": 0.3095,
+        "success_on_executed": 0.38328173374613,
+        "success_on_feasible": 0.49126984126984125,
+        "successes": 619,
+        "tasks": 2000,
+        "unauthorized_executions": 0,
+        "unnecessary_abstention_rate": 0.0,
+        "unsafe_rate": 0.1725,
+        "utility": -0.048765,
+        "utility_ci95": [
+          -0.09754087500000001,
+          -0.0054114999999999745
+        ]
+      },
+      "ope": {
+        "absolute_error": 0.0016246639343284533,
+        "direct": -0.04334972652179402,
+        "dr": -0.04714033606567155,
+        "dr_ci95": [
+          -0.09576401957337843,
+          -0.0025463828926294233
+        ],
+        "ess": 1959.5578731717324,
+        "identifiable": true,
+        "ips": -0.0436184954600622,
+        "matched": 1960,
+        "max_weight": 1.0434782608695652,
+        "snips": -0.04318434879007597,
+        "unsupported_fraction": 0.0,
+        "warning": ""
+      }
+    },
+    "conservative_direct": {
+      "actual": {
+        "correct_abstention_rate": 0.9702702702702702,
+        "cost_per_success": 0.016643109540636043,
+        "coverage": 0.3,
+        "decision_accuracy": 0.642,
+        "denied_at_execution": 0,
+        "executed": 600,
+        "mean_cost": 0.00471,
+        "mean_excess_access": 0.0,
+        "mean_latency_ms": 2.017,
+        "runtime_p95_ms": 0.024879163538571444,
+        "success_all_tasks": 0.283,
+        "success_on_executed": 0.9433333333333334,
+        "success_on_feasible": 0.4492063492063492,
+        "successes": 566,
+        "tasks": 2000,
+        "unauthorized_executions": 0,
+        "unnecessary_abstention_rate": 0.5412698412698412,
+        "unsafe_rate": 0.0105,
+        "utility": 0.25729,
+        "utility_ci95": [
+          0.2353739375,
+          0.2767210625
+        ]
+      },
+      "ope": {
+        "absolute_error": 0.0011096179789660265,
+        "direct": 0.2574044049586109,
+        "dr": 0.25839961797896605,
+        "dr_ci95": [
+          0.23798948464543823,
+          0.27784738672184095
+        ],
+        "ess": 57.499766532463674,
+        "identifiable": true,
+        "ips": 0.2638187777418109,
+        "matched": 987,
+        "max_weight": 100.0,
+        "snips": 0.29346074589364074,
+        "unsupported_fraction": 0.0,
+        "warning": ""
+      }
+    },
+    "conservative_dr": {
+      "actual": {
+        "correct_abstention_rate": 0.9756756756756757,
+        "cost_per_success": 0.017099644128113878,
+        "coverage": 0.3115,
+        "decision_accuracy": 0.642,
+        "denied_at_execution": 0,
+        "executed": 623,
+        "mean_cost": 0.004804999999999999,
+        "mean_excess_access": 0.0,
+        "mean_latency_ms": 2.0625,
+        "runtime_p95_ms": 0.024754162586759772,
+        "success_all_tasks": 0.281,
+        "success_on_executed": 0.9020866773675762,
+        "success_on_feasible": 0.44603174603174606,
+        "successes": 562,
+        "tasks": 2000,
+        "unauthorized_executions": 0,
+        "unnecessary_abstention_rate": 0.5198412698412699,
+        "unsafe_rate": 0.0085,
+        "utility": 0.259195,
+        "utility_ci95": [
+          0.23898131250000001,
+          0.27683543749999995
+        ]
+      },
+      "ope": {
+        "absolute_error": 0.0011943632750711086,
+        "direct": 0.25678610578632116,
+        "dr": 0.2603893632750711,
+        "dr_ci95": [
+          0.2395921112780402,
+          0.278180855126286
+        ],
+        "ess": 59.01947866737155,
+        "identifiable": true,
+        "ips": 0.26578614833816855,
+        "matched": 1010,
+        "max_weight": 100.0,
+        "snips": 0.29175292508632156,
+        "unsupported_fraction": 0.0,
+        "warning": ""
+      }
+    },
+    "direct": {
+      "actual": {
+        "correct_abstention_rate": 0.8554054054054054,
+        "cost_per_success": 0.09224,
+        "coverage": 0.6555,
+        "decision_accuracy": 0.879,
+        "denied_at_execution": 0,
+        "executed": 1311,
+        "mean_cost": 0.051885,
+        "mean_excess_access": 0.0,
+        "mean_latency_ms": 16.967,
+        "runtime_p95_ms": 0.032082985853776336,
+        "success_all_tasks": 0.5625,
+        "success_on_executed": 0.8581235697940504,
+        "success_on_feasible": 0.8928571428571429,
+        "successes": 1125,
+        "tasks": 2000,
+        "unauthorized_executions": 0,
+        "unnecessary_abstention_rate": 0.044444444444444446,
+        "unsafe_rate": 0.0105,
+        "utility": 0.489615,
+        "utility_ci95": [
+          0.46350662500000006,
+          0.51276125
+        ]
+      },
+      "ope": {
+        "absolute_error": 0.016415439523518094,
+        "direct": 0.46685782974294604,
+        "dr": 0.5060304395235181,
+        "dr_ci95": [
+          0.4412674389918427,
+          0.5728585707612224
+        ],
+        "ess": 58.685988840691955,
+        "identifiable": true,
+        "ips": 0.4123946523653757,
+        "matched": 962,
+        "max_weight": 80.0,
+        "snips": 0.427622557462727,
+        "unsupported_fraction": 0.0,
+        "warning": ""
+      }
+    },
+    "dr": {
+      "actual": {
+        "correct_abstention_rate": 0.7851351351351351,
+        "cost_per_success": 0.09995487364620939,
+        "coverage": 0.6835,
+        "decision_accuracy": 0.8445,
+        "denied_at_execution": 0,
+        "executed": 1367,
+        "mean_cost": 0.055375,
+        "mean_excess_access": 0.03,
+        "mean_latency_ms": 17.6405,
+        "runtime_p95_ms": 0.032585089502390474,
+        "success_all_tasks": 0.554,
+        "success_on_executed": 0.8105340160936357,
+        "success_on_feasible": 0.8793650793650793,
+        "successes": 1108,
+        "tasks": 2000,
+        "unauthorized_executions": 0,
+        "unnecessary_abstention_rate": 0.04126984126984127,
+        "unsafe_rate": 0.02,
+        "utility": 0.457125,
+        "utility_ci95": [
+          0.4311701875,
+          0.48450656249999996
+        ]
+      },
+      "ope": {
+        "absolute_error": 0.018981433957188876,
+        "direct": 0.374679064749484,
+        "dr": 0.4761064339571889,
+        "dr_ci95": [
+          0.37884999303991035,
+          0.6054213840580354
+        ],
+        "ess": 42.545671428081874,
+        "identifiable": true,
+        "ips": 0.403893631512166,
+        "matched": 730,
+        "max_weight": 100.0,
+        "snips": 0.44705134102268795,
+        "unsupported_fraction": 0.0,
+        "warning": ""
+      }
+    },
+    "ips": {
+      "actual": {
+        "correct_abstention_rate": 0.6567567567567567,
+        "cost_per_success": 0.10194907407407408,
+        "coverage": 0.7315,
+        "decision_accuracy": 0.783,
+        "denied_at_execution": 0,
+        "executed": 1463,
+        "mean_cost": 0.055052500000000004,
+        "mean_excess_access": 0.064,
+        "mean_latency_ms": 17.923,
+        "runtime_p95_ms": 0.0326270645018667,
+        "success_all_tasks": 0.54,
+        "success_on_executed": 0.7382091592617909,
+        "success_on_feasible": 0.8571428571428571,
+        "successes": 1080,
+        "tasks": 2000,
+        "unauthorized_executions": 0,
+        "unnecessary_abstention_rate": 0.04047619047619048,
+        "unsafe_rate": 0.0195,
+        "utility": 0.4427475,
+        "utility_ci95": [
+          0.4149065625,
+          0.46612643750000005
+        ]
+      },
+      "ope": {
+        "absolute_error": 0.012246178303105648,
+        "direct": 0.33044548379533,
+        "dr": 0.45499367830310566,
+        "dr_ci95": [
+          0.3655129770283874,
+          0.5870500955662501
+        ],
+        "ess": 44.63479582502361,
+        "identifiable": true,
+        "ips": 0.4160133276016213,
+        "matched": 814,
+        "max_weight": 100.0,
+        "snips": 0.4846400748541393,
+        "unsupported_fraction": 0.0,
+        "warning": ""
+      }
+    },
+    "oracle": {
+      "actual": {
+        "correct_abstention_rate": 1.0,
+        "cost_per_success": 0.04987623762376238,
+        "coverage": 0.606,
+        "decision_accuracy": 0.976,
+        "denied_at_execution": 0,
+        "executed": 1212,
+        "mean_cost": 0.030225000000000002,
+        "mean_excess_access": 0.002,
+        "mean_latency_ms": 9.538,
+        "runtime_p95_ms": 0.03225206310162321,
+        "success_all_tasks": 0.606,
+        "success_on_executed": 1.0,
+        "success_on_feasible": 0.9619047619047619,
+        "successes": 1212,
+        "tasks": 2000,
+        "unauthorized_executions": 0,
+        "unnecessary_abstention_rate": 0.0380952380952381,
+        "unsafe_rate": 0.0,
+        "utility": 0.5756749999999999,
+        "utility_ci95": [
+          0.5527095000000001,
+          0.5949177499999999
+        ]
+      }
+    },
+    "rules": {
+      "actual": {
+        "correct_abstention_rate": 0.9608108108108108,
+        "cost_per_success": 0.058977064220183485,
+        "coverage": 0.593,
+        "decision_accuracy": 0.9005,
+        "denied_at_execution": 0,
+        "executed": 1186,
+        "mean_cost": 0.0321425,
+        "mean_excess_access": 0.0,
+        "mean_latency_ms": 10.9665,
+        "runtime_p95_ms": 0.03191905561834574,
+        "success_all_tasks": 0.545,
+        "success_on_executed": 0.9190556492411467,
+        "success_on_feasible": 0.8650793650793651,
+        "successes": 1090,
+        "tasks": 2000,
+        "unauthorized_executions": 0,
+        "unnecessary_abstention_rate": 0.08174603174603175,
+        "unsafe_rate": 0.0085,
+        "utility": 0.49585749999999995,
+        "utility_ci95": [
+          0.4720663125,
+          0.518230875
+        ]
+      },
+      "ope": {
+        "absolute_error": 0.005681171158656184,
+        "direct": 0.3802939309334222,
+        "dr": 0.49017632884134377,
+        "dr_ci95": [
+          0.41176218055760594,
+          0.6091453870226883
+        ],
+        "ess": 53.70754621112798,
+        "identifiable": true,
+        "ips": 0.48129435991825514,
+        "matched": 983,
+        "max_weight": 100.0,
+        "snips": 0.5248979119587961,
+        "unsupported_fraction": 0.0,
+        "warning": ""
+      }
+    },
+    "schema_match": {
+      "actual": {
+        "correct_abstention_rate": 0.5202702702702703,
+        "cost_per_success": 0.18544303797468353,
+        "coverage": 0.8075,
+        "decision_accuracy": 0.7455,
+        "denied_at_execution": 0,
+        "executed": 1615,
+        "mean_cost": 0.10255,
+        "mean_excess_access": 0.0,
+        "mean_latency_ms": 33.2525,
+        "runtime_p95_ms": 0.03229106805520132,
+        "success_all_tasks": 0.553,
+        "success_on_executed": 0.6848297213622291,
+        "success_on_feasible": 0.8777777777777778,
+        "successes": 1106,
+        "tasks": 2000,
+        "unauthorized_executions": 0,
+        "unnecessary_abstention_rate": 0.0,
+        "unsafe_rate": 0.0,
+        "utility": 0.45044999999999996,
+        "utility_ci95": [
+          0.42893725000000005,
+          0.46897150000000004
+        ]
+      },
+      "ope": {
+        "absolute_error": 0.07191885853932783,
+        "direct": 0.3203723440146107,
+        "dr": 0.3785311414606721,
+        "dr_ci95": [
+          0.29318047414259346,
+          0.47551633942043314
+        ],
+        "ess": 25.17686971106198,
+        "identifiable": true,
+        "ips": 0.266,
+        "matched": 398,
+        "max_weight": 100.0,
+        "snips": 0.4140077821011673,
+        "unsupported_fraction": 0.0,
+        "warning": "low effective sample size; interval may be unstable"
+      }
+    }
+  },
+  "schema_version": 1,
+  "selected_calibration": {
+    "threshold": 0.0,
+    "uncertainty_weight": 1.0
+  },
+  "selected_direct_calibration": {
+    "threshold": 0.0,
+    "uncertainty_weight": 0.5
+  },
+  "source_sha256": {
+    "execution.py": "219e07f84b41ed08209ce146ec67f21e43df0980336654894638390be62b4da1",
+    "learning.py": "b45ea349be94e008975f59faf58fab6d5cfc1225ded39949e557590b3002e41b",
+    "mcp_server.py": "ebe065b0c847f63dddb04d2114a01e84a596e09978a30e08a5754bd1ae5c7128",
+    "run.py": "a9d8c4ae4c848b0e9100ba46b858c22ab7e0fd80f763bc8eb0c5fa4abb2ad064",
+    "sandbox.py": "e5dc4ab3278828a3ae68e9e5fa692b39c720b05629133d11cf2b6fa12359c57e",
+    "suite.py": "506ac6f9966a2562f20803d78d76307e3fbba136bccf69723bd159be04ecc23d",
+    "test_experiment.py": "2da421558c1d56a57733d78a6daa9e2fa5c5f98e4eddcee8c434c5bb84c4e968",
+    "test_mcp.py": "e1ff49e8edf82f567429247438099fad0311dedbeba4b370e8adec31da469ae7"
+  },
+  "tools": [
+    {
+      "cost": 0.01,
+      "domain": "documents",
+      "latency_ms": 5,
+      "name": "docs.search",
+      "scope": "docs.read"
+    },
+    {
+      "cost": 0.025,
+      "domain": "documents",
+      "latency_ms": 8,
+      "name": "docs.cache",
+      "scope": "docs.read"
+    },
+    {
+      "cost": 0.08,
+      "domain": "documents",
+      "latency_ms": 25,
+      "name": "docs.get",
+      "scope": "docs.read"
+    },
+    {
+      "cost": 0.16,
+      "domain": "documents",
+      "latency_ms": 45,
+      "name": "docs.batch_get",
+      "scope": "docs.read"
+    },
+    {
+      "cost": 0.12,
+      "domain": "documents",
+      "latency_ms": 35,
+      "name": "docs.export",
+      "scope": "docs.export"
+    },
+    {
+      "cost": 0.025,
+      "domain": "tickets",
+      "latency_ms": 8,
+      "name": "tickets.close_one",
+      "scope": "tickets.write"
+    },
+    {
+      "cost": 0.12,
+      "domain": "tickets",
+      "latency_ms": 35,
+      "name": "tickets.close_checked",
+      "scope": "tickets.write"
+    },
+    {
+      "cost": 0.08,
+      "domain": "tickets",
+      "latency_ms": 20,
+      "name": "tickets.admin_close",
+      "scope": "tickets.admin"
+    },
+    {
+      "cost": 0.015,
+      "domain": "crm",
+      "latency_ms": 8,
+      "name": "crm.discount_one",
+      "scope": "crm.write"
+    },
+    {
+      "cost": 0.1,
+      "domain": "crm",
+      "latency_ms": 30,
+      "name": "crm.discount_checked",
+      "scope": "crm.write"
+    },
+    {
+      "cost": 0.06,
+      "domain": "crm",
+      "latency_ms": 18,
+      "name": "crm.discount_bulk",
+      "scope": "crm.admin"
+    }
+  ]
+}

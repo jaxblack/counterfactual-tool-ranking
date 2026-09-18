@@ -1,0 +1,55 @@
+name: Research artifact checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.14']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - run: python -m pip install -r requirements.txt -r requirements-dev.txt
+      - run: ruff check .
+      - run: python -m unittest discover -p 'test_*.py' -v
+      - run: python verify_artifacts.py
+      - run: python suite.py --quick --out results/ci
+      - run: python run.py run --backend mcp --scenario noisy --train-size 120 --calibration-size 40 --test-size 40 --bootstrap 20 --out results/mcp-ci
+      - run: python run.py replay --backend mcp --log results/mcp-ci/train.jsonl
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reports-python-${{ matrix.python }}
+          path: |
+            results/ci/aggregate.json
+            results/ci/*.png
+            results/mcp-ci/report.md
+
+  paper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: paper/package-lock.json
+      - run: npm ci --prefix paper
+      - run: npm audit --prefix paper
+      - run: npx --prefix paper playwright install --with-deps chromium
+      - run: npm run pdf --prefix paper
+      - run: git diff --exit-code -- paper/paper.md paper/claims.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: working-paper
+          path: paper/paper.pdf

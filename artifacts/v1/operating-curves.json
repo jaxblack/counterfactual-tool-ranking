@@ -1,0 +1,119 @@
+[
+  {
+    "threshold": 0.0,
+    "nonempty_seeds": 5,
+    "coverage": 0.44699999999999995,
+    "success_on_executed": 0.8527409995862092,
+    "success_all_tasks": 0.38100000000000006,
+    "cost_per_success": 0.06322053204113798,
+    "unsafe_rate": 0.0095
+  },
+  {
+    "threshold": 0.25,
+    "nonempty_seeds": 5,
+    "coverage": 0.4229,
+    "success_on_executed": 0.885193725428765,
+    "success_all_tasks": 0.37429999999999997,
+    "cost_per_success": 0.05789072095682313,
+    "unsafe_rate": 0.008
+  },
+  {
+    "threshold": 0.5,
+    "nonempty_seeds": 5,
+    "coverage": 0.37679999999999997,
+    "success_on_executed": 0.9359206364445501,
+    "success_all_tasks": 0.35259999999999997,
+    "cost_per_success": 0.04741015325011056,
+    "unsafe_rate": 0.0075
+  },
+  {
+    "threshold": 0.75,
+    "nonempty_seeds": 5,
+    "coverage": 0.30179999999999996,
+    "success_on_executed": 0.9509398220209105,
+    "success_all_tasks": 0.2869,
+    "cost_per_success": 0.036600797032720636,
+    "unsafe_rate": 0.005599999999999999
+  },
+  {
+    "threshold": 0.8,
+    "nonempty_seeds": 5,
+    "coverage": 0.26580000000000004,
+    "success_on_executed": 0.9559812484362039,
+    "success_all_tasks": 0.254,
+    "cost_per_success": 0.02825262209633561,
+    "unsafe_rate": 0.0048000000000000004
+  },
+  {
+    "threshold": 0.825,
+    "nonempty_seeds": 5,
+    "coverage": 0.22970000000000002,
+    "success_on_executed": 0.958444634879908,
+    "success_all_tasks": 0.22010000000000002,
+    "cost_per_success": 0.020938223845674255,
+    "unsafe_rate": 0.004
+  },
+  {
+    "threshold": 0.85,
+    "nonempty_seeds": 5,
+    "coverage": 0.20270000000000002,
+    "success_on_executed": 0.9647223942841416,
+    "success_all_tasks": 0.1955,
+    "cost_per_success": 0.015903481066083754,
+    "unsafe_rate": 0.0032
+  },
+  {
+    "threshold": 0.875,
+    "nonempty_seeds": 5,
+    "coverage": 0.1659,
+    "success_on_executed": 0.9720902181645327,
+    "success_all_tasks": 0.16119999999999998,
+    "cost_per_success": 0.012998991063330582,
+    "unsafe_rate": 0.0019
+  },
+  {
+    "threshold": 0.9,
+    "nonempty_seeds": 5,
+    "coverage": 0.1339,
+    "success_on_executed": 0.9778578523060115,
+    "success_all_tasks": 0.13089999999999996,
+    "cost_per_success": 0.011543368501017184,
+    "unsafe_rate": 0.001
+  },
+  {
+    "threshold": 0.925,
+    "nonempty_seeds": 5,
+    "coverage": 0.1253,
+    "success_on_executed": 0.977913656550532,
+    "success_all_tasks": 0.12250000000000001,
+    "cost_per_success": 0.011637100615084422,
+    "unsafe_rate": 0.001
+  },
+  {
+    "threshold": 0.95,
+    "nonempty_seeds": 5,
+    "coverage": 0.11750000000000001,
+    "success_on_executed": 0.977471298391891,
+    "success_all_tasks": 0.11479999999999999,
+    "cost_per_success": 0.011681032453756306,
+    "unsafe_rate": 0.001
+  },
+  {
+    "threshold": 0.975,
+    "nonempty_seeds": 5,
+    "coverage": 0.0743,
+    "success_on_executed": 0.968780017975087,
+    "success_all_tasks": 0.07220000000000001,
+    "cost_per_success": 0.01119619574228394,
+    "unsafe_rate": 0.0008
+  },
+  {
+    "threshold": 1.0,
+    "nonempty_seeds": 2,
+    "coverage": 0.00525,
+    "success_on_executed": 0.9285714285714286,
+    "success_all_tasks": 0.005,
+    "cost_per_success": 0.013749999999999998,
+    "unsafe_rate": 0.00025
+  }
+]
